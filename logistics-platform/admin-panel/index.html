@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت الووانت</title>
+    <style>
+        * { box-sizing: border-box; font-family: Tahoma, sans-serif; }
+        body { background: #0f172a; color: white; padding: 20px; direction: rtl; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { text-align: center; color: #38bdf8; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #1e293b; border-radius: 8px; overflow: hidden; }
+        th, td { padding: 12px; text-align: right; border-bottom: 1px solid #334155; font-size: 14px; }
+        th { background: #334155; color: #f8fafc; }
+        .status { padding: 4px 8px; border-radius: 4px; font-size: 12px; background: #0284c7; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📊 پنل نظارت و مدیریت کل سیستم</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>کد سفارش</th>
+                <th>مبدأ</th>
+                <th>مقصد</th>
+                <th>مبلغ (یورو)</th>
+                <th>وضعیت</th>
+            </tr>
+        </thead>
+        <tbody id="adminTable">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function renderAdminTable() {
+        const tbody = document.getElementById('adminTable');
+        const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+
+        if(orders.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;">سفارشی ثبت نشده است.</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = '';
+        orders.forEach(order => {
+            tbody.innerHTML += `
+                <tr>
+                    <td>${order.id}</td>
+                    <td>${order.origin}</td>
+                    <td>${order.destination}</td>
+                    <td>${order.price}</td>
+                    <td><span class="status">${order.status}</span></td>
+                </tr>
+            `;
+        });
+    }
+
+    setInterval(renderAdminTable, 3000);
+    renderAdminTable();
+</script>
+
+</body>
+</html>

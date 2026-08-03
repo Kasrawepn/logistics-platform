@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل رانندگان (قبول سفارش)</title>
+    <style>
+        * { box-sizing: border-box; font-family: Tahoma, sans-serif; }
+        body { background: #f8fafc; padding: 20px; direction: rtl; }
+        .card { max-width: 500px; margin: 0 auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h2 { color: #0f172a; text-align: center; }
+        .order-item { border: 1px solid #e2e8f0; padding: 15px; border-radius: 8px; margin-bottom: 15px; background: #fff; }
+        .order-header { display: flex; justify-content: space-between; font-weight: bold; color: #1e293b; }
+        .price { color: #16a34a; font-weight: bold; }
+        .btn-accept { width: 100%; padding: 10px; background: #16a34a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .btn-accept:hover { background: #15803d; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🛞 لیست بارهای اعلام‌شده (راننده)</h2>
+    <div id="ordersList">در حال بارگذاری سفارش‌ها...</div>
+</div>
+
+<script>
+    function loadOrders() {
+        const ordersList = document.getElementById('ordersList');
+        const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+
+        if (orders.length === 0) {
+            ordersList.innerHTML = '<p style="text-align:center; color:#64748b;">هیچ بار فعالی در محدوده شما وجود ندارد.</p>';
+            return;
+        }
+
+        ordersList.innerHTML = '';
+        orders.forEach((order, index) => {
+            if(order.status === 'در انتظار راننده') {
+                ordersList.innerHTML += `
+                    <div class="order-item">
+                        <div class="order-header">
+                            <span>کد: ${order.id}</span>
+                            <span class="price">${order.price} یورو</span>
+                        </div>
+                        <p style="margin: 8px 0; font-size: 14px;">📍 <b>مبدأ:</b> ${order.origin}</p>
+                        <p style="margin: 8px 0; font-size: 14px;">🏁 <b>مقصد:</b> ${order.destination}</p>
+                        <button class="btn-accept" onclick="acceptOrder(${index})">قبول این درخواست بار</button>
+                    </div>
+                `;
+            }
+        });
+    }
+
+    function acceptOrder(index) {
+        let orders = JSON.parse(localStorage.getItem('orders') || '[]');
+        orders[index].status = 'توسط راننده پذیرفته شد';
+        localStorage.setItem('orders', JSON.stringify(orders));
+        alert('سفارش به شما اختصاص یافت! لطفاً به سمت مبدأ حرکت کنید.');
+        loadOrders();
+    }
+
+    // به‌روزرسانی خودکار هر ۵ ثانیه
+    setInterval(loadOrders, 5000);
+    loadOrders();
+</script>
+
+</body>
+</html>

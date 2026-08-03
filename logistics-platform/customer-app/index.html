@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت درخواست وانت و کامیون بار (مشتری)</title>
+    <style>
+        * { box-sizing: border-box; font-family: Tahoma, sans-serif; }
+        body { background: #f0f2f5; padding: 20px; direction: rtl; }
+        .card { max-width: 480px; margin: 0 auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h2 { color: #1e293b; text-align: center; margin-top: 0; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 13px; color: #475569; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; }
+        .price-box { background: #f0fdf4; border: 1px solid #86efac; padding: 15px; border-radius: 8px; text-align: center; margin: 15px 0; }
+        .price { font-size: 22px; font-weight: bold; color: #166534; }
+        button { width: 100%; padding: 12px; background: #2563eb; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        button:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🚚 درخواست الووانت / باربری</h2>
+    
+    <div class="form-group">
+        <label>نوع خودرو:</label>
+        <select id="vehicle" onchange="calcPrice()">
+            <option value="1.5">زیر ۳.۵ تن (ون / وانت شهری)</option>
+            <option value="2.2">۳.۵ تا ۷ تن (کامیونت)</option>
+            <option value="3.5">بالای ۷ تن (کامیون سنگین)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>آدرس مبدأ:</label>
+        <input type="text" id="origin" placeholder="مثلا: Radolfzell, Hauptstraße">
+    </div>
+
+    <div class="form-group">
+        <label>آدرس مقصد:</label>
+        <input type="text" id="destination" placeholder="مثلا: Singen, Bahnhofstraße">
+    </div>
+
+    <div class="form-group">
+        <label>مسافت (کیلومتر):</label>
+        <input type="number" id="distance" value="10" oninput="calcPrice()">
+    </div>
+
+    <div class="form-group">
+        <label>عکس بار / کالا:</label>
+        <input type="file" id="imageInput" accept="image/*">
+    </div>
+
+    <div class="price-box">
+        <div>مبلغ کرایه تخمینی:</div>
+        <div class="price"><span id="priceDisplay">30.00</span> یورو</div>
+    </div>
+
+    <button onclick="submitOrder()">ثبت و ارسال به رانندگان</button>
+</div>
+
+<script>
+    function calcPrice() {
+        const rate = parseFloat(document.getElementById('vehicle').value);
+        const dist = parseFloat(document.getElementById('distance').value) || 0;
+        const total = 15 + (dist * rate); // ۱۵ یورو ورودی پایه
+        document.getElementById('priceDisplay').innerText = total.toFixed(2);
+    }
+
+    function submitOrder() {
+        const origin = document.getElementById('origin').value;
+        const destination = document.getElementById('destination').value;
+        const price = document.getElementById('priceDisplay').innerText;
+        
+        if(!origin || !destination) {
+            alert('لطفاً آدرس مبدأ و مقصد را وارد کنید.');
+            return;
+        }
+
+        const newOrder = {
+            id: 'ORD-' + Math.floor(1000 + Math.random() * 9000),
+            origin,
+            destination,
+            price,
+            status: 'در انتظار راننده',
+            date: new Date().toLocaleTimeString('fa-IR')
+        };
+
+        let orders = JSON.parse(localStorage.getItem('orders') || '[]');
+        orders.push(newOrder);
+        localStorage.setItem('orders', JSON.stringify(orders));
+
+        alert('درخواست شما با موفقیت ثبت شد و برای رانندگان نزدیک فرستاده شد!');
+    }
+</script>
+
+</body>
+</html>
