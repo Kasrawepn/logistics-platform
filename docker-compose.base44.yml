@@ -1,0 +1,19 @@
+services:
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    command: ["node", "dev-server.mjs"]
+    environment:
+      PORT: "3000"
+      APP_DIR: /app/logistics-platform
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:3000/"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
