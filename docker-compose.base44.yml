@@ -1,5 +1,5 @@
 # Base44 development environment.
-# Runs the HORIZON LOGISTICS website straight from the cloned source (bind mount),
+# Runs the AYDIN TRANSPORT & LOGISTIK website straight from the cloned source (bind mount),
 # so every edit to website/ is visible on refresh without rebuilding an image.
 name: horizon-logistics
 
@@ -16,7 +16,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "wget -q -O - http://127.0.0.1/ | grep -qi 'horizon logistics' || exit 1",
+          "wget -q -O - http://127.0.0.1/ | grep -qi 'aydin' || exit 1",
         ]
       interval: 10s
       timeout: 3s

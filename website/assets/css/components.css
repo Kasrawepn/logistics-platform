@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HORIZON LOGISTICS — Components
+   AYDIN TRANSPORT & LOGISTIK — Components
    Header · Footer · Cards · Forms · Controls · Cursor
    ========================================================================== */
 
@@ -1234,5 +1234,54 @@ body.menu-open .nav-toggle__bars span:nth-child(3) {
   .service-card__more {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* -------------------------------------------------------- Language switch */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line-dark);
+  border-radius: 999px;
+}
+
+.lang-switch__btn {
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s var(--ease-out), background 0.3s var(--ease-out);
+}
+
+.lang-switch__btn:hover {
+  color: #fff;
+}
+
+.lang-switch__btn.is-active {
+  background: var(--gold);
+  color: var(--navy-900);
+}
+
+.mobile-menu__foot .lang-switch {
+  align-self: flex-start;
+}
+
+/* The brand sub-line is long in German, so tighten it on narrow screens. */
+@media (max-width: 900px) {
+  .site-header__actions {
+    gap: 0.6rem;
+  }
+  .brand__sub {
+    font-size: 0.5rem;
+    letter-spacing: 0.24em;
+  }
+  .brand__mark {
+    width: 34px;
+    height: 34px;
   }
 }

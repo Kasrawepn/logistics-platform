@@ -1,6 +1,7 @@
 /* ==========================================================================
-   HORIZON LOGISTICS — Interactions
+   AYDIN TRANSPORT & LOGISTIK — Interactions
    Sticky header · Curtain menu · Reveals · Counters · Carousel · Form · Cursor
+   Loaded after i18n.js and layout.js.
    ========================================================================== */
 
 (function () {
@@ -11,64 +12,82 @@
   const raf = (fn) => window.requestAnimationFrame(fn);
 
   /* ------------------------------------------------------- Sticky header */
-  function initHeader() {
+  function applyHeaderState() {
     const header = document.getElementById("siteHeader");
-    if (!header) return;
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 40);
+  }
+
+  function initHeader() {
+    if (!document.getElementById("siteHeader")) return;
+    applyHeaderState();
+
+    if (initHeader.bound) return;
+    initHeader.bound = true;
 
     let ticking = false;
-    const apply = () => {
-      header.classList.toggle("is-scrolled", window.scrollY > 40);
-      ticking = false;
-    };
-
     window.addEventListener(
       "scroll",
       () => {
         if (!ticking) {
           ticking = true;
-          raf(apply);
+          raf(() => {
+            applyHeaderState();
+            ticking = false;
+          });
         }
       },
       { passive: true }
     );
-    apply();
   }
 
   /* ------------------------------------------------------- Mobile menu */
+  /* Header and menu are re-rendered on a language change, so these helpers
+     always work from the elements that are in the document right now. */
+  function openMenu(menu, toggle) {
+    menu.classList.add("is-open");
+    document.body.classList.add("menu-open", "is-locked");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", window.AydinI18n.t("common.closeMenu"));
+  }
+
+  function closeMenu(menu, toggle) {
+    if (menu) menu.classList.remove("is-open");
+    document.body.classList.remove("menu-open", "is-locked");
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", window.AydinI18n.t("common.menuOpen"));
+    }
+  }
+
   function initMenu() {
     const toggle = document.querySelector(".nav-toggle");
     const menu = document.getElementById("mobileMenu");
     if (!toggle || !menu) return;
 
-    const open = () => {
-      raf(() => menu.classList.add("is-open"));
-      document.body.classList.add("menu-open", "is-locked");
-      toggle.setAttribute("aria-expanded", "true");
-      toggle.setAttribute("aria-label", "Close menu");
-    };
-
-    const close = () => {
-      menu.classList.remove("is-open");
-      document.body.classList.remove("menu-open", "is-locked");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Open menu");
-    };
-
     toggle.addEventListener("click", () => {
-      menu.classList.contains("is-open") ? close() : open();
+      menu.classList.contains("is-open") ? closeMenu(menu, toggle) : openMenu(menu, toggle);
     });
 
-    menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", close));
+    menu.querySelectorAll("a").forEach((link) =>
+      link.addEventListener("click", () => closeMenu(menu, toggle))
+    );
+
+    if (initMenu.bound) return;
+    initMenu.bound = true;
 
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && menu.classList.contains("is-open")) {
-        close();
-        toggle.focus();
-      }
+      if (event.key !== "Escape") return;
+      const currentMenu = document.getElementById("mobileMenu");
+      const currentToggle = document.querySelector(".nav-toggle");
+      if (!currentMenu || !currentMenu.classList.contains("is-open")) return;
+      closeMenu(currentMenu, currentToggle);
+      currentToggle?.focus();
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 960 && menu.classList.contains("is-open")) close();
+      if (window.innerWidth > 960) {
+        closeMenu(document.getElementById("mobileMenu"), document.querySelector(".nav-toggle"));
+      }
     });
   }
 
@@ -270,13 +289,15 @@
         if (slot) slot.textContent = message || "";
       };
 
+      const t = (key) => window.AydinI18n.t(key);
+
       const validate = (field) => {
         const value = (field.value || "").trim();
-        if (field.required && !value) return "This field is required.";
+        if (field.required && !value) return t("ct.f.required");
         if (field.type === "email" && value && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value))
-          return "Please enter a valid email address.";
+          return t("ct.f.invalidEmail");
         if (field.type === "checkbox" && field.required && !field.checked)
-          return "Please confirm to continue.";
+          return t("ct.f.confirm");
         return "";
       };
 
@@ -308,9 +329,9 @@
         payload.submittedAt = new Date().toISOString();
 
         try {
-          const stored = JSON.parse(localStorage.getItem("horizon_enquiries") || "[]");
+          const stored = JSON.parse(localStorage.getItem("aydin_requests") || "[]");
           stored.push(payload);
-          localStorage.setItem("horizon_enquiries", JSON.stringify(stored));
+          localStorage.setItem("aydin_requests", JSON.stringify(stored));
         } catch (error) {
           /* storage unavailable — the confirmation below still applies */
         }
@@ -420,4 +441,11 @@
   } else {
     boot();
   }
+
+  /* The header and menu are rebuilt on every language change, so rebind them. */
+  document.addEventListener("layout:rendered", () => {
+    closeMenu(document.getElementById("mobileMenu"), document.querySelector(".nav-toggle"));
+    initHeader();
+    initMenu();
+  });
 })();

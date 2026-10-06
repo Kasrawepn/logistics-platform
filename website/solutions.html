@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Solutions — Horizon Logistics</title>
-<meta name="description" content="Industry-specific supply chain solutions from Horizon Logistics: retail, automotive, pharma, food, chemicals and manufacturing, backed by full load visibility.">
+<title>Lösungen — Aydın Transport &amp; Logistik</title>
+<meta name="description" content="Passende Transportlösungen für Privatkunden, Geschäftskunden und eilige Sendungen — deutschlandweit und pünktlich.">
 <meta name="theme-color" content="#0A1A2F">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,27 +15,26 @@
 <link rel="stylesheet" href="assets/css/pages.css">
 <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
 </head>
-<body data-page="solutions">
+<body data-page="solutions" data-title-key="meta.solutions.title" data-desc-key="meta.solutions.desc">
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
 <div data-component="header"></div>
 
 <main id="main">
 
   <section class="page-hero">
     <div class="page-hero__media" data-parallax="0.1">
-      <img src="assets/img/industrial-night.jpg" alt="Industrial freight terminal operating at night" fetchpriority="high">
+      <img src="assets/img/warehouse-floor.jpg" alt="Moderne Logistikfläche" fetchpriority="high">
     </div>
     <div class="page-hero__overlay"></div>
     <div class="container page-hero__inner">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a><span>/</span><span aria-current="page">Solutions</span>
+        <a href="index.html" data-i18n="common.home">Startseite</a><span>/</span><span aria-current="page" data-i18n="nav.solutions">Lösungen</span>
       </nav>
-      <h1>Solutions shaped by your industry</h1>
-      <p>
-        A pharmacy delivery and a parts feed to a production line are both “transport”.
-        They are not the same problem. We build the plan around the constraint that matters
-        to you.
+      <h1 data-i18n="sol.hero.title">Lösungen für jede Sendung</h1>
+      <p data-i18n="sol.hero.lead">
+        Ob einzelne Palette, Umzug oder regelmäßiger Firmenverkehr: Wir passen Fahrzeug und
+        Ablauf an Ihre Sendung an.
       </p>
     </div>
   </section>
@@ -45,127 +44,113 @@
     <div class="container">
       <div class="split">
         <div class="split__text">
-          <span class="eyebrow" data-reveal="fade">Our Approach</span>
-          <h2 data-reveal>Design the chain, then run it</h2>
-          <p class="lead" data-reveal>
-            We start with a supply chain review — volumes, lead times, service windows,
-            exceptions. Then we design a network you can actually staff and afford, and we
-            commit to it in a service level agreement.
+          <span class="eyebrow" data-reveal="fade" data-i18n="sol.approach.eyebrow">Unser Ansatz</span>
+          <h2 data-reveal data-i18n="sol.approach.title">Erst fragen, dann fahren</h2>
+          <p class="lead" data-reveal data-i18n="sol.approach.lead">
+            Wir klären Umfang, Termin und Besonderheiten, bevor die Fahrt beginnt. So gibt es
+            unterwegs keine Überraschungen.
           </p>
           <ul class="feature-list" data-reveal-group="80">
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Network modelling.</strong> Hub locations and departure times tested against your real order profile.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Cost transparency.</strong> A rate structure you can forecast against, with no surcharge surprises.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Proven onboarding.</strong> A 30-day implementation plan with named owners on both sides.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.approach.b1"><strong>Klare Absprache</strong> zu Termin, Umfang und Preis.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.approach.b2"><strong>Passendes Fahrzeug</strong> für Ihre Sendung.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.approach.b3"><strong>Rückmeldung bei der Zustellung.</strong></span></li>
           </ul>
-          <div class="split__actions" data-reveal="fade"><a class="btn btn--navy" href="contact.html#quote">Start a supply chain review</a></div>
+          <div class="split__actions" data-reveal="fade">
+            <a class="btn btn--navy" href="contact.html#quote" data-i18n="sol.approach.cta">Transport anfragen</a>
+          </div>
         </div>
         <div class="split__media" data-reveal="scale">
-          <div class="panel-media panel-media--wide img-zoom" data-cursor="Our Process">
-            <img src="assets/img/warehouse-floor.jpg" alt="Modern distribution centre prepared for a supply chain operation" loading="lazy">
+          <div class="panel-media panel-media--wide img-zoom" data-cursor="Planung" data-i18n-attr="data-cursor:sol.approach.eyebrow">
+            <img src="assets/img/warehouse-portrait.jpg" alt="Vorbereitung einer Sendung im Lager" loading="lazy">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================================================== INDUSTRIES -->
-  <section class="section section--soft" id="industries">
+  <!-- ============================================================= WHO -->
+  <section class="section section--soft">
     <div class="container">
       <div class="section-head">
         <div>
-          <span class="eyebrow" data-reveal="fade">Industries</span>
-          <h2 class="section-head__title" data-reveal>Where we are already at home</h2>
+          <span class="eyebrow" data-reveal="fade" data-i18n="sol.who.eyebrow">Für wen wir fahren</span>
+          <h2 class="section-head__title" data-reveal data-i18n="sol.who.title">Privatkunden und Unternehmen</h2>
         </div>
-        <p data-reveal>
-          Sector experience means fewer questions at the start and fewer surprises later —
-          because we have already met your compliance officer.
+        <p data-reveal data-i18n="sol.who.lead">
+          Jede Sendung bekommt denselben sorgfältigen Ablauf — nur der Umfang unterscheidet
+          sich.
         </p>
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem" data-reveal-group="80">
         <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16l-1.2 11.2A2 2 0 0 1 16.8 21H7.2a2 2 0 0 1-2-1.8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></div>
-          <h3>Retail &amp; E-commerce</h3>
-          <p>Peak-season capacity, store replenishment and returns handling with next-day cut-offs you can publish to customers.</p>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18V9l8-5 8 5v9"/><path d="M9 18v-6h6v6"/></svg></div>
+          <h3 data-i18n="sol.w1.title">Privatkunden</h3>
+          <p data-i18n="sol.w1.text">Einzeltransporte, Möbel und Hausrat nach Absprache — sorgfältig verladen und direkt zugestellt.</p>
         </article>
         <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16v-4l2.2-5.2A2 2 0 0 1 8 5.5h8a2 2 0 0 1 1.8 1.3L20 12v4"/><path d="M4 16h16v3H4z"/><circle cx="7.5" cy="19" r="1.4"/><circle cx="16.5" cy="19" r="1.4"/></svg></div>
-          <h3>Automotive</h3>
-          <p>Just-in-sequence line feeds, returnable packaging loops and emergency part runs on a two-hour call-off.</p>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5h10.5v9H2z"/><path d="M12.5 11h4.2l2.3 3v2.5h-6.5z"/><circle cx="6.4" cy="18.5" r="1.6"/><circle cx="16.4" cy="18.5" r="1.6"/></svg></div>
+          <h3 data-i18n="sol.w2.title">Geschäftskunden</h3>
+          <p data-i18n="sol.w2.text">Regelmäßige Transporte, Direktfahrten und Express-Lieferungen für Betriebe und Handel.</p>
         </article>
         <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M4 12h16"/><circle cx="12" cy="12" r="9"/></svg></div>
-          <h3>Pharma &amp; Healthcare</h3>
-          <p>GDP-compliant 2–8 °C and frozen lanes with validated temperature logging, plus audit-ready documentation packs.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3v8a6 6 0 0 0 12 0V3"/><path d="M12 17v4"/><path d="M8 21h8"/></svg></div>
-          <h3>Food &amp; Beverage</h3>
-          <p>Chilled, ambient and dual-temperature transport with HACCP hygiene protocols and traceable batch handling.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v5l4 12H5L9 8Z"/><path d="M7.5 14h9"/></svg></div>
-          <h3>Chemicals</h3>
-          <p>ADR classes 2 to 9 with segregation planning, licensed drivers and emergency response cover on every lane.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div>
-          <h3>Industrial Manufacturing</h3>
-          <p>Inbound raw material flows, outbound finished goods and abnormal-load projects up to 32 tonnes.</p>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></svg></div>
+          <h3 data-i18n="sol.w3.title">Eil- und Sondersendungen</h3>
+          <p data-i18n="sol.w3.text">Kurzfristige Kurierfahrten und Sendungen, die kein Zwischenlager sehen dürfen.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================== DETAIL -->
+  <!-- ========================================================= EXAMPLE -->
   <section class="section">
     <div class="container">
       <div class="split split--reverse">
         <div class="split__text">
-          <span class="eyebrow" data-reveal="fade">Case in point</span>
-          <h2 data-reveal>Replenishing 240 stores before the doors open</h2>
-          <p class="lead" data-reveal>
-            A grocery retailer needed every store stocked before 07:00 without adding a
-            single trailer to its fleet. We rebuilt the departure schedule around store
-            opening times rather than depot convenience.
+          <span class="eyebrow" data-reveal="fade" data-i18n="sol.example.eyebrow">Ablauf</span>
+          <h2 data-reveal data-i18n="sol.example.title">So läuft eine Direktfahrt</h2>
+          <p class="lead" data-reveal data-i18n="sol.example.lead">
+            Vom Anruf bis zur Übergabe sind es drei Schritte — und Sie wissen in jedem davon,
+            woran Sie sind.
           </p>
-          <ul class="feature-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>31% fewer empty kilometres</strong> after re-sequencing the backhaul network.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>99.2% on-time arrivals</strong> sustained through the December peak.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>One control tower</strong> covering 12 depots, all reporting through a single weekly review.</span></li>
+          <ul class="feature-list" data-reveal-group="80">
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.example.b1"><strong>Anfrage.</strong> Sie nennen uns Abholort, Ziel, Zeitpunkt und Umfang der Sendung.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.example.b2"><strong>Bestätigung.</strong> Wir bestätigen Termin und Preis — verbindlich und schriftlich.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.example.b3"><strong>Fahrt und Übergabe.</strong> Wir laden, fahren direkt und übergeben persönlich.</span></li>
           </ul>
         </div>
         <div class="split__media" data-reveal="scale">
-          <div class="panel-media panel-media--wide img-zoom" data-cursor="Retail">
-            <img src="assets/img/warehouse-lights.jpg" alt="Distribution centre with overhead lights preparing overnight store replenishment" loading="lazy">
+          <div class="panel-media panel-media--wide img-zoom" data-cursor="Direktfahrt" data-i18n-attr="data-cursor:home.s3.title">
+            <img src="assets/img/van-road.jpg" alt="Transporter auf dem Weg zum Ziel" loading="lazy">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================================================== TECHNOLOGY -->
+  <!-- =========================================================== REACH -->
   <section class="section section--deep on-dark">
     <div class="container">
       <div class="split">
         <div class="split__text">
-          <span class="eyebrow eyebrow--light" data-reveal="fade">Technology</span>
-          <h2 data-reveal>One view of every load</h2>
-          <p class="lead" data-reveal>
-            Our visibility platform is deliberately unglamorous: it shows where the freight
-            is, whether it is on time, and what happens next. It connects to your systems
-            rather than replacing them.
+          <span class="eyebrow eyebrow--light" data-reveal="fade" data-i18n="sol.reach.eyebrow">Erreichbarkeit</span>
+          <h2 data-reveal data-i18n="sol.reach.title">Kurze Wege, klare Auskunft</h2>
+          <p class="lead" data-reveal data-i18n="sol.reach.lead">
+            Sie erreichen uns telefonisch oder per E-Mail. Wir antworten in der Regel am selben
+            Tag.
           </p>
           <ul class="feature-list" data-reveal-group="80">
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Live tracking</strong> on every vehicle, refreshed every two minutes.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Exception alerts</strong> by email or webhook when an ETA moves beyond tolerance.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>ERP integration</strong> through a documented REST API for orders, status and documents.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Digital documents</strong> — CMR, POD and temperature certificates archived per consignment.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.reach.b1"><strong>Telefonisch</strong> für kurzfristige Anfragen und Änderungen.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.reach.b2"><strong>Per E-Mail</strong> für Angebote, Listen und schriftliche Bestätigungen.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="sol.reach.b3"><strong>Vor Ort in Konstanz</strong> — Termine nach Absprache.</span></li>
           </ul>
+          <div class="split__actions" data-reveal="fade">
+            <a class="btn btn--gold" href="contact.html" data-i18n="common.cta">Kontakt aufnehmen</a>
+          </div>
         </div>
         <div class="split__media" data-reveal="scale">
-          <div class="panel-media panel-media--wide img-zoom" data-cursor="Visibility">
-            <img src="assets/img/warehouse-hall.jpg" alt="Distribution hall where consignments are scanned and tracked" loading="lazy">
+          <div class="panel-media panel-media--wide img-zoom" data-cursor="Standort" data-i18n-attr="data-cursor:ct.area.eyebrow">
+            <img src="assets/img/industrial-night.jpg" alt="Logistikbetrieb am Abend" loading="lazy">
           </div>
         </div>
       </div>
@@ -174,20 +159,20 @@
 
   <section class="cta-band">
     <div class="cta-band__media" data-parallax="0.08">
-      <img src="assets/img/industrial-pipes.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="assets/img/warehouse-shelves.jpg" alt="" aria-hidden="true" loading="lazy">
     </div>
     <div class="container cta-band__inner">
       <div class="cta-band__copy">
-        <span class="eyebrow eyebrow--light">Your Industry</span>
-        <h2>Send us the constraint you cannot solve</h2>
-        <p style="color:rgba(255,255,255,.74)">
-          Temperature excursions, peak capacity, customs delays, line stoppages. Chances are
-          we have already planned around it.
+        <span class="eyebrow eyebrow--light" data-i18n="sol.cta.eyebrow">Ihre Sendung</span>
+        <h2 data-i18n="sol.cta.title">Sagen Sie uns, was zu tun ist</h2>
+        <p style="color:rgba(255,255,255,.74)" data-i18n="sol.cta.text">
+          Wir prüfen die Anfrage, nennen Ihnen einen Termin und einen Preis — ohne
+          Verpflichtung.
         </p>
       </div>
       <div class="cta-band__actions">
-        <a class="btn btn--gold btn--lg" href="contact.html#quote">Request a Quote</a>
-        <a class="btn btn--ghost-light btn--lg" href="services.html">Browse services</a>
+        <a class="btn btn--gold btn--lg" href="contact.html#quote" data-i18n="common.quote">Angebot anfordern</a>
+        <a class="btn btn--ghost-light btn--lg" href="services.html" data-i18n="common.services">Leistungen ansehen</a>
       </div>
     </div>
   </section>
@@ -195,6 +180,7 @@
 </main>
 
 <div data-component="footer"></div>
+<script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/layout.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>

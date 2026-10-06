@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Horizon Logistics</title>
-<meta name="description" content="Request a freight quote or talk to the Horizon Logistics dispatch desk. Rotterdam headquarters and hubs in Duisburg, Antwerp and Verona.">
+<title>Kontakt — Aydın Transport &amp; Logistik</title>
+<meta name="description" content="Kontakt zu Aydın Transport &amp; Logistik: Telefon +49 160 801 66 59, E-Mail oder Anfrageformular. Wir melden uns mit einem konkreten Angebot.">
 <meta name="theme-color" content="#0A1A2F">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,26 +15,26 @@
 <link rel="stylesheet" href="assets/css/pages.css">
 <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
 </head>
-<body data-page="contact">
+<body data-page="contact" data-title-key="meta.contact.title" data-desc-key="meta.contact.desc">
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
 <div data-component="header"></div>
 
 <main id="main">
 
   <section class="page-hero">
     <div class="page-hero__media" data-parallax="0.1">
-      <img src="assets/img/vans-row.jpg" alt="Horizon Logistics delivery vans parked at the depot" fetchpriority="high">
+      <img src="assets/img/vans-row.jpg" alt="Transporter am Standort" fetchpriority="high">
     </div>
     <div class="page-hero__overlay"></div>
     <div class="container page-hero__inner">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a><span>/</span><span aria-current="page">Contact</span>
+        <a href="index.html" data-i18n="common.home">Startseite</a><span>/</span><span aria-current="page" data-i18n="nav.contact">Kontakt</span>
       </nav>
-      <h1>Talk to a planner, not a queue</h1>
-      <p>
-        Quotes, capacity checks and live shipment questions all land with the dispatch desk
-        — staffed 24 hours a day, every day of the year.
+      <h1 data-i18n="ct.hero.title">Sprechen wir über Ihre Sendung</h1>
+      <p data-i18n="ct.hero.lead">
+        Rufen Sie uns an oder schreiben Sie uns — wir melden uns mit einem konkreten Angebot
+        zurück.
       </p>
     </div>
   </section>
@@ -44,187 +44,165 @@
     <div class="container">
       <div class="contact-grid">
         <div data-reveal>
-          <span class="eyebrow" style="margin-bottom:1rem">Request a Quote</span>
-          <h2 style="margin-bottom:1rem">Tell us about the freight</h2>
-          <p style="color:var(--fg-muted);margin-bottom:2rem;max-width:48ch">
-            The more detail you give us, the more accurate the first answer will be. A named
-            account manager replies within one business day.
+          <span class="eyebrow" style="margin-bottom:1rem" data-i18n="ct.form.eyebrow">Anfrage</span>
+          <h2 style="margin-bottom:1rem" data-i18n="ct.form.title">Sagen Sie uns, was transportiert werden soll</h2>
+          <p style="color:var(--fg-muted);margin-bottom:2rem;max-width:48ch" data-i18n="ct.form.lead">
+            Je genauer Ihre Angaben, desto schneller können wir Termin und Preis nennen.
           </p>
 
           <form class="form" data-form novalidate>
             <div class="form__row">
               <div class="field">
-                <label for="name">Full name <span class="req">*</span></label>
-                <input id="name" name="name" type="text" autocomplete="name" placeholder="Alex Vermeer" required>
+                <label for="name"><span data-i18n="ct.f.name">Name</span> <span class="req">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required data-i18n-attr="placeholder:ct.f.namePh" placeholder="Vor- und Nachname">
                 <span class="field__error" aria-live="polite"></span>
               </div>
               <div class="field">
-                <label for="company">Company</label>
-                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Nordveld Industrial">
+                <label for="company" data-i18n="ct.f.company">Firma</label>
+                <input id="company" name="company" type="text" autocomplete="organization" data-i18n-attr="placeholder:ct.f.companyPh" placeholder="Optional">
                 <span class="field__error" aria-live="polite"></span>
               </div>
             </div>
 
             <div class="form__row">
               <div class="field">
-                <label for="email">Work email <span class="req">*</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="alex@company.com" required>
+                <label for="email"><span data-i18n="ct.f.email">E-Mail</span> <span class="req">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@beispiel.de">
                 <span class="field__error" aria-live="polite"></span>
               </div>
               <div class="field">
-                <label for="phone">Phone</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+31 10 555 0100">
+                <label for="phone" data-i18n="ct.f.phone">Telefon</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+49 …">
                 <span class="field__error" aria-live="polite"></span>
               </div>
             </div>
 
             <div class="field">
-              <label for="service">Service required <span class="req">*</span></label>
+              <label for="service"><span data-i18n="ct.f.service">Leistung</span> <span class="req">*</span></label>
               <select id="service" name="service" required>
-                <option value="">Please choose a service</option>
-                <option>Road Freight — full or part load</option>
-                <option>Express &amp; Last Mile</option>
-                <option>Warehousing &amp; Distribution</option>
-                <option>Contract Logistics</option>
-                <option>Specialised / ADR / Temperature controlled</option>
-                <option>Something else</option>
+                <option value="" data-i18n="ct.f.servicePh">Bitte wählen</option>
+                <option data-i18n="ct.f.opt1">Transport</option>
+                <option data-i18n="ct.f.opt2">Direktfahrt</option>
+                <option data-i18n="ct.f.opt3">Express-Lieferung</option>
+                <option data-i18n="ct.f.opt4">Kurierdienst</option>
+                <option data-i18n="ct.f.opt5">Etwas anderes</option>
               </select>
               <span class="field__error" aria-live="polite"></span>
             </div>
 
             <div class="form__row">
               <div class="field">
-                <label for="origin">Collection point</label>
-                <input id="origin" name="origin" type="text" placeholder="Rotterdam, NL">
+                <label for="origin" data-i18n="ct.f.origin">Abholort</label>
+                <input id="origin" name="origin" type="text" data-i18n-attr="placeholder:ct.f.originPh" placeholder="Straße, Ort">
                 <span class="field__error" aria-live="polite"></span>
               </div>
               <div class="field">
-                <label for="destination">Delivery point</label>
-                <input id="destination" name="destination" type="text" placeholder="Verona, IT">
+                <label for="destination" data-i18n="ct.f.destination">Zielort</label>
+                <input id="destination" name="destination" type="text" data-i18n-attr="placeholder:ct.f.originPh" placeholder="Straße, Ort">
                 <span class="field__error" aria-live="polite"></span>
               </div>
             </div>
 
             <div class="form__row">
               <div class="field">
-                <label for="freight">Freight details</label>
-                <input id="freight" name="freight" type="text" placeholder="8 pallets · 4,200 kg · 6.1 ldm">
+                <label for="details" data-i18n="ct.f.details">Sendungsdetails</label>
+                <input id="details" name="details" type="text" data-i18n-attr="placeholder:ct.f.detailsPh" placeholder="Anzahl Paletten/Kartons, Gewicht, Maße, Besonderheiten">
                 <span class="field__error" aria-live="polite"></span>
               </div>
               <div class="field">
-                <label for="date">Required collection date</label>
+                <label for="date" data-i18n="ct.f.date">Gewünschter Termin</label>
                 <input id="date" name="date" type="date">
                 <span class="field__error" aria-live="polite"></span>
               </div>
             </div>
 
             <div class="field">
-              <label for="message">Anything else we should know? <span class="req">*</span></label>
-              <textarea id="message" name="message" placeholder="Loading restrictions, temperature range, delivery windows, access equipment…" required></textarea>
+              <label for="message"><span data-i18n="ct.f.message">Nachricht</span> <span class="req">*</span></label>
+              <textarea id="message" name="message" required data-i18n-attr="placeholder:ct.f.messagePh" placeholder="Was soll transportiert werden und wann?"></textarea>
               <span class="field__error" aria-live="polite"></span>
             </div>
 
             <label class="checkbox">
               <input type="checkbox" name="consent" required>
-              <span>I agree that Horizon Logistics may contact me about this enquiry. <span class="req">*</span></span>
+              <span><span data-i18n="ct.f.consent">Ich bin damit einverstanden, dass Aydın Transport &amp; Logistik mich zu dieser Anfrage kontaktiert.</span> <span class="req">*</span></span>
             </label>
 
             <div class="form-success" role="status" tabindex="-1">
-              <strong>Thank you — your request has been received.</strong>
-              <span>A named account manager will come back to you within one business day. For anything urgent, call the dispatch desk on (555) 246-7890.</span>
+              <strong data-i18n="ct.f.successTitle">Danke — Ihre Anfrage ist eingegangen.</strong>
+              <span data-i18n="ct.f.successText">Wir melden uns mit einem konkreten Angebot zurück. Für dringende Fälle erreichen Sie uns telefonisch unter +49 160 801 66 59.</span>
             </div>
 
             <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center">
-              <button class="btn btn--gold btn--lg" type="submit">Send request</button>
-              <span class="form__note">No obligation. We never share your details.</span>
+              <button class="btn btn--gold btn--lg" type="submit" data-i18n="ct.f.submit">Anfrage senden</button>
+              <span class="form__note" data-i18n="ct.f.note">Unverbindlich. Ihre Daten werden nicht weitergegeben.</span>
             </div>
           </form>
         </div>
 
-        <aside data-reveal="right" aria-label="Contact details">
+        <aside data-reveal="right" aria-label="Kontakt">
           <div class="info-list">
             <div class="info-item">
               <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3h3l1.5 3.7-2 1.4a12.4 12.4 0 0 0 5.4 5.4l1.4-2L19.6 13v3a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4 4.7 2 2 0 0 1 6 2.5"/></svg></div>
               <div>
-                <h4>Dispatch desk</h4>
-                <p><a href="tel:+15552467890">(555) 246-7890</a></p>
-                <p style="font-size:.875rem;color:var(--fg-muted)">Staffed 24/7, 365 days a year</p>
+                <h4 data-i18n="ct.info.phoneTitle">Telefon</h4>
+                <p><a href="tel:+491608016659">+49 160 801 66 59</a></p>
+                <p style="font-size:.875rem;color:var(--fg-muted)" data-i18n="ct.info.phoneNote">Mo–Fr 08:00–18:00 Uhr</p>
               </div>
             </div>
             <div class="info-item">
               <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></div>
               <div>
-                <h4>Email</h4>
-                <p><a href="mailto:hello@horizonlogistics.com">hello@horizonlogistics.com</a></p>
-                <p><a href="mailto:quotes@horizonlogistics.com">quotes@horizonlogistics.com</a></p>
+                <h4 data-i18n="ct.info.mailTitle">E-Mail</h4>
+                <p><a href="mailto:Aydinmuhammet601@gmail.com">Aydinmuhammet601@gmail.com</a></p>
+                <p style="font-size:.875rem;color:var(--fg-muted)" data-i18n="ct.info.mailNote">Antwort in der Regel am selben Tag</p>
               </div>
             </div>
             <div class="info-item">
               <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
               <div>
-                <h4>Head office</h4>
-                <p>Havenstraat 118<br>3011 Rotterdam, Netherlands</p>
+                <h4 data-i18n="ct.info.addressTitle">Adresse</h4>
+                <p data-i18n="address">Herrenlandstraße 31–37, Konstanz, Deutschland</p>
+                <p style="font-size:.875rem;color:var(--fg-muted)" data-i18n="ct.info.addressNote">Termine nach Absprache</p>
               </div>
             </div>
             <div class="info-item">
               <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></svg></div>
               <div>
-                <h4>Opening hours</h4>
-                <p>Office: Mon–Fri 08:00–18:00 CET</p>
-                <p style="font-size:.875rem;color:var(--fg-muted)">Warehouse: 24/7</p>
+                <h4 data-i18n="ct.info.hoursTitle">Erreichbarkeit</h4>
+                <p data-i18n="ct.info.hours1">Telefon: Mo–Fr 08:00–18:00 Uhr</p>
+                <p style="font-size:.875rem;color:var(--fg-muted)" data-i18n="ct.info.hours2">Fahrten nach Vereinbarung</p>
               </div>
             </div>
-          </div>
-
-          <div class="badge-row" style="margin-top:2.5rem">
-            <span class="badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg>
-              AEO Authorised
-            </span>
-            <span class="badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/></svg>
-              Cross-border desk
-            </span>
           </div>
         </aside>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================= OFFICES -->
+  <!-- ==================================================== STANDORT -->
   <section class="section section--soft">
     <div class="container">
       <div class="section-head">
         <div>
-          <span class="eyebrow" data-reveal="fade">Locations</span>
-          <h2 class="section-head__title" data-reveal>Four hubs, one network</h2>
+          <span class="eyebrow" data-reveal="fade" data-i18n="ct.area.eyebrow">Standort &amp; Gebiet</span>
+          <h2 class="section-head__title" data-reveal data-i18n="ct.area.title">In Konstanz zu Hause, in Deutschland unterwegs</h2>
         </div>
-        <p data-reveal>
-          Every location runs the same planning standard and the same reporting, so a
-          shipment handed over between hubs never loses its paper trail.
+        <p data-reveal data-i18n="ct.area.lead">
+          Unser Standort ist Konstanz. Abholung und Zustellung koordinieren wir deutschlandweit
+          mit Ihnen.
         </p>
       </div>
 
       <div class="office-grid" data-reveal-group="80">
         <article class="office" data-reveal>
-          <h3>Rotterdam</h3>
-          <div class="office__role">Headquarters</div>
-          <p>Havenstraat 118, 3011 Rotterdam, Netherlands<br>+31 10 555 0100</p>
+          <h3 data-i18n="ct.area.o1">Konstanz</h3>
+          <div class="office__role" data-i18n="ct.area.o1role">Standort</div>
+          <p data-i18n="address">Herrenlandstraße 31–37, Konstanz, Deutschland</p>
         </article>
         <article class="office" data-reveal>
-          <h3>Duisburg</h3>
-          <div class="office__role">Hub</div>
-          <p>Hafenstraße 42, 47059 Duisburg, Germany<br>+49 203 555 0120</p>
-        </article>
-        <article class="office" data-reveal>
-          <h3>Antwerp</h3>
-          <div class="office__role">Hub</div>
-          <p>Noorderlaan 205, 2030 Antwerp, Belgium<br>+32 3 555 0140</p>
-        </article>
-        <article class="office" data-reveal>
-          <h3>Verona</h3>
-          <div class="office__role">Hub</div>
-          <p>Via dell'Industria 9, 37135 Verona, Italy<br>+39 045 555 0160</p>
+          <h3 data-i18n="ct.area.o2">Deutschlandweit</h3>
+          <div class="office__role" data-i18n="ct.area.o2role">Einsatzgebiet</div>
+          <p data-i18n="ct.area.o2text">Transporte, Direktfahrten und Kurierdienste nach Absprache.</p>
         </article>
       </div>
     </div>
@@ -235,61 +213,80 @@
     <div class="container container--narrow">
       <div class="section-head">
         <div>
-          <span class="eyebrow" data-reveal="fade">Questions</span>
-          <h2 class="section-head__title" data-reveal>Before you ask</h2>
+          <span class="eyebrow" data-reveal="fade" data-i18n="ct.faq.eyebrow">Fragen</span>
+          <h2 class="section-head__title" data-reveal data-i18n="ct.faq.title">Häufige Fragen</h2>
         </div>
       </div>
 
       <div class="accordion" data-reveal-group="60">
         <div class="accordion__item is-open" data-reveal>
           <button class="accordion__trigger" type="button" aria-expanded="true" aria-controls="faq-1">
-            How quickly can you collect?
+            <span data-i18n="ct.q1">Wie schnell erhalte ich ein Angebot?</span>
             <span class="accordion__icon" aria-hidden="true"></span>
           </button>
           <div class="accordion__panel" id="faq-1" aria-hidden="false">
-            <div><p>For express requests we target collection within 90 minutes inside the Randstad and the same day across the Benelux and Ruhr. Standard road freight is normally collected within 24 hours of a confirmed booking, depending on the lane and the vehicle class.</p></div>
+            <div><p data-i18n="ct.a1">In der Regel am selben Tag. Am schnellsten geht es telefonisch unter +49 160 801 66 59 — dort klären wir Umfang und Termin direkt.</p></div>
           </div>
         </div>
 
         <div class="accordion__item" data-reveal>
           <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-2">
-            Do you handle customs paperwork?
+            <span data-i18n="ct.q2">Ab welcher Menge nehmen Sie Aufträge an?</span>
             <span class="accordion__icon" aria-hidden="true"></span>
           </button>
           <div class="accordion__panel" id="faq-2" aria-hidden="true">
-            <div><p>Yes. We are AEO authorised and run an in-house brokerage desk for T1, T2, EX and IM declarations. We will also prepare the CMR, packing lists and certificates of origin where the lane requires them, so nothing waits at the border for a missing document.</p></div>
+            <div><p data-i18n="ct.a2">Wir fahren einzelne Sendungen ebenso wie regelmäßige Transporte. Umfang und Termin stimmen wir vorab mit Ihnen ab.</p></div>
           </div>
         </div>
 
         <div class="accordion__item" data-reveal>
           <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-3">
-            Can you transport temperature-controlled goods?
+            <span data-i18n="ct.q3">Welche Gebiete bedienen Sie?</span>
             <span class="accordion__icon" aria-hidden="true"></span>
           </button>
           <div class="accordion__panel" id="faq-3" aria-hidden="true">
-            <div><p>We operate reefer and dual-compartment trailers holding 2–8 °C or −20 °C, with continuous temperature logging and a certificate issued per consignment. Pharma lanes follow our GDP procedures; food lanes follow HACCP hygiene protocols.</p></div>
+            <div><p data-i18n="ct.a3">Wir sind deutschlandweit unterwegs. Abholung und Zustellung koordinieren wir mit Ihnen — auch über weitere Strecken.</p></div>
           </div>
         </div>
 
         <div class="accordion__item" data-reveal>
           <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-4">
-            What does insurance cover?
+            <span data-i18n="ct.q4">Wie läuft der Kontakt während der Fahrt?</span>
             <span class="accordion__icon" aria-hidden="true"></span>
           </button>
           <div class="accordion__panel" id="faq-4" aria-hidden="true">
-            <div><p>Standard CMR liability applies to every international consignment. Additional all-risk cover can be arranged per shipment or as an annual policy — tell us the cargo value in your enquiry and we will include the premium in the quote.</p></div>
+            <div><p data-i18n="ct.a4">Wir melden uns bei der Abholung und vor der Zustellung. So wissen Sie jederzeit, wo Ihre Sendung ist.</p></div>
           </div>
         </div>
 
         <div class="accordion__item" data-reveal>
           <button class="accordion__trigger" type="button" aria-expanded="false" aria-controls="faq-5">
-            Do you work with our own carriers?
+            <span data-i18n="ct.q5">Transportieren Sie auch für Privatkunden?</span>
             <span class="accordion__icon" aria-hidden="true"></span>
           </button>
           <div class="accordion__panel" id="faq-5" aria-hidden="true">
-            <div><p>Frequently. We can act as lead logistics provider, planning and monitoring subcontracted capacity under our own service level, with a single invoice and one point of accountability for the whole flow.</p></div>
+            <div><p data-i18n="ct.a5">Ja. Wir fahren für Privat- und Geschäftskunden — vom einzelnen Möbelstück bis zur regelmäßigen Lieferung.</p></div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="cta-band__media" data-parallax="0.08">
+      <img src="assets/img/industrial-pipes.jpg" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="container cta-band__inner">
+      <div class="cta-band__copy">
+        <span class="eyebrow eyebrow--light" data-i18n="ct.info.phoneTitle">Telefon</span>
+        <h2 data-i18n="ct.cta.title">Lieber direkt sprechen?</h2>
+        <p style="color:rgba(255,255,255,.74)" data-i18n="ct.cta.text">
+          Rufen Sie uns an — Sie sprechen direkt mit dem Fahrer und Inhaber.
+        </p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--gold btn--lg" href="tel:+491608016659">☎ +49 160 801 66 59</a>
+        <a class="btn btn--ghost-light btn--lg" href="mailto:Aydinmuhammet601@gmail.com">✉ Aydinmuhammet601@gmail.com</a>
       </div>
     </div>
   </section>
@@ -297,6 +294,7 @@
 </main>
 
 <div data-component="footer"></div>
+<script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/layout.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>

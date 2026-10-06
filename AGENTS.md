@@ -2,11 +2,27 @@
 
 ## What is here
 
-- `website/` — the HORIZON LOGISTICS marketing site. Hand-written static HTML/CSS/JS,
-  **no build step, no framework, no dependencies**. This is what port 3000 serves.
+- `website/` — the AYDIN TRANSPORT & LOGISTIK marketing site. Hand-written static
+  HTML/CSS/JS, **no build step, no framework, no dependencies**. This is what port 3000
+  serves.
 - `logistics-platform/` — the original three-page Farsi demo (admin panel, customer
-  request form, driver list) using `localStorage`. Untouched by the site work; it is not
-  served by the compose stack.
+  request form, driver list) using `localStorage`. Unrelated to the site; it is not served
+  by the compose stack.
+
+## The business behind the site
+
+Real details, taken from the owner — do not invent more:
+
+- Brand: **Aydın Transport & Logistik** (van livery: "Zuverlässig. Schnell. Pünktlich.",
+  gold arc through the "A"), family-run, based in Konstanz.
+- Phone `+49 160 801 66 59`, email `Aydinmuhammet601@gmail.com`,
+  Herrenlandstraße 31–37, Konstanz. No postcode has been supplied — do not invent one.
+- Services are the owner's list: deutschlandweite Transporte, Direktfahrten,
+  Express-Lieferungen, Kurierdienste, on the strength of a 3.5-tonne van, for private and
+  business customers. Everything the old "Horizon Logistics" site claimed beyond that
+  (185 vehicles, ISO/AEO/GDP certificates, warehouses, Rotterdam/Duisburg/Antwerp/Verona
+  hubs, customer logos, testimonials, statistics) was **placeholder fiction and has been
+  removed** — do not reintroduce claims like these without the owner confirming them.
 
 ## Running it
 
@@ -17,57 +33,80 @@ docker compose -f docker-compose.base44.yml logs -f web
 ```
 
 `web` is plain `nginx:alpine` with `website/` bind-mounted read-only, so **nginx reads the
-files from disk on every request** — edit a file and just refresh; there is no rebuild,
-no watcher and no restart to run. Cache headers are disabled for development in
+files from disk on every request** — edit a file and just refresh; there is no rebuild, no
+watcher and no restart to run. Cache headers are disabled for development in
 `docker/nginx.default.conf`. Clean URLs work: `/services` also serves `services.html`.
 
-Health check greps the served HTML for `horizon logistics` (case-insensitive). If you
-change the site so that string disappears, update the check in `docker-compose.base44.yml`.
+Health check greps the served HTML for `aydin` (case-insensitive; matched by the brand
+image path and the email address, both ASCII — the dotless "ı" in *Aydın* is not a safe
+grep target). If that string disappears, update the check in `docker-compose.base44.yml`.
+
+## Three languages — how the i18n layer works
+
+The site is **German (default), English and Turkish**, switched client-side, no build step:
+
+- `website/assets/js/i18n.js` holds the whole dictionary. Every entry is an array in the
+  order `[de, en, tr]`, so keys can never drift between languages. It also exposes
+  `window.AydinI18n` (`t()`, `lang()`, `set()`, `onChange()`), remembers the choice in
+  `localStorage` under `aydin_lang`, and updates `<html lang>`, the document title and the
+  meta description.
+- Pages opt in per element: `data-i18n="key"` → textContent, `data-i18n-html="key"` →
+  innerHTML (for strings carrying `<br>` or `<strong>`), `data-i18n-attr="placeholder:key"`
+  → attributes. `<body data-title-key data-desc-key>` swaps title/description.
+- **Every translatable string also carries its German text inline**, so the pages still
+  read correctly with JS disabled or before the switch runs. Keep those two in sync.
+- Head/footer live in `website/assets/js/layout.js`; both are rebuilt by `render()` on a
+  language change, which is why script order matters:
+  `i18n.js → layout.js → main.js`. `main.js` rebinds the header and curtain menu on the
+  `layout:rendered` event (it guards its own scroll/resize/keydown listeners so repeated
+  switches do not stack them up). If you add a script, keep that order.
+- When adding a section: put the new key in `i18n.js` for all three languages and mark the
+  markup — never hard-code a language into a component.
 
 ## How the site is put together
 
-- **Header and footer are injected by JavaScript**, from `website/assets/js/layout.js`.
-  To change navigation, the phone number, footer columns or social links, edit that one
-  file — do **not** copy markup into each page. Every page opts in with
-  `<div data-component="header">` / `<div data-component="footer">` and identifies itself
-  with `<body data-page="home|services|about|solutions|fleet|contact">`, which drives the
-  active navigation state.
+- **Header and footer are injected by JavaScript.** To change navigation, the phone
+  number, address or footer columns, edit `layout.js` — do **not** copy markup into each
+  page. Every page opts in with `<div data-component="header">` / `<div data-component="footer">`
+  and identifies itself with `<body data-page="home|services|about|solutions|fleet|contact">`,
+  which drives the active navigation state.
 - **CSS is split by layer** and every page loads all three in this order:
   `base.css` (tokens, reset, typography, buttons, reveal primitives),
-  `components.css` (header, footer, cards, carousel, forms, accordion, cursor),
-  `pages.css` (hero, page hero, splits, CTA band, contact layout).
+  `components.css` (header, footer, cards, carousel, forms, accordion, cursor, language
+  switch), `pages.css` (hero, page hero, splits, CTA band, contact layout).
   Add a new page section to `pages.css`; add a reusable widget to `components.css`.
 - **Colours and spacing come from CSS custom properties** in `:root` in `base.css`
-  (`--navy-900`, `--ivory`, `--gold`, `--section-y`, …). Change the palette there, not in
-  individual rules.
-- **Animations**: put `data-reveal` on an element to fade it in on scroll, and
-  `data-reveal-group="90"` on its parent to stagger children by 90 ms. `data-count="123"`
-  animates a number. `data-cursor="Label"` shows the label in the custom cursor ring.
-  All of it is disabled under `prefers-reduced-motion`, and each page carries a
+  (`--navy-900`, `--ivory`, `--gold`, `--section-y`, …) — the navy `#0A1A2F` and gold
+  `#C5A059` come from the company's own van livery, so keep the palette.
+- **Animations**: `data-reveal` fades an element in on scroll, `data-reveal-group="90"`
+  staggers children, `data-count="123"` animates a number, `data-cursor="Label"` shows a
+  label in the cursor ring. All disabled under `prefers-reduced-motion`; each page carries a
   `<noscript>` fallback so content is never hidden if JS fails.
-- Scripts are loaded with `defer` in the order `layout.js` then `main.js`; `main.js`
-  assumes the header exists.
+- Brand assets: `assets/img/aydin-van-branded.png` is the owner's own photo of the
+  liveried van (hero on the home page, vehicle shot on the fleet page). The other
+  photographs in `assets/img/` are Unsplash stock, free for commercial use — swap in the
+  owner's own photography when it exists.
 
-## Placeholder content to replace before launch
+## Known loose ends
 
-- Phone `(555) 246-7890`, emails `hello@` / `quotes@horizonlogistics.com`, the Rotterdam /
-  Duisburg / Antwerp / Verona addresses, opening hours.
-- Every statistic, service level, certification claim, timeline entry, customer name and
-  testimonial on the site is **illustrative placeholder copy**, not audited fact.
-- The quote form on `contact.html` validates input and stores the submission in
-  `localStorage` under `horizon_enquiries` — there is **no backend**, so nothing is
-  actually delivered. Wire it to a form endpoint, CRM or mail service before going live.
-- Photography lives in `website/assets/img/` (downloaded from Unsplash, free for
-  commercial use). Swap in the client's own fleet and facility photography when available;
-  keep the wide/portrait crops so the `media-stack` layout still works.
+- The enquiry form on `contact.html` validates input and stores submissions in
+  `localStorage` under `aydin_requests` — there is **no backend**, so nothing is actually
+  delivered. Wire it to a form endpoint, CRM or mail service before going live.
+- Footer legal links (Impressum, Datenschutz, AGB) are `#` placeholders.
+- The site is trilingual with no server-side routing: crawlers only ever index the German
+  copy at the canonical URLs.
 
 ## Verifying a change
 
 ```bash
 curl -s -o /dev/null -w '%{http_code}\n' http://localhost:3000/           # expect 200
-curl -s http://localhost:3000/ | grep -i 'horizon logistics'             # real content
+curl -s http://localhost:3000/ | grep -i 'aydin'                         # real content
+for p in index services about solutions fleet contact; do
+  curl -s -o /dev/null -w "$p %{http_code}\n" http://localhost:3000/$p.html
+done
 docker compose -f docker-compose.base44.yml ps                           # web: healthy
 ```
 
-There is no test suite; the site is verified by loading it and by checking that every
-page and asset returns 200.
+There is no test suite; the site is verified by loading it, by flipping DE/EN/TR (all three
+languages must render every page without blank spots) and by checking that every page and
+asset returns 200.

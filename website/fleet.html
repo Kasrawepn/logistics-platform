@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fleet — Horizon Logistics</title>
-<meta name="description" content="185 vehicles, Euro 6 articulated units, city-compliant vans and specialised equipment — maintained in-house and monitored end to end.">
+<title>Fuhrpark — Aydın Transport &amp; Logistik</title>
+<meta name="description" content="Unser 3,5-Tonnen-Transporter: flexibel im Stadtverkehr, belastbar auf der Langstrecke — für Direktfahrten und Express-Lieferungen.">
 <meta name="theme-color" content="#0A1A2F">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,255 +15,107 @@
 <link rel="stylesheet" href="assets/css/pages.css">
 <noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
 </head>
-<body data-page="fleet">
+<body data-page="fleet" data-title-key="meta.fleet.title" data-desc-key="meta.fleet.desc">
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
 <div data-component="header"></div>
 
 <main id="main">
 
   <section class="page-hero">
     <div class="page-hero__media" data-parallax="0.1">
-      <img src="assets/img/hero-truck.jpg" alt="Horizon Logistics articulated vehicle on the motorway at dusk" fetchpriority="high">
+      <img src="assets/img/van-road.jpg" alt="Transporter auf einer Landstraße" fetchpriority="high">
     </div>
     <div class="page-hero__overlay"></div>
     <div class="container page-hero__inner">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a><span>/</span><span aria-current="page">Fleet</span>
+        <a href="index.html" data-i18n="common.home">Startseite</a><span>/</span><span aria-current="page" data-i18n="nav.fleet">Fuhrpark</span>
       </nav>
-      <h1>Equipment maintained to a standard, not a budget</h1>
-      <p>
-        185 vehicles, an average age of 3.4 years and a workshop that services 92% of our
-        own fleet. Reliability on the road starts in the yard.
+      <h1 data-i18n="fl.hero.title">Unser 3,5-Tonnen-Transporter</h1>
+      <p data-i18n="fl.hero.lead">
+        Flexibel im Stadtverkehr, belastbar auf der Langstrecke — unser Transporter ist das
+        Herzstück jeder Fahrt.
       </p>
     </div>
   </section>
 
-  <!-- =========================================================== FLEET -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow" data-reveal="fade">Vehicle Classes</span>
-          <h2 class="section-head__title" data-reveal>Every load has a right vehicle</h2>
-        </div>
-        <div class="carousel__nav" data-reveal="fade">
-          <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous vehicles">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg>
-          </button>
-          <button class="carousel__btn" type="button" data-carousel-next aria-label="More vehicles">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6l6 6-6 6"/></svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="carousel" data-carousel>
-        <div class="carousel__track">
-          <article class="fleet-card">
-            <div class="fleet-card__media">
-              <span class="fleet-card__tag">Long haul</span>
-              <img src="assets/img/hero-truck.jpg" alt="Articulated tractor unit on a motorway at dusk" loading="lazy">
-            </div>
-            <div class="fleet-card__body">
-              <h3>Articulated 40t</h3>
-              <dl class="fleet-card__specs">
-                <div><dt>Payload</dt><dd>24,000 kg</dd></div>
-                <div><dt>Capacity</dt><dd>33 euro pallets</dd></div>
-                <div><dt>Euro class</dt><dd>Euro 6 · Low emission</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="fleet-card">
-            <div class="fleet-card__media">
-              <span class="fleet-card__tag">Distribution</span>
-              <img src="assets/img/truck-fleet.jpg" alt="Rigid distribution trucks travelling in convoy" loading="lazy">
-            </div>
-            <div class="fleet-card__body">
-              <h3>Rigid 12t</h3>
-              <dl class="fleet-card__specs">
-                <div><dt>Payload</dt><dd>6,400 kg</dd></div>
-                <div><dt>Capacity</dt><dd>14 euro pallets</dd></div>
-                <div><dt>Access</dt><dd>Tail lift + side gates</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="fleet-card">
-            <div class="fleet-card__media">
-              <span class="fleet-card__tag">Last mile</span>
-              <img src="assets/img/vans-row.jpg" alt="A row of white delivery vans parked at a depot" loading="lazy">
-            </div>
-            <div class="fleet-card__body">
-              <h3>Sprinter 3.5t</h3>
-              <dl class="fleet-card__specs">
-                <div><dt>Payload</dt><dd>1,250 kg</dd></div>
-                <div><dt>Capacity</dt><dd>11 m³</dd></div>
-                <div><dt>Access</dt><dd>City centre compliant</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="fleet-card">
-            <div class="fleet-card__media">
-              <span class="fleet-card__tag">Urban</span>
-              <img src="assets/img/van-road.jpg" alt="Delivery van in service on a rural road" loading="lazy">
-            </div>
-            <div class="fleet-card__body">
-              <h3>Metro Van</h3>
-              <dl class="fleet-card__specs">
-                <div><dt>Payload</dt><dd>900 kg</dd></div>
-                <div><dt>Capacity</dt><dd>7 m³</dd></div>
-                <div><dt>Access</dt><dd>Zero-emission zone ready</dd></div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="fleet-card">
-            <div class="fleet-card__media">
-              <span class="fleet-card__tag">Specialised</span>
-              <img src="assets/img/industrial-pipes.jpg" alt="Technical installations inside a specialised freight handling facility" loading="lazy">
-            </div>
-            <div class="fleet-card__body">
-              <h3>Specialised Units</h3>
-              <dl class="fleet-card__specs">
-                <div><dt>Payload</dt><dd>Up to 32,000 kg</dd></div>
-                <div><dt>Options</dt><dd>Reefer, ADR, curtain-side</dd></div>
-                <div><dt>Monitoring</dt><dd>Temperature + shock</dd></div>
-              </dl>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================================================== SPEC SHEETS -->
-  <section class="section section--soft">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <span class="eyebrow" data-reveal="fade">Specifications</span>
-          <h2 class="section-head__title" data-reveal>The detail behind the class</h2>
-        </div>
-        <p data-reveal>
-          Trailers, bodies and tail lifts are specified per contract so the equipment
-          matches the loading bay it will meet.
-        </p>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem" data-reveal-group="100">
-        <div data-reveal>
-          <h3 style="margin-bottom:1.25rem">Articulated fleet</h3>
-          <table class="spec-table">
-            <tbody>
-              <tr><th scope="row">Units</th><td>74 tractor units</td></tr>
-              <tr><th scope="row">Bodies</th><td>Curtain-side, box, reefer, ADR</td></tr>
-              <tr><th scope="row">Lengths</th><td>13.6 m / 16.5 m mega</td></tr>
-              <tr><th scope="row">Telematics</th><td>GPS, EBS, temperature, door sensors</td></tr>
-              <tr><th scope="row">Avg. age</th><td>3.1 years</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div data-reveal>
-          <h3 style="margin-bottom:1.25rem">Rigid &amp; distribution</h3>
-          <table class="spec-table">
-            <tbody>
-              <tr><th scope="row">Units</th><td>52 vehicles</td></tr>
-              <tr><th scope="row">Payloads</th><td>3.5 t · 7.5 t · 12 t</td></tr>
-              <tr><th scope="row">Access</th><td>Tail lift to 2,000 kg, roller doors</td></tr>
-              <tr><th scope="row">Compliance</th><td>FORCE / CLOCS aligned</td></tr>
-              <tr><th scope="row">Avg. age</th><td>3.6 years</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div data-reveal>
-          <h3 style="margin-bottom:1.25rem">Vans &amp; specialised</h3>
-          <table class="spec-table">
-            <tbody>
-              <tr><th scope="row">Units</th><td>59 vans and specialist units</td></tr>
-              <tr><th scope="row">Vans</th><td>3.5 t Sprinter and metro class</td></tr>
-              <tr><th scope="row">Electric</th><td>40 vans, 180 km real-world range</td></tr>
-              <tr><th scope="row">Specialist</th><td>Reefer, ADR 2–9, low-loader</td></tr>
-              <tr><th scope="row">Monitoring</th><td>Continuous temperature and shock logging</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================= WORKSHOP -->
+  <!-- ========================================================= VEHICLE -->
   <section class="section">
     <div class="container">
       <div class="split">
         <div class="split__text">
-          <span class="eyebrow" data-reveal="fade">Maintenance &amp; Safety</span>
-          <h2 data-reveal>A workshop, not a repair account</h2>
-          <p class="lead" data-reveal>
-            Two in-house workshops and a network of contracted partners keep our fleet inside
-            PMI on schedule. Vehicles are inspected against a checklist before every
-            departure, not once a year.
+          <span class="eyebrow" data-reveal="fade" data-i18n="fl.vehicle.eyebrow">Unser Fahrzeug</span>
+          <h2 data-reveal data-i18n="fl.vehicle.title">Ein Fahrzeug, das zu vielen Aufgaben passt</h2>
+          <p class="lead" data-reveal data-i18n="fl.vehicle.lead">
+            Ein 3,5-Tonnen-Transporter ist die richtige Wahl für Sendungen, die ohne Umladung
+            und ohne Zwischenlager ans Ziel kommen sollen.
           </p>
           <ul class="feature-list" data-reveal-group="80">
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>92% serviced in-house</strong>, with safety-critical work always under our own supervision.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Driver defect reporting</strong> by app, each entry closed out with a named engineer.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Security screening</strong> and continuous CPC training for every driver we put on the road.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="fl.vehicle.b1"><strong>Direktfahrten</strong> ohne Umladung — ein Fahrzeug von Abholung bis Übergabe.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="fl.vehicle.b2"><strong>Express-Lieferungen</strong> für zeitkritische Sendungen.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="fl.vehicle.b3"><strong>Deutschlandweit</strong> unterwegs, auch über weitere Strecken.</span></li>
           </ul>
+          <div class="split__actions" data-reveal="fade">
+            <a class="btn btn--navy" href="contact.html#quote" data-i18n="common.quote">Angebot anfordern</a>
+          </div>
         </div>
         <div class="split__media" data-reveal="scale">
-          <div class="panel-media panel-media--wide img-zoom" data-cursor="Our Workshop">
-            <img src="assets/img/industrial-pipes.jpg" alt="Technical service installations inside the Horizon Logistics workshop" loading="lazy">
+          <div class="panel-media panel-media--wide img-zoom" data-cursor="Unser Transporter" data-i18n-attr="data-cursor:fl.vehicle.cursor">
+            <img src="assets/img/aydin-van-branded.png" alt="3,5-Tonnen-Transporter mit Aufschrift Aydın Transport &amp; Logistik" loading="lazy">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================================================== SUSTAINABILITY -->
-  <section class="section section--warm">
+  <!-- =========================================================== CARGO -->
+  <section class="section section--soft">
     <div class="container">
-      <div class="split split--reverse">
-        <div class="split__text">
-          <span class="eyebrow" data-reveal="fade">Sustainability</span>
-          <h2 data-reveal>Fewer litres for the same delivery</h2>
-          <p class="lead" data-reveal>
-            We do not publish pledges we cannot evidence. What we can evidence is a fleet
-            transition measured in litres, kilometres and grams of CO₂ per consignment —
-            reported to every contract customer each quarter.
-          </p>
-          <ul class="feature-list" data-reveal-group="80">
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>HVO renewable diesel</strong> at all four hubs, cutting emissions up to 90% per litre.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>40 electric vans</strong> now covering urban routes that were previously diesel.</span></li>
-            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Load optimisation</strong> that removed 1.4 million empty kilometres from our network in 2024.</span></li>
-          </ul>
-          <div class="split__actions" data-reveal="fade"><a class="btn btn--navy" href="contact.html">Ask for our emissions report</a></div>
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal="fade" data-i18n="fl.cargo.eyebrow">Ladegut</span>
+          <h2 class="section-head__title" data-reveal data-i18n="fl.cargo.title">Was wir typischerweise transportieren</h2>
         </div>
-        <div class="split__media" data-reveal="scale">
-          <div class="panel-media panel-media--wide img-zoom" data-cursor="Clean Fleet">
-            <img src="assets/img/vans-row.jpg" alt="A row of delivery vans at the Horizon Logistics depot" loading="lazy">
-          </div>
-        </div>
+        <p data-reveal data-i18n="fl.cargo.lead">
+          Sagen Sie uns, worum es geht — wir prüfen, ob Fahrzeug und Termin passen.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem" data-reveal-group="80">
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 4.5-9 4.5L3 7.5 12 3Z"/><path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5"/></svg></div>
+          <h3 data-i18n="fl.c1.title">Paletten und Kartons</h3>
+          <p data-i18n="fl.c1.text">Einzelne Paletten und kleinere Mengen, sicher verzurrt und trocken transportiert.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18V9l8-5 8 5v9"/><path d="M9 18v-6h6v6"/></svg></div>
+          <h3 data-i18n="fl.c2.title">Möbel und Einzelstücke</h3>
+          <p data-i18n="fl.c2.text">Sperrige oder empfindliche Stücke, die sorgfältig verladen werden müssen.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5h10.5v9H2z"/><path d="M12.5 11h4.2l2.3 3v2.5h-6.5z"/><circle cx="6.4" cy="18.5" r="1.6"/><circle cx="16.4" cy="18.5" r="1.6"/></svg></div>
+          <h3 data-i18n="fl.c3.title">Geschäftliche Sendungen</h3>
+          <p data-i18n="fl.c3.text">Regelmäßige Lieferungen und Direktfahrten für Betriebe und Handel.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <section class="cta-band">
     <div class="cta-band__media" data-parallax="0.08">
-      <img src="assets/img/van-road.jpg" alt="" aria-hidden="true" loading="lazy">
+      <img src="assets/img/van-loading.jpg" alt="" aria-hidden="true" loading="lazy">
     </div>
     <div class="container cta-band__inner">
       <div class="cta-band__copy">
-        <span class="eyebrow eyebrow--light">Capacity</span>
-        <h2>Need a vehicle this week?</h2>
-        <p style="color:rgba(255,255,255,.74)">
-          Our planner keeps short-notice capacity in reserve for exactly this question.
-          Tell us the load and we will confirm what is available.
+        <span class="eyebrow eyebrow--light" data-i18n="fl.cta.eyebrow">Kapazität</span>
+        <h2 data-i18n="fl.cta.title">Passt Ihre Sendung in unser Fahrzeug?</h2>
+        <p style="color:rgba(255,255,255,.74)" data-i18n="fl.cta.text">
+          Ein kurzer Anruf klärt Umfang, Termin und Machbarkeit.
         </p>
       </div>
       <div class="cta-band__actions">
-        <a class="btn btn--gold btn--lg" href="contact.html#quote">Check availability</a>
-        <a class="btn btn--ghost-light btn--lg" href="tel:+15552467890">☎ (555) 246-7890</a>
+        <a class="btn btn--gold btn--lg" href="contact.html#quote" data-i18n="common.quote">Angebot anfordern</a>
+        <a class="btn btn--ghost-light btn--lg" href="tel:+491608016659">☎ +49 160 801 66 59</a>
       </div>
     </div>
   </section>
@@ -271,6 +123,7 @@
 </main>
 
 <div data-component="footer"></div>
+<script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/layout.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>
