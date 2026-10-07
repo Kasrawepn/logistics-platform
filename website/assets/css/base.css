@@ -541,17 +541,15 @@ p {
 
 .img-zoom {
   overflow: hidden;
+  background: var(--navy-900);
 }
 
 .img-zoom img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   transition: transform 1.1s var(--ease-out);
-}
-
-.img-zoom:hover img {
-  transform: scale(1.055);
 }
 
 /* --- Reduced motion ---------------------------------------------------- */
