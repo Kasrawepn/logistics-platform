@@ -82,10 +82,18 @@ The site is **German (default), English and Turkish**, switched client-side, no 
   staggers children, `data-count="123"` animates a number, `data-cursor="Label"` shows a
   label in the cursor ring. All disabled under `prefers-reduced-motion`; each page carries a
   `<noscript>` fallback so content is never hidden if JS fails.
-- Brand assets: `assets/img/aydin-van-branded.png` is the owner's own photo of the
-  liveried van (hero on the home page, vehicle shot on the fleet page). The other
-  photographs in `assets/img/` are Unsplash stock, free for commercial use — swap in the
-  owner's own photography when it exists.
+- Brand assets: the site runs on the owner's own photography — `aydin-van-white.jpg` /
+  `aydin-van-dark.jpg` (the two liveried vans), `aydin-trucks.jpg` (parked fleet),
+  `aydin-office.jpg` (the branded meeting room) and `aydin-team-1..4.jpg` (driver
+  portraits). The old Unsplash stock photos have been deleted; `aydin-van-branded.png` is
+  the earlier cut-out, kept but no longer referenced. The new files were cut from the
+  owner's phone photos: the phone status bar and navigation bar were trimmed off, and each
+  portrait is a 4:5 crop centred on the detected face — that is what keeps faces readable
+  under `object-fit: cover` in the narrow service-card and panel slots. Re-crop with a face
+  detector rather than a plain centre crop if these are ever replaced.
+- `about.html` carries a `Unser Team` portrait grid (`.team-grid` / `.team-card` in
+  `pages.css`) fed by the four driver photos; its copy lives under the `ab.team.*` i18n
+  keys.
 
 ## Known loose ends
 

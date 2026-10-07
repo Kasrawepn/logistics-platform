@@ -442,6 +442,17 @@
     "ab.who.cta1": ["Angebot anfordern", "Request a quote", "Teklif isteyin"],
     "ab.who.cta2": ["Fuhrpark ansehen", "See the fleet", "Filomuzu görün"],
     "ab.who.caption": ["Konstanz · deutschlandweit im Einsatz", "Constance · on the road across Germany", "Konstanz · Almanya genelinde hizmet"],
+    "ab.team.eyebrow": ["Unser Team", "Our team", "Ekibimiz"],
+    "ab.team.title": [
+      "Die Menschen hinter Aydın Transport & Logistik",
+      "The people behind Aydın Transport & Logistics",
+      "Aydın Transport & Lojistik'in arkasındaki insanlar",
+    ],
+    "ab.team.lead": [
+      "Familiengeführt: Bei uns sprechen Sie direkt mit den Menschen, die planen und fahren.",
+      "Family-run: you speak directly with the people who plan and drive.",
+      "Aile işletmesi: sizinle planlayan ve süren insanlarla doğrudan konuşursunuz.",
+    ],
     "ab.values.eyebrow": ["Worauf Sie sich verlassen können", "What you can count on", "Güvenebilecekleriniz"],
     "ab.values.title": ["Vier Zusagen, jeden Tag", "Four promises, every day", "Her gün dört söz"],
     "ab.values.lead": [

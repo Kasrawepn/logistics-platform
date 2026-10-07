@@ -330,6 +330,40 @@
   color: var(--fg-muted);
 }
 
+/* --------------------------------------------------------------- Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.team-card {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--navy-900);
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.1s var(--ease-out);
+}
+
+.team-card:hover img {
+  transform: scale(1.04);
+}
+
+.team-note {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
 /* ---------------------------------------------------------- Feature list */
 .feature-list {
   display: grid;
