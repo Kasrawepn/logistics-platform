@@ -1282,3 +1282,77 @@ body.menu-open .nav-toggle__bars span:nth-child(3) {
     height: 34px;
   }
 }
+
+/* ------------------------------------------------- Floating quick contact */
+/* WhatsApp + direct phone, pinned to the viewport so they stay on screen
+   while the page scrolls. Injected by layout.js on every page. */
+.quick-contact {
+  position: fixed;
+  right: clamp(0.85rem, 2.5vw, 1.75rem);
+  bottom: max(1.25rem, env(safe-area-inset-bottom, 0px));
+  z-index: 80;
+  display: grid;
+  gap: 0.7rem;
+  justify-items: center;
+  animation: quickContactIn 0.7s var(--ease-out) 0.35s both;
+}
+
+@keyframes quickContactIn {
+  from {
+    opacity: 0;
+    transform: translateX(38px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.quick-contact__btn {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 18px 34px -18px rgba(10, 26, 47, 0.7);
+  transition: transform 0.35s var(--ease-out), background 0.35s var(--ease-out),
+    box-shadow 0.35s var(--ease-out);
+}
+
+.quick-contact__btn svg {
+  width: 25px;
+  height: 25px;
+}
+
+.quick-contact__btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 22px 38px -18px rgba(10, 26, 47, 0.8);
+}
+
+.quick-contact__btn--whatsapp {
+  background: #25d366;
+}
+
+.quick-contact__btn--call {
+  background: var(--gold);
+  color: var(--navy-900);
+}
+
+.quick-contact__btn--call:hover {
+  background: var(--gold-600);
+}
+
+@media (max-width: 720px) {
+  .quick-contact {
+    gap: 0.6rem;
+  }
+  .quick-contact__btn {
+    width: 48px;
+    height: 48px;
+  }
+  .quick-contact__btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}

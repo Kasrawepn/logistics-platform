@@ -101,6 +101,12 @@
     "common.prev": ["Vorheriges Fahrzeug", "Previous vehicle", "Önceki araç"],
     "common.next": ["Nächstes Fahrzeug", "Next vehicle", "Sonraki araç"],
     "common.cta": ["Kontakt aufnehmen", "Get in touch", "Bize ulaşın"],
+    "common.whatsapp": [
+      "WhatsApp schreiben",
+      "Message on WhatsApp",
+      "WhatsApp'tan yazın",
+    ],
+    "common.call": ["Jetzt anrufen", "Call now", "Hemen ara"],
 
     /* -------------------------------------------------------------- footer */
     "footer.aboutTitle": [
