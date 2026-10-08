@@ -280,6 +280,8 @@
   function initForms() {
     document.querySelectorAll("[data-form]").forEach((form) => {
       const success = form.querySelector(".form-success");
+      const failure = form.querySelector(".form-error");
+      const submit = form.querySelector('button[type="submit"]');
 
       const setError = (field, message) => {
         const wrapper = field.closest(".field") || field.closest(".checkbox");
@@ -310,7 +312,7 @@
         });
       });
 
-      form.addEventListener("submit", (event) => {
+      form.addEventListener("submit", async (event) => {
         event.preventDefault();
         let firstInvalid = null;
 
@@ -326,21 +328,33 @@
         }
 
         const payload = Object.fromEntries(new FormData(form).entries());
-        payload.submittedAt = new Date().toISOString();
+
+        success?.classList.remove("is-visible");
+        failure?.classList.remove("is-visible");
+        if (submit) submit.disabled = true;
 
         try {
-          const stored = JSON.parse(localStorage.getItem("aydin_requests") || "[]");
-          stored.push(payload);
-          localStorage.setItem("aydin_requests", JSON.stringify(stored));
-        } catch (error) {
-          /* storage unavailable — the confirmation below still applies */
-        }
+          /* Same origin: nginx forwards /api/ to the contact service, which mails the enquiry. */
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-        if (success) {
-          success.classList.add("is-visible");
-          success.focus?.();
+          if (success) {
+            success.classList.add("is-visible");
+            success.focus?.();
+          }
+          form.reset();
+        } catch (error) {
+          if (failure) {
+            failure.classList.add("is-visible");
+            failure.focus?.();
+          }
+        } finally {
+          if (submit) submit.disabled = false;
         }
-        form.reset();
       });
     });
   }

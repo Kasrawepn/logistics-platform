@@ -2,5 +2,16 @@
   "previewPort": 3000,
   "healthPath": "/",
   "startCommand": "docker compose -f docker-compose.base44.yml up -d",
-  "secrets": []
+  "secrets": [
+    {
+      "name": "GMAIL_USER",
+      "description": "Gmail address the contact form sends from — the owner's account, Aydinmuhammet601@gmail.com.",
+      "requiredAtBoot": false
+    },
+    {
+      "name": "GMAIL_APP_PASSWORD",
+      "description": "Google App Password for that Gmail account (Google Account → Security → 2-step verification → App passwords). Without it the contact form cannot deliver mail.",
+      "requiredAtBoot": false
+    }
+  ]
 }

@@ -1,0 +1,17 @@
+{
+  "name": "aydin-contact-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Delivers enquiries from the AYDIN TRANSPORT & LOGISTIK contact form to the owner's inbox.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.15"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

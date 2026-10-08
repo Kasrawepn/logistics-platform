@@ -1054,6 +1054,26 @@ body.menu-open .nav-toggle__bars span:nth-child(3) {
   display: grid;
 }
 
+.form-error {
+  display: none;
+  gap: 0.6rem;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid rgba(180, 70, 60, 0.5);
+  background: rgba(180, 70, 60, 0.08);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+}
+
+.form-error.is-visible {
+  display: grid;
+}
+
+/* The submit button is disabled while the enquiry is on its way. */
+.form .btn[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
 /* --------------------------------------------------------- Accordion */
 .accordion {
   border-top: 1px solid var(--line);

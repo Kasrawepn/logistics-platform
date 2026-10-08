@@ -809,6 +809,16 @@
       "We will come back with a firm quote. For anything urgent, call us on +49 160 801 66 59.",
       "Net bir teklifle dönüş yapacağız. Acil durumlar için +49 160 801 66 59 numaralı telefondan ulaşabilirsiniz.",
     ],
+    "ct.f.errorTitle": [
+      "Die Anfrage konnte nicht gesendet werden.",
+      "Your request could not be sent.",
+      "Talebiniz gönderilemedi.",
+    ],
+    "ct.f.errorText": [
+      "Bitte versuchen Sie es später erneut — oder rufen Sie uns direkt an: +49 160 801 66 59.",
+      "Please try again in a moment — or call us directly on +49 160 801 66 59.",
+      "Lütfen biraz sonra tekrar deneyin — ya da doğrudan arayın: +49 160 801 66 59.",
+    ],
     "ct.f.required": ["Dieses Feld ist erforderlich.", "This field is required.", "Bu alan zorunludur."],
     "ct.f.invalidEmail": ["Bitte eine gültige E-Mail-Adresse eingeben.", "Please enter a valid email address.", "Lütfen geçerli bir e-posta adresi girin."],
     "ct.f.confirm": ["Bitte bestätigen, um fortzufahren.", "Please confirm to continue.", "Devam etmek için lütfen onaylayın."],

@@ -8,6 +8,10 @@
 - `logistics-platform/` — the original three-page Farsi demo (admin panel, customer
   request form, driver list) using `localStorage`. Unrelated to the site; it is not served
   by the compose stack.
+- `server/` — the contact form API: a small Node service (`node:22-alpine`, one
+  dependency, `nodemailer`) that mails form submissions to the owner's inbox. It is the
+  only part of the project that needs credentials — see "The contact form and the mail
+  service" below.
 
 ## The business behind the site
 
@@ -40,6 +44,17 @@ watcher and no restart to run. Cache headers are disabled for development in
 Health check greps the served HTML for `aydin` (case-insensitive; matched by the brand
 image path and the email address, both ASCII — the dotless "ı" in *Aydın* is not a safe
 grep target). If that string disappears, update the check in `docker-compose.base44.yml`.
+
+`docker/nginx.default.conf` is mounted read-only and nginx loads it **at startup only** —
+editing it needs `docker compose -f docker-compose.base44.yml restart web`, unlike the site
+files, which are picked up on refresh.
+
+The stack has a second service, `api` (`server/`), which nginx proxies `/api/` to. It
+installs its own dependencies at container start (`npm ci`, kept out of the repo in the
+`contact_api_modules` volume) and reaches the outside world through `GMAIL_USER` +
+`GMAIL_APP_PASSWORD` from the platform-managed env file. `web` deliberately does **not**
+depend on `api`: the site must keep serving while the mail service is unconfigured, down or
+still installing, and the form reports that sending failed. See the next section.
 
 ## Three languages — how the i18n layer works
 
@@ -95,11 +110,41 @@ The site is **German (default), English and Turkish**, switched client-side, no 
   `pages.css`) fed by the four driver photos; its copy lives under the `ab.team.*` i18n
   keys.
 
+## The contact form and the mail service
+
+`contact.html` posts its form to `/api/contact` **on its own origin** — nginx forwards
+`/api/` to the `api` service (upstream resolved per request, so nginx starts and keeps
+serving without it). Nothing is written to `localStorage` any more: the form either hands
+the enquiry to the mail service or shows the `.form-error` block (`ct.f.errorTitle` /
+`ct.f.errorText` in `i18n.js`, all three languages), and the submit button is disabled
+while the request is in flight.
+
+`server/server.js` keeps its dependencies to one (`nodemailer`) on purpose: `node:http`
+serves the two routes (`GET /api/health`, `POST /api/contact`). It validates and
+length-caps every field, drops unknown ones, rate-limits 5 messages per 10 minutes per IP
+(`X-Forwarded-For` from nginx), escapes the HTML part, sets the customer's address as
+`Reply-To`, and mails to `CONTACT_TO` (compose `environment:`, default the owner's Gmail).
+
+The credentials are the owner's: `GMAIL_USER` and `GMAIL_APP_PASSWORD` — a Google **App
+Password**, which needs 2-step verification on that account; the normal account password
+will not authenticate over SMTP. They are declared in `.base44/environment.json` and
+delivered to `/run/base44/app.env`; never add them to compose `environment:`, which would
+permanently outrank the dashboard values. Without them the service still boots, reports
+`{"ok":true,"mail":"missing"}` on `/api/health` and answers `503` on `/api/contact` instead
+of pretending to send — which is what the form's error state means in practice.
+
+To exercise delivery without a real mailbox, point `SMTP_HOST`/`SMTP_PORT` at a throwaway
+SMTP sink through a compose override file kept outside the repo, then submit the form: the
+headers (`To: Aydinmuhammet601@gmail.com`, `Reply-To` = customer) and the message are
+readable in the sink's log. That is how this wiring was verified — the Gmail handshake
+itself can only be proven with the real App Password.
+
 ## Known loose ends
 
-- The enquiry form on `contact.html` validates input and stores submissions in
-  `localStorage` under `aydin_requests` — there is **no backend**, so nothing is actually
-  delivered. Wire it to a form endpoint, CRM or mail service before going live.
+- Contact-form delivery needs the owner's Google App Password (`GMAIL_APP_PASSWORD`); until
+  it is set, the form reports its error state instead of delivering.
+- The `api` service has to be deployed next to the static site — a host that can only serve
+  files has no `/api/contact`, and the form then shows its error state.
 - Footer legal links (Impressum, Datenschutz, AGB) are `#` placeholders.
 - The site is trilingual with no server-side routing: crawlers only ever index the German
   copy at the canonical URLs.
@@ -112,9 +157,12 @@ curl -s http://localhost:3000/ | grep -i 'aydin'                         # real 
 for p in index services about solutions fleet contact; do
   curl -s -o /dev/null -w "$p %{http_code}\n" http://localhost:3000/$p.html
 done
-docker compose -f docker-compose.base44.yml ps                           # web: healthy
+curl -s http://localhost:3000/api/health                                 # {"ok":true,"mail":…}
+docker compose -f docker-compose.base44.yml ps                           # web + api: healthy
 ```
 
 There is no test suite; the site is verified by loading it, by flipping DE/EN/TR (all three
 languages must render every page without blank spots) and by checking that every page and
-asset returns 200.
+asset returns 200. The form is verified in the browser: fill it, submit, and expect the
+success block — with mail unconfigured (or the service stopped) the `.form-error` block must
+appear instead.
