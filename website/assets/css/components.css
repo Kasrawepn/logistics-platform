@@ -1254,6 +1254,50 @@ body.menu-open .nav-toggle__bars span:nth-child(3) {
   }
 }
 
+/* Narrow phones: the header row must fit the screen, otherwise the menu button
+   is pushed off the right edge and the page can be dragged sideways. The
+   phone number stays reachable through the floating call button, the curtain
+   menu and the footer. */
+@media (max-width: 560px) {
+  .site-header__inner {
+    gap: 0.75rem;
+  }
+  .brand {
+    gap: 0.55rem;
+    min-width: 0;
+  }
+  .brand__mark {
+    width: 30px;
+    height: 30px;
+  }
+  .brand__name {
+    font-size: 0.9375rem;
+    letter-spacing: 0.12em;
+  }
+  .brand__sub {
+    display: none;
+  }
+  .site-header__actions {
+    gap: 0.4rem;
+  }
+  .lang-switch {
+    gap: 1px;
+    padding: 2px;
+  }
+  .lang-switch__btn {
+    padding: 0.28rem 0.4rem;
+    font-size: 0.5625rem;
+    letter-spacing: 0.08em;
+  }
+  .btn--phone {
+    display: none;
+  }
+  .nav-toggle {
+    width: 42px;
+    height: 42px;
+  }
+}
+
 /* -------------------------------------------------------- Language switch */
 .lang-switch {
   display: flex;
@@ -1317,13 +1361,13 @@ body.menu-open .nav-toggle__bars span:nth-child(3) {
   animation: quickContactIn 0.7s var(--ease-out) 0.35s both;
 }
 
+/* Transform only: the buttons must never be left invisible if this animation
+   does not run (background tab, animations paused). */
 @keyframes quickContactIn {
   from {
-    opacity: 0;
-    transform: translateX(38px);
+    transform: translateY(18px);
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }
@@ -1350,8 +1394,17 @@ body.menu-open .nav-toggle__bars span:nth-child(3) {
   box-shadow: 0 22px 38px -18px rgba(10, 26, 47, 0.8);
 }
 
+/* WhatsApp is the primary channel, so it is the larger of the two. */
 .quick-contact__btn--whatsapp {
   background: #25d366;
+  width: 64px;
+  height: 64px;
+  box-shadow: 0 0 0 6px rgba(37, 211, 102, 0.16), 0 18px 34px -18px rgba(10, 26, 47, 0.7);
+}
+
+.quick-contact__btn--whatsapp svg {
+  width: 32px;
+  height: 32px;
 }
 
 .quick-contact__btn--call {
@@ -1374,5 +1427,13 @@ body.menu-open .nav-toggle__bars span:nth-child(3) {
   .quick-contact__btn svg {
     width: 22px;
     height: 22px;
+  }
+  .quick-contact__btn--whatsapp {
+    width: 58px;
+    height: 58px;
+  }
+  .quick-contact__btn--whatsapp svg {
+    width: 29px;
+    height: 29px;
   }
 }

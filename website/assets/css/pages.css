@@ -260,7 +260,10 @@
 .split {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: clamp(2.5rem, 5vw, 5rem);
+  /* Eleven column gaps: the minimum must stay small enough to fit a narrow
+     phone, otherwise the 12-column track is wider than the screen and the
+     whole page can be panned sideways. */
+  gap: clamp(1.25rem, 5vw, 5rem);
   align-items: center;
 }
 

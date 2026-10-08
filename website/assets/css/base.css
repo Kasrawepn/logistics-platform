@@ -80,6 +80,9 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* Safety net: a single stray element must never make the page wider than the
+     screen (on phones that shows up as a page that has to be zoomed out). */
+  overflow-x: clip;
 }
 
 body {

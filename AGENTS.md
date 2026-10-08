@@ -93,6 +93,13 @@ The site is **German (default), English and Turkish**, switched client-side, no 
 - **Colours and spacing come from CSS custom properties** in `:root` in `base.css`
   (`--navy-900`, `--ivory`, `--gold`, `--section-y`, …) — the navy `#0A1A2F` and gold
   `#C5A059` come from the company's own van livery, so keep the palette.
+- **Mobile widths**: the 12-column grids (`.split`) use a `clamp()` gap whose *minimum*
+  matters — eleven column gaps at 40px already need 440px, which is wider than any phone and
+  dragged the whole page sideways. `html` also carries `overflow-x: clip` as a safety net, so
+  a `[data-reveal="right"]` element before it reveals, or the 1.04 zoom scale left on media,
+  cannot make the page pannable. Verify widths by measuring rather than by eye: load the page
+  in a 320/375/414px iframe and assert `documentElement.scrollWidth === clientWidth` and that
+  `.site-header__inner` does not overflow (an alpine+chromium image and `--dump-dom` is enough).
 - **Animations**: `data-reveal` fades an element in on scroll, `data-reveal-group="90"`
   staggers children, `data-count="123"` animates a number, `data-cursor="Label"` shows a
   label in the cursor ring. All disabled under `prefers-reduced-motion`; each page carries a
