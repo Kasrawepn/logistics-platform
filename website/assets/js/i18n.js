@@ -387,6 +387,78 @@
       "<strong>Almanya genelinde hizmet.</strong>",
     ],
     "svc.4.cta": ["Kurier anfragen", "Request a courier", "Kurye talep et"],
+    "svc.5.eyebrow": ["05 · Visa & Einwanderung", "05 · Visas & immigration", "05 · Vize & göç"],
+    "svc.5.title": [
+      "Beratung zu Visa und Einwanderung",
+      "Advice on visas and immigration",
+      "Vize ve göçmenlik danışmanlığı",
+    ],
+    "svc.5.lead": [
+      "Wir begleiten Familien, Fachkräfte und Studierende aus Konstanz und Umgebung — von der ersten Frage bis zur vollständigen Antragsmappe.",
+      "We support families, skilled workers and students in and around Konstanz — from the first question to a complete application file.",
+      "Konstanz ve çevresindeki ailelere, nitelikli çalışanlara ve öğrencilere eşlik ediyoruz — ilk sorudan eksiksiz başvuru dosyasına kadar.",
+    ],
+    "svc.5.b1": [
+      "<strong>Die passende Visa-Option finden:</strong> Familienzusammenführung, Arbeit, Ausbildung, Studium oder Besuch.",
+      "<strong>Finding the right visa route:</strong> family reunion, work, vocational training, study or a visit.",
+      "<strong>Size uygun vize yolunu bulma:</strong> aile birleşimi, çalışma, meslek eğitimi, öğrenim veya ziyaret.",
+    ],
+    "svc.5.b2": [
+      "<strong>Dokumentencheck:</strong> welche Unterlagen Botschaft und Ausländerbehörde erwarten — inklusive Übersetzungen und Beglaubigungen.",
+      "<strong>Document check:</strong> what the embassy and the immigration office expect — including translations and certified copies.",
+      "<strong>Belge kontrolü:</strong> konsolosluk ve yabancılar dairesinin beklediği belgeler — çeviri ve onaylar dahil.",
+    ],
+    "svc.5.b3": [
+      "<strong>Formulare und Termine:</strong> Hilfe beim Ausfüllen der Anträge und beim Vereinbaren der Termine.",
+      "<strong>Forms and appointments:</strong> help filling in the applications and booking the appointments.",
+      "<strong>Formlar ve randevular:</strong> başvuru formlarının doldurulması ve randevu alınması için destek.",
+    ],
+    "svc.5.b4": [
+      "<strong>Begleitung bis zur Entscheidung:</strong> Vorbereitung auf Rückfragen und Nachreichen fehlender Unterlagen.",
+      "<strong>Support until the decision:</strong> preparing for follow-up questions and submitting documents that are still missing.",
+      "<strong>Karara kadar eşlik:</strong> ek sorulara hazırlık ve eksik belgelerin sonradan iletilmesi.",
+    ],
+    "svc.5.cta": ["Beratung anfragen", "Request advice", "Danışmanlık isteyin"],
+    "svc.5.note": [
+      "Wir beraten und begleiten — wir sind keine Anwaltskanzlei und keine Behörde.",
+      "We advise and support you — we are not a law firm and not an authority.",
+      "Danışmanlık yapıyor ve eşlik ediyoruz — bir avukatlık bürosu ya da resmi kurum değiliz.",
+    ],
+    "svc.5.d.eyebrow": ["Im Detail", "In detail", "Ayrıntılar"],
+    "svc.5.d.title": [
+      "Was die Beratung abdeckt",
+      "What the consultation covers",
+      "Danışmanlığın kapsamı",
+    ],
+    "svc.5.d.lead": [
+      "Vier häufige Wege — und was dabei jeweils wichtig ist.",
+      "Four common routes — and what matters for each of them.",
+      "Dört yaygın yol — ve her birinde önemli olanlar.",
+    ],
+    "svc.5.d1.title": ["Familie & Ehe", "Family & marriage", "Aile & evlilik"],
+    "svc.5.d1.text": [
+      "Nachzug von Ehepartner, Kindern und Eltern: Nachweise zu Beziehung, Wohnung und Lebensunterhalt.",
+      "Reuniting with a spouse, children or parents: evidence of your relationship, housing and income.",
+      "Eş, çocuk ve ebeveynlerin birleşimi: ilişki, konut ve geçim kanıtları.",
+    ],
+    "svc.5.d2.title": ["Arbeit & Ausbildung", "Work & training", "Çalışma & meslek eğitimi"],
+    "svc.5.d2.text": [
+      "Arbeitsvisum, Blaue Karte und Ausbildungsplatz: Anerkennung von Abschlüssen und der Weg über die Botschaft.",
+      "Work visa, Blue Card and apprenticeship: recognition of qualifications and the route through the embassy.",
+      "Çalışma vizesi, Mavi Kart ve meslek eğitimi yeri: diploma denkliği ve konsolosluk süreci.",
+    ],
+    "svc.5.d3.title": ["Studium & Sprache", "Study & language", "Öğrenim & dil"],
+    "svc.5.d3.text": [
+      "Studentenvisum und Sprachkurs: Zulassung, Finanzierungsnachweis und Krankenversicherung.",
+      "Student visa and language course: admission, proof of funds and health insurance.",
+      "Öğrenci vizesi ve dil kursu: kabul, finansman kanıtı ve sağlık sigortası.",
+    ],
+    "svc.5.d4.title": ["Besuch & Verlängerung", "Visits & extensions", "Ziyaret & uzatma"],
+    "svc.5.d4.text": [
+      "Besuchsvisum, Verlängerung und Niederlassung: Fristen und Termine bei der Ausländerbehörde.",
+      "Visitor visa, extension and settlement: deadlines and appointments at the immigration office.",
+      "Ziyaret vizesi, uzatma ve kalıcı oturum: süreler ve yabancılar dairesinde randevular.",
+    ],
     "svc.notes.eyebrow": ["Gut zu wissen", "Good to know", "Bilinmesi iyi olur"],
     "svc.notes.title": ["Worauf Sie sich verlassen können", "What you can rely on", "Neye güvenebilirsiniz"],
     "svc.notes.lead": [

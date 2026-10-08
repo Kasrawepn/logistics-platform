@@ -713,6 +713,25 @@
   border-color: rgba(197, 160, 89, 0.4);
 }
 
+/* ------------------------------------------------- Visa & Einwanderung */
+.visa-extra {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.visa-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.visa-note {
+  margin-top: 0.35rem;
+  max-width: 46ch;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--fg-muted);
+}
+
 /* ---------------------------------------------------------- Responsive */
 @media (max-width: 1080px) {
   .split__text,
