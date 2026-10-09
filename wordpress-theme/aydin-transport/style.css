@@ -1,0 +1,48 @@
+/*
+Theme Name: Aydın Transport & Logistik
+Theme URI: https://aydinvisa.de
+Author: Aydın Transport & Logistik
+Description: Die Website von Aydın Transport & Logistik als WordPress-Theme. Startseite und die fünf Unterseiten werden von den Templates gerendert; Gestaltung, Farben und die dreisprachige Ebene (DE/EN/TR) kommen aus den eigenen CSS- und JS-Dateien im Ordner assets/. Kein Page-Builder, keine Blöcke — dieselbe Optik wie auf der statischen Seite.
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+License: proprietary
+Text Domain: aydin
+*/
+
+/* Die Gestaltung selbst liegt in assets/css/base.css, components.css und
+   pages.css und wird in dieser Reihenfolge von functions.php geladen. Diese
+   Datei enthält nur den Theme-Kopf und die Ergänzungen für WordPress. */
+
+/* Kontaktseite: WhatsApp ist der Hauptkanal, deshalb der grüne Button. */
+.btn--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.btn--whatsapp:hover {
+  background: #1fbe5b;
+  color: #fff;
+}
+
+.contact-cta {
+  display: grid;
+  gap: 1.35rem;
+  justify-items: start;
+}
+
+.contact-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-cta .btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Fallback-Template (index.php): Inhalt unterhalb des festen Headers. */
+.fallback-page {
+  padding-top: calc(var(--header-h) + 4rem);
+}

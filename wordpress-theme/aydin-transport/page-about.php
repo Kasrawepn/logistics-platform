@@ -1,0 +1,195 @@
+<?php
+/**
+ * Über uns
+ *
+ * Generated from website/about.html by wordpress-theme/build.py — edit the static
+ * page and re-run the build instead of editing this file.
+ */
+
+/*
+Template Name: Über uns
+*/
+
+get_header();
+?>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="page-hero__media" data-parallax="0.1">
+      <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-white.jpg' ) ); ?>" alt="Transporter von Aydın Transport &amp; Logistik" fetchpriority="high">
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="<?php echo esc_url( aydin_page_url( 'home' ) ); ?>" data-i18n="common.home">Startseite</a><span>/</span><span aria-current="page" data-i18n="nav.about">Über uns</span>
+      </nav>
+      <h1 data-i18n="ab.hero.title">Transport aus Konstanz, für ganz Deutschland</h1>
+      <p data-i18n="ab.hero.lead">
+        Aydın Transport &amp; Logistik ist ein familiengeführtes Unternehmen. Wir fahren dort,
+        wo Sie uns brauchen — zuverlässig, schnell und pünktlich.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================= WHO WE ARE -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split__text">
+          <span class="eyebrow" data-reveal="fade" data-i18n="ab.who.eyebrow">Über uns</span>
+          <h2 data-reveal data-i18n="ab.who.title">Wer wir sind</h2>
+          <p class="lead" data-reveal data-i18n="ab.who.lead">
+            Wir sind ein familiengeführtes Transportunternehmen mit Sitz in Konstanz und fahren
+            deutschlandweit für Privat- und Geschäftskunden.
+          </p>
+          <p data-reveal data-i18n="ab.who.body">
+            Unsere Stärke ist die Nähe: Sie erreichen uns direkt, wir planen jede Fahrt selbst
+            und sind selbst unterwegs. So bleibt Verantwortung dort, wo sie hingehört.
+          </p>
+          <div class="split__actions" data-reveal="fade">
+            <a class="btn btn--navy" href="<?php echo esc_url( aydin_page_url( 'contact', '#quote' ) ); ?>" data-i18n="ab.who.cta1">Angebot anfordern</a>
+            <a class="link-arrow" href="<?php echo esc_url( aydin_page_url( 'fleet' ) ); ?>" data-i18n="ab.who.cta2">Fuhrpark ansehen</a>
+          </div>
+        </div>
+
+        <figure class="split__media media-stack" data-reveal="scale" role="group" aria-label="Aydın Transport &amp; Logistik">
+          <div class="media-stack__main img-zoom" data-cursor="Transport" data-i18n-attr="data-cursor:home.s1.title">
+            <img src="<?php echo esc_url( aydin_asset( 'img/aydin-office.jpg' ) ); ?>" alt="Besprechungsraum von Aydın Transport &amp; Logistik" loading="lazy">
+          </div>
+          <div class="media-stack__side img-zoom" data-cursor="Unser Fahrzeug" data-i18n-attr="data-cursor:home.about.cursor">
+            <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-dark.jpg' ) ); ?>" alt="Transporter von Aydın Transport &amp; Logistik" loading="lazy">
+          </div>
+          <a class="round-btn media-stack__btn" href="<?php echo esc_url( aydin_page_url( 'contact' ) ); ?>" aria-label="Kontakt aufnehmen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <figcaption data-i18n="ab.who.caption">Konstanz · deutschlandweit im Einsatz</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ TEAM -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal="fade" data-i18n="ab.team.eyebrow">Unser Team</span>
+          <h2 class="section-head__title" data-reveal data-i18n="ab.team.title">Die Menschen hinter Aydın Transport &amp; Logistik</h2>
+        </div>
+        <p data-reveal data-i18n="ab.team.lead">
+          Familiengeführt: Bei uns sprechen Sie direkt mit den Menschen, die planen und fahren.
+        </p>
+      </div>
+
+      <div class="team-grid" data-reveal-group="80">
+        <figure class="team-card" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-1.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
+        </figure>
+        <figure class="team-card" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-2.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
+        </figure>
+        <figure class="team-card" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-3.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
+        </figure>
+        <figure class="team-card" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-4.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
+        </figure>
+      </div>
+
+      <p class="team-note" data-reveal="fade" data-i18n="ab.who.caption">Konstanz · deutschlandweit im Einsatz</p>
+    </div>
+  </section>
+
+  <!-- =========================================================== VALUES -->
+  <section class="section section--warm">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal="fade" data-i18n="ab.values.eyebrow">Worauf Sie sich verlassen können</span>
+          <h2 class="section-head__title" data-reveal data-i18n="ab.values.title">Vier Zusagen, jeden Tag</h2>
+        </div>
+        <p data-reveal data-i18n="ab.values.lead">
+          Wir versprechen nichts, was wir nicht halten können — dafür halten wir, was wir
+          versprechen.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem" data-reveal-group="90">
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3 data-i18n="ab.v1.title">Zuverlässig</h3>
+          <p data-i18n="ab.v1.text">Wir erscheinen zum vereinbarten Termin und informieren, falls sich etwas ändert.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-7 4 14 2.5-7h5"/></svg></div>
+          <h3 data-i18n="ab.v2.title">Schnell</h3>
+          <p data-i18n="ab.v2.text">Kurze Wege und direkte Entscheidungen — Ihre Anfrage wird nicht weitergereicht.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></svg></div>
+          <h3 data-i18n="ab.v3.title">Pünktlich</h3>
+          <p data-i18n="ab.v3.text">Abholung und Zustellung im vereinbarten Zeitfenster, nicht irgendwann am Tag.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4a8 8 0 1 0 0 16"/><path d="M16 8a4 4 0 1 0 0 8"/></svg></div>
+          <h3 data-i18n="ab.v4.title">Persönlich</h3>
+          <p data-i18n="ab.v4.text">Ein Ansprechpartner für alles — vom ersten Anruf bis zur Übergabe.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ FACTS -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="split">
+        <div class="split__text">
+          <span class="eyebrow" data-reveal="fade" data-i18n="ab.facts.eyebrow">Auf einen Blick</span>
+          <h2 data-reveal data-i18n="ab.facts.title">Unser Unternehmen in Zahlen und Fakten</h2>
+          <p data-reveal data-i18n="ab.values.lead">
+            Wir versprechen nichts, was wir nicht halten können — dafür halten wir, was wir
+            versprechen.
+          </p>
+          <div class="split__actions" data-reveal="fade">
+            <a class="btn btn--navy" href="<?php echo esc_url( aydin_page_url( 'contact' ) ); ?>" data-i18n="common.cta">Kontakt aufnehmen</a>
+          </div>
+        </div>
+        <div class="split__media" data-reveal>
+          <table class="spec-table">
+            <tbody>
+              <tr><th scope="row" data-i18n="ab.facts.r1">Fahrzeugklasse</th><td data-i18n="ab.facts.v1">3,5-Tonnen-Transporter</td></tr>
+              <tr><th scope="row" data-i18n="ab.facts.r2">Einsatzgebiet</th><td data-i18n="ab.facts.v2">Deutschlandweit</td></tr>
+              <tr><th scope="row" data-i18n="ab.facts.r3">Leistungen</th><td data-i18n="ab.facts.v3">Transporte, Direktfahrten, Express, Kurier</td></tr>
+              <tr><th scope="row" data-i18n="ab.facts.r4">Kunden</th><td data-i18n="ab.facts.v4">Privat- und Geschäftskunden</td></tr>
+              <tr><th scope="row" data-i18n="ab.facts.r5">Standort</th><td data-i18n="ab.facts.v5">Konstanz, Deutschland</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="cta-band__media" data-parallax="0.08">
+      <img src="<?php echo esc_url( aydin_asset( 'img/aydin-trucks.jpg' ) ); ?>" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="container cta-band__inner">
+      <div class="cta-band__copy">
+        <span class="eyebrow eyebrow--light" data-i18n="ab.cta.eyebrow">Kennenlernen</span>
+        <h2 data-i18n="ab.cta.title">Sprechen wir über Ihre Sendung</h2>
+        <p style="color:rgba(255,255,255,.74)" data-i18n="ab.cta.text">
+          Ein Anruf genügt, um zu klären, ob und wann wir fahren können.
+        </p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--gold btn--lg" href="<?php echo esc_url( aydin_page_url( 'contact', '#quote' ) ); ?>" data-i18n="common.quote">Angebot anfordern</a>
+        <a class="btn btn--ghost-light btn--lg" href="tel:+491608016659">☎ +49 160 801 66 59</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<?php
+get_footer();

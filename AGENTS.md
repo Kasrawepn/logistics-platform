@@ -117,6 +117,39 @@ The site is **German (default), English and Turkish**, switched client-side, no 
   `pages.css`) fed by the four driver photos; its copy lives under the `ab.team.*` i18n
   keys.
 
+## The WordPress theme (`wordpress-theme/`)
+
+The site also ships as a WordPress theme: the owner's domain `aydinvisa.de` sits on a
+Hetzner konsoleH WordPress install, and nothing can be deployed there from here — the owner
+uploads `aydin-transport.zip` themselves.
+
+- `python3 wordpress-theme/build.py` regenerates the theme from `website/`: it copies
+  `website/assets/` into `aydin-transport/assets/`, turns every page into a PHP template
+  (`front-page.php`, `page-<slug>.php`) and writes `aydin-transport.zip` (plus a copy under
+  `website/downloads/`, served by the preview). **The generated templates are never edited
+  by hand** — change `website/` and rebuild. `page-contact.php` is generated too, but with
+  the form replaced by `template-parts/contact-cta.php` (WhatsApp + phone) and its
+  heading/lead swapped to the `ct.quote.*` keys, because the hosting cannot run the Node
+  mail service.
+- `functions.php` enqueues the same CSS/JS in the same order, creates the five inner pages
+  on activation (slugs `services`, `about`, `solutions`, `fleet`, `contact`) and hands
+  `layout.js` its page URLs through `window.AydinSiteUrls`. The header/footer stay injected
+  by JS from one table, so `layout.js` runs every internal href through `url()` and falls
+  back to the `.html` names when that object is missing (the static preview). Page URLs are
+  resolved at runtime with `get_page_by_path()`/`get_permalink()`, so any permalink
+  structure works.
+- `wordpress-theme/docker-compose.test.yml` (WordPress + MariaDB on port 8080, instructions
+  in `wordpress-theme/README.md`) is how the theme is checked: pages render, header, footer
+  and quick-contact are injected with WordPress URLs, the i18n layer sets `<html lang>` and
+  the title, and the contact page has no `<form>` but a `wa.me` button. For a same-origin
+  check, `docker cp` a probe page into `/var/www/html/` — headless chromium lives in the
+  local `layout-probe` image.
+- `test-mu-plugins/force-https.php` is mounted **only** into that test instance: the preview
+  proxy talks plain HTTP to the container, so WordPress' `is_ssl()` is false and it would
+  print `http://` asset URLs that a browser on the public https host blocks as mixed
+  content (page renders unstyled, no injected header). The owner's hosting serves the domain
+  directly and needs none of this.
+
 ## The contact form and the mail service
 
 `contact.html` posts its form to `/api/contact` **on its own origin** — nginx forwards

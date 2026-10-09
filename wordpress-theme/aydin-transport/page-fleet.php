@@ -1,0 +1,119 @@
+<?php
+/**
+ * Fuhrpark
+ *
+ * Generated from website/fleet.html by wordpress-theme/build.py — edit the static
+ * page and re-run the build instead of editing this file.
+ */
+
+/*
+Template Name: Fuhrpark
+*/
+
+get_header();
+?>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="page-hero__media" data-parallax="0.1">
+      <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-dark.jpg' ) ); ?>" alt="Transporter von Aydın Transport &amp; Logistik" fetchpriority="high">
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="<?php echo esc_url( aydin_page_url( 'home' ) ); ?>" data-i18n="common.home">Startseite</a><span>/</span><span aria-current="page" data-i18n="nav.fleet">Fuhrpark</span>
+      </nav>
+      <h1 data-i18n="fl.hero.title">Unser 3,5-Tonnen-Transporter</h1>
+      <p data-i18n="fl.hero.lead">
+        Flexibel im Stadtverkehr, belastbar auf der Langstrecke — unser Transporter ist das
+        Herzstück jeder Fahrt.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================= VEHICLE -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split__text">
+          <span class="eyebrow" data-reveal="fade" data-i18n="fl.vehicle.eyebrow">Unser Fahrzeug</span>
+          <h2 data-reveal data-i18n="fl.vehicle.title">Ein Fahrzeug, das zu vielen Aufgaben passt</h2>
+          <p class="lead" data-reveal data-i18n="fl.vehicle.lead">
+            Ein 3,5-Tonnen-Transporter ist die richtige Wahl für Sendungen, die ohne Umladung
+            und ohne Zwischenlager ans Ziel kommen sollen.
+          </p>
+          <ul class="feature-list" data-reveal-group="80">
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="fl.vehicle.b1"><strong>Direktfahrten</strong> ohne Umladung — ein Fahrzeug von Abholung bis Übergabe.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="fl.vehicle.b2"><strong>Express-Lieferungen</strong> für zeitkritische Sendungen.</span></li>
+            <li data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="fl.vehicle.b3"><strong>Deutschlandweit</strong> unterwegs, auch über weitere Strecken.</span></li>
+          </ul>
+          <div class="split__actions" data-reveal="fade">
+            <a class="btn btn--navy" href="<?php echo esc_url( aydin_page_url( 'contact', '#quote' ) ); ?>" data-i18n="common.quote">Angebot anfordern</a>
+          </div>
+        </div>
+        <div class="split__media" data-reveal="scale">
+          <div class="panel-media panel-media--wide img-zoom" data-cursor="Unser Transporter" data-i18n-attr="data-cursor:fl.vehicle.cursor">
+            <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-white.jpg' ) ); ?>" alt="Transporter von Aydın Transport &amp; Logistik" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================== CARGO -->
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal="fade" data-i18n="fl.cargo.eyebrow">Ladegut</span>
+          <h2 class="section-head__title" data-reveal data-i18n="fl.cargo.title">Was wir typischerweise transportieren</h2>
+        </div>
+        <p data-reveal data-i18n="fl.cargo.lead">
+          Sagen Sie uns, worum es geht — wir prüfen, ob Fahrzeug und Termin passen.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem" data-reveal-group="80">
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 4.5-9 4.5L3 7.5 12 3Z"/><path d="m3 12 9 4.5 9-4.5M3 16.5 12 21l9-4.5"/></svg></div>
+          <h3 data-i18n="fl.c1.title">Paletten und Kartons</h3>
+          <p data-i18n="fl.c1.text">Einzelne Paletten und kleinere Mengen, sicher verzurrt und trocken transportiert.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18V9l8-5 8 5v9"/><path d="M9 18v-6h6v6"/></svg></div>
+          <h3 data-i18n="fl.c2.title">Möbel und Einzelstücke</h3>
+          <p data-i18n="fl.c2.text">Sperrige oder empfindliche Stücke, die sorgfältig verladen werden müssen.</p>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7.5h10.5v9H2z"/><path d="M12.5 11h4.2l2.3 3v2.5h-6.5z"/><circle cx="6.4" cy="18.5" r="1.6"/><circle cx="16.4" cy="18.5" r="1.6"/></svg></div>
+          <h3 data-i18n="fl.c3.title">Geschäftliche Sendungen</h3>
+          <p data-i18n="fl.c3.text">Regelmäßige Lieferungen und Direktfahrten für Betriebe und Handel.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="cta-band__media" data-parallax="0.08">
+      <img src="<?php echo esc_url( aydin_asset( 'img/aydin-trucks.jpg' ) ); ?>" alt="" aria-hidden="true" loading="lazy">
+    </div>
+    <div class="container cta-band__inner">
+      <div class="cta-band__copy">
+        <span class="eyebrow eyebrow--light" data-i18n="fl.cta.eyebrow">Kapazität</span>
+        <h2 data-i18n="fl.cta.title">Passt Ihre Sendung in unser Fahrzeug?</h2>
+        <p style="color:rgba(255,255,255,.74)" data-i18n="fl.cta.text">
+          Ein kurzer Anruf klärt Umfang, Termin und Machbarkeit.
+        </p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--gold btn--lg" href="<?php echo esc_url( aydin_page_url( 'contact', '#quote' ) ); ?>" data-i18n="common.quote">Angebot anfordern</a>
+        <a class="btn btn--ghost-light btn--lg" href="tel:+491608016659">☎ +49 160 801 66 59</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<?php
+get_footer();
