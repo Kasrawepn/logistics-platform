@@ -24,7 +24,7 @@ get_header();
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="<?php echo esc_url( aydin_page_url( 'home' ) ); ?>" data-i18n="common.home">Startseite</a><span>/</span><span aria-current="page" data-i18n="nav.about">Über uns</span>
       </nav>
-      <h1 data-i18n="ab.hero.title">Transport aus Konstanz, für ganz Deutschland</h1>
+      <h1 data-i18n="ab.hero.title">Transport aus Radolfzell, für ganz Deutschland</h1>
       <p data-i18n="ab.hero.lead">
         Aydın Transport &amp; Logistik ist ein familiengeführtes Unternehmen. Wir fahren dort,
         wo Sie uns brauchen — zuverlässig, schnell und pünktlich.
@@ -40,7 +40,7 @@ get_header();
           <span class="eyebrow" data-reveal="fade" data-i18n="ab.who.eyebrow">Über uns</span>
           <h2 data-reveal data-i18n="ab.who.title">Wer wir sind</h2>
           <p class="lead" data-reveal data-i18n="ab.who.lead">
-            Wir sind ein familiengeführtes Transportunternehmen mit Sitz in Konstanz und fahren
+            Wir sind ein familiengeführtes Transportunternehmen mit Sitz in Radolfzell und fahren
             deutschlandweit für Privat- und Geschäftskunden.
           </p>
           <p data-reveal data-i18n="ab.who.body">
@@ -63,7 +63,7 @@ get_header();
           <a class="round-btn media-stack__btn" href="<?php echo esc_url( aydin_page_url( 'contact' ) ); ?>" aria-label="Kontakt aufnehmen">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
-          <figcaption data-i18n="ab.who.caption">Konstanz · deutschlandweit im Einsatz</figcaption>
+          <figcaption data-i18n="ab.who.caption">Radolfzell · deutschlandweit im Einsatz</figcaption>
         </figure>
       </div>
     </div>
@@ -97,7 +97,7 @@ get_header();
         </figure>
       </div>
 
-      <p class="team-note" data-reveal="fade" data-i18n="ab.who.caption">Konstanz · deutschlandweit im Einsatz</p>
+      <p class="team-note" data-reveal="fade" data-i18n="ab.who.caption">Radolfzell · deutschlandweit im Einsatz</p>
     </div>
   </section>
 
@@ -162,7 +162,7 @@ get_header();
               <tr><th scope="row" data-i18n="ab.facts.r2">Einsatzgebiet</th><td data-i18n="ab.facts.v2">Deutschlandweit</td></tr>
               <tr><th scope="row" data-i18n="ab.facts.r3">Leistungen</th><td data-i18n="ab.facts.v3">Transporte, Direktfahrten, Express, Kurier</td></tr>
               <tr><th scope="row" data-i18n="ab.facts.r4">Kunden</th><td data-i18n="ab.facts.v4">Privat- und Geschäftskunden</td></tr>
-              <tr><th scope="row" data-i18n="ab.facts.r5">Standort</th><td data-i18n="ab.facts.v5">Konstanz, Deutschland</td></tr>
+              <tr><th scope="row" data-i18n="ab.facts.r5">Standort</th><td data-i18n="ab.facts.v5">Radolfzell, Deutschland</td></tr>
             </tbody>
           </table>
         </div>

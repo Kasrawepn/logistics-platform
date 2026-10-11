@@ -38,6 +38,7 @@
   const NAV = [
     { key: "nav.home", href: "index.html", page: "home" },
     { key: "nav.services", href: "services.html", page: "services" },
+    { key: "nav.visa", href: "visa.html", page: "visa" },
     { key: "nav.about", href: "about.html", page: "about" },
     { key: "nav.solutions", href: "solutions.html", page: "solutions" },
     { key: "nav.fleet", href: "fleet.html", page: "fleet" },
@@ -149,6 +150,7 @@
             <h4>${t("footer.company")}</h4>
             <nav class="footer-links" aria-label="${t("footer.company")}">
               <a href="${url("about.html")}">${t("nav.about")}</a>
+              <a href="${url("visa.html")}">${t("nav.visa")}</a>
               <a href="${url("fleet.html")}">${t("nav.fleet")}</a>
               <a href="${url("solutions.html")}">${t("nav.solutions")}</a>
               <a href="${url("contact.html")}">${t("nav.contact")}</a>

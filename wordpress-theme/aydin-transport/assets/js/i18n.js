@@ -27,7 +27,7 @@
       "Aydın Transport & Lojistik — Güvenilir. Hızlı. Zamanında.",
     ],
     "meta.home.desc": [
-      "Deutschlandweiter Transport mit 3,5-Tonnen-Transportern: Direktfahrten, Express-Lieferungen und Kurierdienste für Privat- und Geschäftskunden aus Konstanz.",
+      "Deutschlandweiter Transport mit 3,5-Tonnen-Transportern: Direktfahrten, Express-Lieferungen und Kurierdienste für Privat- und Geschäftskunden aus Radolfzell.",
       "Nationwide transport across Germany with 3.5-tonne vans: direct runs, express deliveries and courier services for private and business customers.",
       "3,5 tonluk araçlarla Almanya genelinde taşıma: direkt seferler, ekspres teslimat ve kurye hizmetleri. Bireysel ve kurumsal müşteriler için.",
     ],
@@ -47,9 +47,9 @@
       "Hakkımızda — Aydın Transport & Lojistik",
     ],
     "meta.about.desc": [
-      "Familiengeführtes Transportunternehmen aus Konstanz: deutschlandweite Transporte für Privat- und Geschäftskunden.",
-      "A family-run transport company from Constance: nationwide transport for private and business customers.",
-      "Konstanz merkezli aile işletmesi: bireysel ve kurumsal müşteriler için Almanya genelinde taşıma.",
+      "Familiengeführtes Transportunternehmen aus Radolfzell: deutschlandweite Transporte für Privat- und Geschäftskunden.",
+      "A family-run transport company from Radolfzell: nationwide transport for private and business customers.",
+      "Radolfzell merkezli aile işletmesi: bireysel ve kurumsal müşteriler için Almanya genelinde taşıma.",
     ],
     "meta.solutions.title": [
       "Lösungen — Aydın Transport & Logistik",
@@ -110,14 +110,14 @@
 
     /* -------------------------------------------------------------- footer */
     "footer.aboutTitle": [
-      "Transport & Logistik aus Konstanz",
-      "Transport & logistics from Constance",
-      "Konstanz merkezli transport & lojistik",
+      "Transport & Logistik aus Radolfzell",
+      "Transport & logistics from Radolfzell",
+      "Radolfzell merkezli transport & lojistik",
     ],
     "footer.aboutText": [
-      "Familiengeführtes Transportunternehmen aus Konstanz. Wir fahren deutschlandweit für Privat- und Geschäftskunden — zuverlässig, schnell und pünktlich.",
-      "A family-run transport company based in Constance. We drive throughout Germany for private and business customers — reliable, fast and on time.",
-      "Konstanz merkezli aile işletmesi. Bireysel ve kurumsal müşteriler için Almanya genelinde çalışıyoruz — güvenilir, hızlı ve zamanında.",
+      "Familiengeführtes Transportunternehmen aus Radolfzell. Wir fahren deutschlandweit für Privat- und Geschäftskunden — zuverlässig, schnell und pünktlich.",
+      "A family-run transport company based in Radolfzell. We drive throughout Germany for private and business customers — reliable, fast and on time.",
+      "Radolfzell merkezli aile işletmesi. Bireysel ve kurumsal müşteriler için Almanya genelinde çalışıyoruz — güvenilir, hızlı ve zamanında.",
     ],
     "footer.services": ["Leistungen", "Services", "Hizmetler"],
     "footer.company": ["Unternehmen", "Company", "Şirket"],
@@ -138,16 +138,16 @@
     "footer.legal.terms": ["AGB", "Terms", "Şartlar"],
     "footer.legal.imprint": ["Impressum", "Imprint", "Künye"],
     "address": [
-      "Herrenlandstraße 31–37, Konstanz, Deutschland",
-      "Herrenlandstraße 31–37, Constance, Germany",
-      "Herrenlandstraße 31–37, Konstanz, Almanya",
+      "Herrenlandstraße 31–37, Radolfzell, Deutschland",
+      "Herrenlandstraße 31–37, Radolfzell, Germany",
+      "Herrenlandstraße 31–37, Radolfzell, Almanya",
     ],
 
     /* ---------------------------------------------------------------- home */
     "home.hero.eyebrow": [
-      "Transport & Logistik · Konstanz",
-      "Transport & logistics · Constance",
-      "Transport & lojistik · Konstanz",
+      "Transport & Logistik · Radolfzell",
+      "Transport & logistics · Radolfzell",
+      "Transport & lojistik · Radolfzell",
     ],
     "home.hero.title": [
       "Zuverlässig.<br>Schnell. Pünktlich.",
@@ -166,9 +166,9 @@
     "home.about.eyebrow": ["Über uns", "About us", "Hakkımızda"],
     "home.about.title": ["Ihr Transport in guten Händen", "Your freight in safe hands", "Yükünüz güvenli ellerde"],
     "home.about.lead": [
-      "Aydın Transport & Logistik ist ein familiengeführtes Transportunternehmen aus Konstanz. Wir fahren für Privat- und Geschäftskunden in ganz Deutschland.",
-      "Aydın Transport & Logistics is a family-run transport company based in Constance. We drive for private and business customers throughout Germany.",
-      "Aydın Transport & Lojistik, Konstanz merkezli bir aile işletmesidir. Almanya genelinde bireysel ve kurumsal müşteriler için taşıma yapıyoruz.",
+      "Aydın Transport & Logistik ist ein familiengeführtes Transportunternehmen aus Radolfzell. Wir fahren für Privat- und Geschäftskunden in ganz Deutschland.",
+      "Aydın Transport & Logistics is a family-run transport company based in Radolfzell. We drive for private and business customers throughout Germany.",
+      "Aydın Transport & Lojistik, Radolfzell merkezli bir aile işletmesidir. Almanya genelinde bireysel ve kurumsal müşteriler için taşıma yapıyoruz.",
     ],
     "home.about.body": [
       "Ob einzelne Palette, Möbelstück oder regelmäßige Lieferung: Wir planen jede Fahrt persönlich, melden uns beim Status und liefern zum vereinbarten Termin. Keine Zwischenhändler, keine Überraschungen.",
@@ -176,9 +176,9 @@
       "Tek bir palet, bir mobilya ya da düzenli teslimat: her seferi kendimiz planlıyor, sizi bilgilendiriyor ve söz verilen saatte teslim ediyoruz. Aracı yok, sürpriz yok.",
     ],
     "home.about.caption": [
-      "Unser 3,5-t-Transporter · Konstanz",
-      "Our 3.5-tonne van · Constance",
-      "3,5 tonluk aracımız · Konstanz",
+      "Unser 3,5-t-Transporter · Radolfzell",
+      "Our 3.5-tonne van · Radolfzell",
+      "3,5 tonluk aracımız · Radolfzell",
     ],
     "home.about.cursor": ["Unser Fahrzeug", "Our vehicle", "Aracımız"],
     "home.services.eyebrow": ["Leistungen", "Services", "Hizmetler"],
@@ -394,9 +394,9 @@
       "Vize ve göçmenlik danışmanlığı",
     ],
     "svc.5.lead": [
-      "Wir begleiten Familien, Fachkräfte und Studierende aus Konstanz und Umgebung — von der ersten Frage bis zur vollständigen Antragsmappe.",
-      "We support families, skilled workers and students in and around Konstanz — from the first question to a complete application file.",
-      "Konstanz ve çevresindeki ailelere, nitelikli çalışanlara ve öğrencilere eşlik ediyoruz — ilk sorudan eksiksiz başvuru dosyasına kadar.",
+      "Wir begleiten Familien, Fachkräfte und Studierende aus Radolfzell und Umgebung — von der ersten Frage bis zur vollständigen Antragsmappe.",
+      "We support families, skilled workers and students in and around Radolfzell — from the first question to a complete application file.",
+      "Radolfzell ve çevresindeki ailelere, nitelikli çalışanlara ve öğrencilere eşlik ediyoruz — ilk sorudan eksiksiz başvuru dosyasına kadar.",
     ],
     "svc.5.b1": [
       "<strong>Die passende Visa-Option finden:</strong> Familienzusammenführung, Arbeit, Ausbildung, Studium oder Besuch.",
@@ -499,7 +499,7 @@
     ],
 
     /* --------------------------------------------------------------- about */
-    "ab.hero.title": ["Transport aus Konstanz, für ganz Deutschland", "Transport from Constance, for all of Germany", "Konstanz'dan Almanya'nın tamamına"],
+    "ab.hero.title": ["Transport aus Radolfzell, für ganz Deutschland", "Transport from Radolfzell, for all of Germany", "Radolfzell'dan Almanya'nın tamamına"],
     "ab.hero.lead": [
       "Aydın Transport & Logistik ist ein familiengeführtes Unternehmen. Wir fahren dort, wo Sie uns brauchen — zuverlässig, schnell und pünktlich.",
       "Aydın Transport & Logistics is a family-run company. We drive wherever you need us — reliably, fast and on time.",
@@ -508,9 +508,9 @@
     "ab.who.eyebrow": ["Über uns", "About us", "Hakkımızda"],
     "ab.who.title": ["Wer wir sind", "Who we are", "Biz kimiz"],
     "ab.who.lead": [
-      "Wir sind ein familiengeführtes Transportunternehmen mit Sitz in Konstanz und fahren deutschlandweit für Privat- und Geschäftskunden.",
-      "We are a family-run transport company based in Constance, driving throughout Germany for private and business customers.",
-      "Konstanz merkezli aile işletmesiyiz; Almanya genelinde bireysel ve kurumsal müşteriler için taşıma yapıyoruz.",
+      "Wir sind ein familiengeführtes Transportunternehmen mit Sitz in Radolfzell und fahren deutschlandweit für Privat- und Geschäftskunden.",
+      "We are a family-run transport company based in Radolfzell, driving throughout Germany for private and business customers.",
+      "Radolfzell merkezli aile işletmesiyiz; Almanya genelinde bireysel ve kurumsal müşteriler için taşıma yapıyoruz.",
     ],
     "ab.who.body": [
       "Unsere Stärke ist die Nähe: Sie erreichen uns direkt, wir planen jede Fahrt selbst und sind selbst unterwegs. So bleibt Verantwortung dort, wo sie hingehört.",
@@ -519,7 +519,7 @@
     ],
     "ab.who.cta1": ["Angebot anfordern", "Request a quote", "Teklif isteyin"],
     "ab.who.cta2": ["Fuhrpark ansehen", "See the fleet", "Filomuzu görün"],
-    "ab.who.caption": ["Konstanz · deutschlandweit im Einsatz", "Constance · on the road across Germany", "Konstanz · Almanya genelinde hizmet"],
+    "ab.who.caption": ["Radolfzell · deutschlandweit im Einsatz", "Radolfzell · on the road across Germany", "Radolfzell · Almanya genelinde hizmet"],
     "ab.team.eyebrow": ["Unser Team", "Our team", "Ekibimiz"],
     "ab.team.title": [
       "Die Menschen hinter Aydın Transport & Logistik",
@@ -573,7 +573,7 @@
     "ab.facts.r4": ["Kunden", "Customers", "Müşteriler"],
     "ab.facts.v4": ["Privat- und Geschäftskunden", "Private and business customers", "Bireysel ve kurumsal müşteriler"],
     "ab.facts.r5": ["Standort", "Location", "Konum"],
-    "ab.facts.v5": ["Konstanz, Deutschland", "Constance, Germany", "Konstanz, Almanya"],
+    "ab.facts.v5": ["Radolfzell, Deutschland", "Radolfzell, Germany", "Radolfzell, Almanya"],
     "ab.cta.eyebrow": ["Kennenlernen", "Say hello", "Tanışalım"],
     "ab.cta.title": ["Sprechen wir über Ihre Sendung", "Let's talk about your shipment", "Gönderinizi konuşalım"],
     "ab.cta.text": [
@@ -677,9 +677,9 @@
       "<strong>E-posta ile</strong> teklifler, listeler ve yazılı onaylar için.",
     ],
     "sol.reach.b3": [
-      "<strong>Vor Ort in Konstanz</strong> — Termine nach Absprache.",
-      "<strong>On site in Constance</strong> — appointments by arrangement.",
-      "<strong>Konstanz'da yerinde</strong> — randevu ile.",
+      "<strong>Vor Ort in Radolfzell</strong> — Termine nach Absprache.",
+      "<strong>On site in Radolfzell</strong> — appointments by arrangement.",
+      "<strong>Radolfzell'da yerinde</strong> — randevu ile.",
     ],
     "sol.cta.eyebrow": ["Ihre Sendung", "Your shipment", "Gönderiniz"],
     "sol.cta.title": ["Sagen Sie uns, was zu tun ist", "Tell us what needs doing", "Ne yapmamız gerektiğini söyleyin"],
@@ -831,13 +831,13 @@
     "ct.f.invalidEmail": ["Bitte eine gültige E-Mail-Adresse eingeben.", "Please enter a valid email address.", "Lütfen geçerli bir e-posta adresi girin."],
     "ct.f.confirm": ["Bitte bestätigen, um fortzufahren.", "Please confirm to continue.", "Devam etmek için lütfen onaylayın."],
     "ct.area.eyebrow": ["Standort & Gebiet", "Location & coverage", "Konum & bölge"],
-    "ct.area.title": ["In Konstanz zu Hause, in Deutschland unterwegs", "Based in Constance, driving across Germany", "Konstanz merkezli, Almanya genelinde"],
+    "ct.area.title": ["In Radolfzell zu Hause, in Deutschland unterwegs", "Based in Radolfzell, driving across Germany", "Radolfzell merkezli, Almanya genelinde"],
     "ct.area.lead": [
-      "Unser Standort ist Konstanz. Abholung und Zustellung koordinieren wir deutschlandweit mit Ihnen.",
-      "Our base is Constance. Collection and delivery are arranged with you throughout Germany.",
-      "Merkezimiz Konstanz. Alım ve teslimatı Almanya genelinde sizinle planlıyoruz.",
+      "Unser Standort ist Radolfzell. Abholung und Zustellung koordinieren wir deutschlandweit mit Ihnen.",
+      "Our base is Radolfzell. Collection and delivery are arranged with you throughout Germany.",
+      "Merkezimiz Radolfzell. Alım ve teslimatı Almanya genelinde sizinle planlıyoruz.",
     ],
-    "ct.area.o1": ["Konstanz", "Constance", "Konstanz"],
+    "ct.area.o1": ["Radolfzell", "Radolfzell", "Radolfzell"],
     "ct.area.o1role": ["Standort", "Base", "Merkez"],
     "ct.area.o2": ["Deutschlandweit", "Throughout Germany", "Almanya genelinde"],
     "ct.area.o2role": ["Einsatzgebiet", "Coverage", "Hizmet alanı"],
@@ -883,6 +883,97 @@
       "Rufen Sie uns an — Sie sprechen direkt mit dem Fahrer und Inhaber.",
       "Give us a call — you speak directly to the driver and owner.",
       "Bizi arayın — doğrudan sürücü ve işletme sahibiyle konuşursunuz.",
+    ],
+
+    /* ----------------------------------------------------------- visa page */
+    "nav.visa": ["Visa", "Visa", "Vize"],
+    "meta.visa.title": [
+      "Visa & Einwanderung — Aydın Transport & Logistik",
+      "Visa & Immigration — Aydın Transport & Logistics",
+      "Vize & Göç — Aydın Transport & Lojistik",
+    ],
+    "meta.visa.desc": [
+      "Professionelle Beratung für Visa- und Aufenthaltsanträge in europäische Länder — von der ersten Frage bis zur vollständigen Antragsmappe.",
+      "Professional consulting for visa and residence permit applications for European countries — from the first question to a complete application file.",
+      "Avrupa ülkelerine vize ve oturum izni başvurularında profesyonel danışmanlık — ilk sorudan eksiksiz başvuru dosyasına kadar.",
+    ],
+    "visa.hero.title": ["Visa & Einwanderung", "Visa & Immigration", "Vize & Göç"],
+    "visa.hero.lead": [
+      "Professionelle Beratung für Visa- und Aufenthaltsanträge in europäische Länder.",
+      "Professional consulting for visa and residence permit applications for European countries.",
+      "Avrupa ülkelerine vize ve oturum izni başvurularında profesyonel danışmanlık.",
+    ],
+    "visa.intro.eyebrow": ["Danke, dass Sie uns kontaktieren", "Thank you for contacting us", "Bize ulaştığınız için teşekkürler"],
+    "visa.intro.title": ["Wie wir Ihnen helfen können", "How we can help you", "Size nasıl yardımcı olabiliriz"],
+    "visa.intro.lead": [
+      "Unser Unternehmen bietet professionelle Beratung für Visa- und Aufenthaltsanträge in europäische Länder. Für Anträge in alle Länder Europas begleiten wir Sie vom Beginn des Verfahrens bis zum Abschluss.",
+      "Our company offers professional consulting for visa and residence permit applications for European countries. We support you from the start to the end of the application process for all European countries.",
+      "Firmamız, Avrupa ülkelerine yönelik vize ve oturum izni başvurularında profesyonel danışmanlık hizmeti sunmaktadır. Avrupa'daki tüm ülkelere yapılacak başvurular için, başvuru sürecinin başından sonuna kadar sizlere destek oluyoruz.",
+    ],
+    "visa.services.eyebrow": ["Unsere Leistungen", "Our services", "Hizmetlerimiz"],
+    "visa.services.title": ["Visum-Arten, die wir betreuen", "Visa types we handle", "Sunduğumuz vize türleri"],
+    "visa.services.lead": [
+      "Vom Touristenvisum bis zum Aufenthaltsantrag — wir begleiten Sie bei jedem Antragsweg.",
+      "From a tourist visa to a residence permit — we guide you through every application route.",
+      "Turistik vizeden oturum izni başvurusuna kadar — her başvuru yolunda size eşlik ediyoruz.",
+    ],
+    "visa.s1.title": ["Touristenvisum", "Tourist visa", "Turistik vize"],
+    "visa.s1.text": [
+      "Für touristische Reisen in europäische Länder — mit allen erforderlichen Unterlagen.",
+      "For tourist trips to European countries — with all required documents.",
+      "Avrupa ülkelerine turistik geziler için — gerekli tüm belgelerle birlikte.",
+    ],
+    "visa.s2.title": ["Geschäftsvisum", "Business visa", "Ticari vize"],
+    "visa.s2.text": [
+      "Für geschäftliche Termine, Messen und Meetings in Europa.",
+      "For business appointments, trade fairs and meetings in Europe.",
+      "Avrupa'da iş randevuları, fuarlar ve toplantılar için.",
+    ],
+    "visa.s3.title": ["Familienbesuchsvisum", "Family visit visa", "Aile ziyareti vizesi"],
+    "visa.s3.text": [
+      "Um Familie und Freunde in europäischen Ländern zu besuchen.",
+      "To visit family and friends in European countries.",
+      "Avrupa ülkelerinde aileyi ve arkadaşları ziyaret etmek için.",
+    ],
+    "visa.s4.title": ["Studentenvisum", "Student visa", "Öğrenci vizesi"],
+    "visa.s4.text": [
+      "Für Studium, Sprachkurse und Austauschprogramme in Europa.",
+      "For study, language courses and exchange programmes in Europe.",
+      "Avrupa'da öğrenim, dil kursları ve değişim programları için.",
+    ],
+    "visa.s5.title": ["Arbeitsvisum", "Work visa", "Çalışma vizesi"],
+    "visa.s5.text": [
+      "Für Beschäftigung und berufliche Tätigkeiten in europäischen Ländern.",
+      "For employment and professional activities in European countries.",
+      "Avrupa ülkelerinde istihdam ve mesleki faaliyetler için.",
+    ],
+    "visa.s6.title": ["Familiennachzugsvisum", "Family reunification visa", "Aile birleşimi vizesi"],
+    "visa.s6.text": [
+      "Nachzug von Ehepartner und Kindern nach Europa.",
+      "Reuniting with a spouse and children in Europe.",
+      "Eş ve çocukların Avrupa'ya birleşimi için.",
+    ],
+    "visa.s7.title": ["Aufenthaltsanträge", "Residence permit applications", "Oturum izni başvuruları"],
+    "visa.s7.text": [
+      "Anträge auf Aufenthaltserlaubnis und Verlängerung in europäischen Ländern.",
+      "Applications for residence permits and extensions in European countries.",
+      "Avrupa ülkelerinde oturum izni ve uzatma başvuruları.",
+    ],
+    "visa.cta.eyebrow": ["Nächster Schritt", "Next step", "Sonraki adım"],
+    "visa.cta.title": ["Beratung anfragen", "Request advice", "Danışmanlık isteyin"],
+    "visa.cta.text": [
+      "Rufen Sie uns an oder schreiben Sie uns — wir begleiten Sie durch den gesamten Antragsprozess.",
+      "Call us or write to us — we guide you through the entire application process.",
+      "Bizi arayın ya da yazın — başvuru sürecinin tamamında size eşlik ediyoruz.",
+    ],
+
+    /* ------------------------------------------------------------- gallery */
+    "home.gallery.eyebrow": ["Galerie", "Gallery", "Galeri"],
+    "home.gallery.title": ["Eindrücke aus unserem Alltag", "Impressions from our daily work", "Günlüğümüzden izlenimler"],
+    "home.gallery.lead": [
+      "Fahrzeuge, Team und Einsatz — ein Blick hinter die Kulissen.",
+      "Vehicles, team and operations — a look behind the scenes.",
+      "Araçlar, ekip ve çalışmalar — perde arkasına bir bakış.",
     ],
   };
 

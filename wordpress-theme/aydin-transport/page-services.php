@@ -148,7 +148,7 @@ get_header();
           <span class="eyebrow" data-i18n="svc.5.eyebrow">05 · Visa &amp; Einwanderung</span>
           <h2 data-i18n="svc.5.title">Beratung zu Visa und Einwanderung</h2>
           <p class="lead" data-i18n="svc.5.lead">
-            Wir begleiten Familien, Fachkräfte und Studierende aus Konstanz und Umgebung —
+            Wir begleiten Familien, Fachkräfte und Studierende aus Radolfzell und Umgebung —
             von der ersten Frage bis zur vollständigen Antragsmappe.
           </p>
           <ul class="feature-list">

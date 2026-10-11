@@ -20,7 +20,7 @@ get_header();
 
     <div class="hero__inner container">
       <div class="hero__content">
-        <span class="hero__eyebrow hero__anim" data-i18n="home.hero.eyebrow">Transport &amp; Logistik · Konstanz</span>
+        <span class="hero__eyebrow hero__anim" data-i18n="home.hero.eyebrow">Transport &amp; Logistik · Radolfzell</span>
         <h1 class="hero__anim" data-i18n-html="home.hero.title">Zuverlässig.<br>Schnell. Pünktlich.</h1>
         <p class="hero__lead hero__anim" data-i18n="home.hero.lead">
           Deutschlandweiter Transport mit 3,5-Tonnen-Transportern. Wir holen ab, liefern
@@ -58,7 +58,7 @@ get_header();
           <h2 data-reveal data-i18n="home.about.title">Ihr Transport in guten Händen</h2>
           <p class="lead" data-reveal data-i18n="home.about.lead">
             Aydın Transport &amp; Logistik ist ein familiengeführtes Transportunternehmen aus
-            Konstanz. Wir fahren für Privat- und Geschäftskunden in ganz Deutschland.
+            Radolfzell. Wir fahren für Privat- und Geschäftskunden in ganz Deutschland.
           </p>
           <p data-reveal data-i18n="home.about.body">
             Ob einzelne Palette, Möbelstück oder regelmäßige Lieferung: Wir planen jede Fahrt
@@ -80,7 +80,7 @@ get_header();
           <a class="round-btn media-stack__btn" href="<?php echo esc_url( aydin_page_url( 'about' ) ); ?>" aria-label="Über Aydın Transport &amp; Logistik">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
-          <figcaption data-i18n="ab.who.caption">Konstanz · deutschlandweit im Einsatz</figcaption>
+          <figcaption data-i18n="ab.who.caption">Radolfzell · deutschlandweit im Einsatz</figcaption>
         </figure>
       </div>
     </div>
@@ -213,6 +213,48 @@ get_header();
             <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-dark.jpg' ) ); ?>" alt="Transporter von Aydın Transport &amp; Logistik" loading="lazy">
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================= GALERIE -->
+  <section class="section section--soft" id="galerie">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-reveal="fade" data-i18n="home.gallery.eyebrow">Galerie</span>
+          <h2 class="section-head__title" data-reveal data-i18n="home.gallery.title">Eindrücke aus unserem Alltag</h2>
+        </div>
+        <p data-reveal data-i18n="home.gallery.lead">
+          Fahrzeuge, Team und Einsatz — ein Blick hinter die Kulissen.
+        </p>
+      </div>
+
+      <div class="gallery" data-reveal-group="80">
+        <figure class="gallery__item gallery__item--lg" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-trucks.jpg' ) ); ?>" alt="Fuhrpark von Aydın Transport & Logistik" loading="lazy">
+        </figure>
+        <figure class="gallery__item" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-white.jpg' ) ); ?>" alt="Transporter von Aydın Transport & Logistik" loading="lazy">
+        </figure>
+        <figure class="gallery__item" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-1.jpg' ) ); ?>" alt="Fahrer von Aydın Transport & Logistik" loading="lazy">
+        </figure>
+        <figure class="gallery__item gallery__item--wide" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-office.jpg' ) ); ?>" alt="Besprechungsraum von Aydın Transport & Logistik" loading="lazy">
+        </figure>
+        <figure class="gallery__item" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-dark.jpg' ) ); ?>" alt="Transporter von Aydın Transport & Logistik" loading="lazy">
+        </figure>
+        <figure class="gallery__item" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-2.jpg' ) ); ?>" alt="Fahrer von Aydın Transport & Logistik" loading="lazy">
+        </figure>
+        <figure class="gallery__item" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-3.jpg' ) ); ?>" alt="Fahrer von Aydın Transport & Logistik" loading="lazy">
+        </figure>
+        <figure class="gallery__item" data-reveal>
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-4.jpg' ) ); ?>" alt="Fahrer von Aydın Transport & Logistik" loading="lazy">
+        </figure>
       </div>
     </div>
   </section>

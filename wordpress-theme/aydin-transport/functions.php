@@ -42,6 +42,11 @@ function aydin_page_map() {
 			'title_key' => 'meta.contact.title',
 			'desc_key'  => 'meta.contact.desc',
 		),
+		'visa'      => array(
+			'label'     => 'Visa',
+			'title_key' => 'meta.visa.title',
+			'desc_key'  => 'meta.visa.desc',
+		),
 	);
 }
 
@@ -109,6 +114,7 @@ function aydin_enqueue_assets() {
 		'solutions.html' => 'solutions',
 		'fleet.html'     => 'fleet',
 		'contact.html'   => 'contact',
+		'visa.html'      => 'visa',
 	) as $file => $slug ) {
 		$urls[ $file ] = aydin_page_url( $slug );
 
