@@ -1,42 +1,386 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پلتفرم لجستیک الووانت</title>
-    <style>
-        * { box-sizing: border-box; font-family: Tahoma, sans-serif; }
-        body { background: #f0f2f5; padding: 20px; direction: rtl; margin: 0; }
-        .container { max-width: 520px; margin: 40px auto; }
-        h1 { text-align: center; color: #1e293b; font-size: 22px; }
-        p.hint { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 25px; }
-        a.app { display: block; background: white; padding: 18px; border-radius: 12px; text-decoration: none; color: #1e293b; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 15px; }
-        a.app:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.14); }
-        .title { font-weight: bold; font-size: 16px; margin-bottom: 6px; }
-        .desc { font-size: 13px; color: #64748b; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AYDIN BERATUNG & LOGİSTİK TRANSPORT | Vize, Lojistik & Taşımacılık</title>
+  <meta name="description" content="Avrupa ülkelerine vize, oturum izni danışmanlığı ve taşımacılık lojistik çözümleri. Zuverlässig. Schnell. Pünktlich.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>🚚 پلتفرم لجستیک الووانت</h1>
-    <p class="hint">هر سه پنل از همین آدرس اجرا می‌شوند و داده‌ها بین آن‌ها به اشتراک گذاشته می‌شود.</p>
-
-    <a class="app" href="/customer-app/">
-        <div class="title">📝 پنل مشتری</div>
-        <div class="desc">ثبت درخواست وانت و کامیون بار و محاسبه کرایه</div>
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="container header-inner">
+    <a href="#hero" class="logo" aria-label="AYDIN BERATUNG & LOGİSTİK">
+      <svg class="logo-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M20 5 L35 32 L5 32 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M20 14 L28 28 L12 28 Z" fill="currentColor" opacity="0.25"/>
+        <circle cx="20" cy="22" r="2.5" fill="currentColor"/>
+      </svg>
+      <span class="logo-text">
+        <span class="logo-main">AYDIN</span>
+        <span class="logo-sub">BERATUNG & LOGİSTİK</span>
+      </span>
     </a>
 
-    <a class="app" href="/driver-app/">
-        <div class="title">🛞 پنل راننده</div>
-        <div class="desc">مشاهده بارهای اعلام‌شده و پذیرش سفارش</div>
-    </a>
+    <nav class="nav-desktop" aria-label="Ana menü">
+      <a href="#hero">Ana Sayfa</a>
+      <a href="#about">Hakkımızda</a>
+      <a href="#services">Hizmetler</a>
+      <a href="#visa">Vize Hizmetleri</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#contact">İletişim</a>
+    </nav>
 
-    <a class="app" href="/admin-panel/">
-        <div class="title">📊 پنل مدیریت</div>
-        <div class="desc">نظارت بر همه سفارش‌های ثبت‌شده</div>
-    </a>
+    <a href="#contact" class="btn btn-outline-light btn-sm header-cta">☎ İletişime Geçin</a>
+
+    <button class="menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="nav-mobile" aria-label="Mobil menü">
+    <a href="#hero">Ana Sayfa</a>
+    <a href="#about">Hakkımızda</a>
+    <a href="#services">Hizmetler</a>
+    <a href="#visa">Vize Hizmetleri</a>
+    <a href="#gallery">Galeri</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="hero-label reveal">ZUVERLÄSSIG · SCHNELL · PÜNKTLICH</p>
+    <h1 class="hero-title reveal">AYDIN BERATUNG &<br>LOGİSTİK TRANSPORT</h1>
+    <p class="hero-subtitle reveal">Avrupa ülkelerine yönelik vize ve oturum izni danışmanlığı ile taşımacılık ve lojistik çözümleri.</p>
+    <div class="hero-buttons reveal">
+      <a href="#services" class="btn btn-gold">Hizmetlerimiz</a>
+      <a href="#contact" class="btn btn-outline-light">İletişime Geçin →</a>
+    </div>
+  </div>
+  <a href="#about" class="hero-scroll" aria-label="Aşağı kaydır">↓</a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about">
+  <div class="container about-grid">
+    <div class="about-text reveal">
+      <p class="section-label">HAKKIMIZDA</p>
+      <h2 class="section-title">Hakkımızda</h2>
+      <p class="body-text">
+        Firmamız, Avrupa ülkelerine yönelik vize ve oturum izni başvurularında profesyonel danışmanlık hizmeti sunmaktadır. Avrupa'daki tüm ülkelere yapılacak başvurular için, başvuru sürecinin başından sonuna kadar sizlere destek oluyoruz.
+      </p>
+      <p class="body-text">
+        Ayrıca taşımacılık ve lojistik alanında da kapsamlı hizmetler sunarak, Express Transporte, Nationale Transporte ve Logistik Lösungen ile yanınızdayız. Zuverlässig, schnell, pünktlich — güvenilir, hızlı ve punktuel.
+      </p>
+      <a href="#services" class="btn btn-dark">Daha Fazla →</a>
+    </div>
+    <div class="about-images reveal">
+      <div class="about-img-main img-wrap">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80&auto=format&fit=crop" alt="Karayolu taşımacılığı" loading="lazy">
+      </div>
+      <div class="about-img-secondary img-wrap">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80&auto=format&fit=crop" alt="Lojistik depo" loading="lazy">
+      </div>
+      <div class="about-badge">
+        <span class="about-badge-num">15+</span>
+        <span class="about-badge-text">Yıllık Deneyim</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">HİZMETLERİMİZ</p>
+      <h2 class="section-title">Taşımacılık & Lojistik</h2>
+      <p class="section-subtitle">Almanya ve Avrupa geneline kapsamlı taşımacılık ve lojistik çözümleri.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <div class="card-num">01</div>
+        <h3>Express Transporte</h3>
+        <p>Hızlı ve zamanında express taşımacılık hizmetleri. Acil gönderileriniz için güvenilir çözüm.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="card-num">02</div>
+        <h3>Nationale Transporte</h3>
+        <p>Almanya geneline ulusal taşımacılık. "Transporte in ganz Deutschland" — tüm Almanya'ya.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="card-num">03</div>
+        <h3>Logistik Lösungen</h3>
+        <p>Kapsamlı lojistik çözümleri. Depolama, dağıtım ve tedarik zinciri yönetimi.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="card-num">04</div>
+        <h3>Möbeltransport</h3>
+        <p>Mobilya taşıma hizmetleri. Güvenli ve özenli mobilya nakliyesi.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="card-num">05</div>
+        <h3>Umzugsservice</h3>
+        <p>Profesyonel ev ve ofis taşıma hizmetleri. Baştan sona taşınma desteği.</p>
+      </article>
+      <article class="service-card reveal">
+        <div class="card-num">06</div>
+        <h3>Lagerung</h3>
+        <p>Güvenli depolama hizmetleri. Eşyalarınız için güvenli ve uygun koşullarda saklama.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISA SERVICES ============ -->
+<section id="visa" class="visa">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">VİZE HİZMETLERİ</p>
+      <h2 class="section-title">Vize & Oturum İzni Danışmanlığı</h2>
+      <p class="section-subtitle visa-intro">
+        iletişime geçtiğiniz için teşekkürler! Size nasıl yardımcı olabiliriz?<br>
+        Firmamız, Avrupa ülkelerine yönelik vize ve oturum izni başvurularında profesyonel danışmanlık hizmeti sunmaktadır. Avrupa'daki tüm ülkelere yapılacak başvurular için, başvuru sürecinin başından sonuna kadar sizlere destek oluyoruz.
+      </p>
+    </div>
+    <div class="visa-grid">
+      <article class="visa-card reveal">
+        <div class="visa-icon">🧳</div>
+        <h3>Turistik Vize</h3>
+        <p>Turistik amaçlı Avrupa seyahatleriniz için vize başvuru danışmanlığı.</p>
+      </article>
+      <article class="visa-card reveal">
+        <div class="visa-icon">💼</div>
+        <h3>Ticari Vize</h3>
+        <p>İş amaçlı seyahatler için ticari vize başvuru süreçlerinde profesyonel destek.</p>
+      </article>
+      <article class="visa-card reveal">
+        <div class="visa-icon">👨‍👩‍👧</div>
+        <h3>Aile Ziyareti Vizesi</h3>
+        <p>Akraba ve aile ziyareti için vize başvuru danışmanlığı.</p>
+      </article>
+      <article class="visa-card reveal">
+        <div class="visa-icon">🎓</div>
+        <h3>Öğrenci Vizesi</h3>
+        <p>Eğitim amaçlı Avrupa'ya gitmek isteyen öğrenciler için vize danışmanlığı.</p>
+      </article>
+      <article class="visa-card reveal">
+        <div class="visa-icon">⚒️</div>
+        <h3>Çalışma Vizesi</h3>
+        <p>Avrupa'da çalışmak isteyenler için çalışma vizesi başvuru desteği.</p>
+      </article>
+      <article class="visa-card reveal">
+        <div class="visa-icon">🏠</div>
+        <h3>Aile Birleşimi Vizesi</h3>
+        <p>Aile birleşimi için vize başvuru süreçlerinde eksiksiz danışmanlık.</p>
+      </article>
+      <article class="visa-card reveal">
+        <div class="visa-icon">📋</div>
+        <h3>Oturum İzni Başvuruları</h3>
+        <p>Avrupa'da oturum izni başvuru süreçlerinde başından sonuna kadar destek.</p>
+      </article>
+      <article class="visa-card visa-card-cta reveal">
+        <div class="visa-icon">✦</div>
+        <h3>Daha Fazla Bilgi</h3>
+        <p>Belirli bir ülke veya vize türü hakkında sorularınız mı var? Bizimle iletişime geçin.</p>
+        <a href="#contact" class="btn btn-gold btn-sm">İletişime Geçin →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="gallery">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">GALERİ</p>
+      <h2 class="section-title">Çalışmalarımızdan Kareler</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item gallery-item-lg" data-index="0">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80&auto=format&fit=crop" alt="Tır yolda" loading="lazy">
+      </figure>
+      <figure class="gallery-item" data-index="1">
+        <img src="https://images.unsplash.com/photo-1571989928541-674d0cf46c4a?w=600&q=80&auto=format&fit=crop" alt="Konteynerler" loading="lazy">
+      </figure>
+      <figure class="gallery-item" data-index="2">
+        <img src="https://images.unsplash.com/photo-1586206670130-4c6d8e646c9a?w=600&q=80&auto=format&fit=crop" alt="Karayolu taşımacılık" loading="lazy">
+      </figure>
+      <figure class="gallery-item gallery-item-tall" data-index="3">
+        <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80&auto=format&fit=crop" alt="Lojistik depo" loading="lazy">
+      </figure>
+      <figure class="gallery-item" data-index="4">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&q=80&auto=format&fit=crop" alt="Lojistik" loading="lazy">
+      </figure>
+      <figure class="gallery-item" data-index="5">
+        <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=600&q=80&auto=format&fit=crop" alt="Yükleme" loading="lazy">
+      </figure>
+      <figure class="gallery-item" data-index="6">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80&auto=format&fit=crop" alt="Van" loading="lazy">
+      </figure>
+      <figure class="gallery-item" data-index="7">
+        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&q=80&auto=format&fit=crop" alt="Havaalanı" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <p class="section-label">İLETİŞİM</p>
+      <h2 class="section-title">İletişime Geçin</h2>
+      <p class="body-text">Her türlü soru ve talepleriniz için bizimle iletişime geçebilirsiniz. Uzman ekibimiz size yardımcı olmaktan memnuniyet duyacaktır.</p>
+
+      <div class="contact-items">
+        <div class="contact-item">
+          <span class="contact-icon">☎</span>
+          <div>
+            <span class="contact-label">Telefon</span>
+            <a href="tel:+49">+49 (0) XXX XXX XX XX</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉</span>
+          <div>
+            <span class="contact-label">E-Posta</span>
+            <a href="mailto:info@aydin-logistik.de">info@aydin-logistik.de</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <span class="contact-label">Adres</span>
+            <span class="contact-value">Deutschland</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕐</span>
+          <div>
+            <span class="contact-label">Çalışma Saatleri</span>
+            <span class="contact-value">Pzt - Cum: 09:00 - 18:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+      <div class="form-group">
+        <label for="name">Ad Soyad</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">E-Posta</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Konu</label>
+        <select id="subject" name="subject">
+          <option value="visa">Vize Hizmetleri</option>
+          <option value="transport">Taşımacılık</option>
+          <option value="logistics">Lojistik</option>
+          <option value="other">Diğer</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Mesajınız</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark btn-block">Gönder →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <svg class="logo-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M20 5 L35 32 L5 32 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M20 14 L28 28 L12 28 Z" fill="currentColor" opacity="0.25"/>
+            <circle cx="20" cy="22" r="2.5" fill="currentColor"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-main">AYDIN</span>
+            <span class="logo-sub">BERATUNG & LOGİSTİK</span>
+          </span>
+        </a>
+        <p class="footer-desc">Avrupa ülkelerine vize, oturum izni danışmanlığı ve taşımacılık lojistik çözümleri. Zuverlässig. Schnell. Pünktlich.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hızlı Erişim</h4>
+        <a href="#hero">Ana Sayfa</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#services">Hizmetler</a>
+        <a href="#visa">Vize Hizmetleri</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">İletişim</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hizmetler</h4>
+        <a href="#services">Express Transporte</a>
+        <a href="#services">Nationale Transporte</a>
+        <a href="#services">Logistik Lösungen</a>
+        <a href="#visa">Vize Danışmanlığı</a>
+        <a href="#visa">Oturum İzni</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Portallar</h4>
+        <a href="/customer-app/">Müşteri Paneli</a>
+        <a href="/driver-app/">Sürücü Paneli</a>
+        <a href="/admin-panel/">Admin Paneli</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <a href="tel:+49">☎ +49 (0) XXX XXX XX XX</a>
+        <a href="mailto:info@aydin-logistik.de">✉ info@aydin-logistik.de</a>
+        <span class="contact-value">📍 Deutschland</span>
+        <span class="contact-value">🕐 Pzt-Cum: 09:00-18:00</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 AYDIN BERATUNG & LOGİSTİK TRANSPORT. Tüm hakları saklıdır.</p>
+      <p>www.aydin-logistik.de</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Kapat">✕</button>
+  <button class="lightbox-prev" aria-label="Önceki">←</button>
+  <button class="lightbox-next" aria-label="Sonraki">→</button>
+  <img src="" alt="" id="lightboxImg">
 </div>
 
+<script src="/app.js"></script>
 </body>
 </html>
