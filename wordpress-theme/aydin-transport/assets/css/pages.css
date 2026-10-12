@@ -353,7 +353,7 @@
 .team-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   transition: transform 1.1s var(--ease-out);
 }
@@ -546,7 +546,7 @@
 .map-block img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -753,7 +753,7 @@
 .gallery__item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   transition: transform 1.1s var(--ease-out);
 }

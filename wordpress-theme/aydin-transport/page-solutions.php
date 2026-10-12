@@ -143,7 +143,7 @@ get_header();
         </div>
         <div class="split__media" data-reveal="scale">
           <div class="panel-media panel-media--wide img-zoom" data-cursor="Standort" data-i18n-attr="data-cursor:ct.area.eyebrow">
-            <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-3.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
+            <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-4.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
           </div>
         </div>
       </div>

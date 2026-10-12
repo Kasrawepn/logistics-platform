@@ -305,7 +305,7 @@ get_header();
           <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-2.jpg' ) ); ?>" alt="Fahrer von Aydın Transport & Logistik" loading="lazy">
         </figure>
         <figure class="gallery__item" data-reveal>
-          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-3.jpg' ) ); ?>" alt="Fahrer von Aydın Transport & Logistik" loading="lazy">
+          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-branded.png' ) ); ?>" alt="Transporter von Aydın Transport & Logistik" loading="lazy">
         </figure>
         <figure class="gallery__item" data-reveal>
           <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-4.jpg' ) ); ?>" alt="Fahrer von Aydın Transport & Logistik" loading="lazy">

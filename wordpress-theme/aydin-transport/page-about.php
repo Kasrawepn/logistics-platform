@@ -89,10 +89,7 @@ get_header();
         <figure class="team-card" data-reveal>
           <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-2.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
         </figure>
-        <figure class="team-card" data-reveal>
-          <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-3.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
-        </figure>
-        <figure class="team-card" data-reveal>
+                <figure class="team-card" data-reveal>
           <img src="<?php echo esc_url( aydin_asset( 'img/aydin-team-4.jpg' ) ); ?>" alt="Fahrer von Aydın Transport &amp; Logistik" loading="lazy">
         </figure>
       </div>
