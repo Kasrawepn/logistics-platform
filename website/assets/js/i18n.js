@@ -181,7 +181,7 @@
       "3,5 tonluk aracımız · Radolfzell",
     ],
     "home.about.cursor": ["Unser Fahrzeug", "Our vehicle", "Aracımız"],
-    "home.services.eyebrow": ["Leistungen", "Services", "Hizmetler"],
+    "home.services.eyebrow": ["Transport & Logistik", "Transport & Logistics", "Taşıma & Lojistik"],
     "home.services.title": ["Was wir für Sie fahren", "What we drive for you", "Sizin için neler yapıyoruz"],
     "home.services.lead": [
       "Vier Leistungen, ein Ansprechpartner. Sie entscheiden, was Sie brauchen — wir übernehmen die Umsetzung.",
@@ -207,6 +207,13 @@
       "Yükünüz A'dan B'ye doğrudan gider — aktarma yok, dolambaç yok.",
     ],
     "home.s4.title": ["Kurierdienste", "Courier services", "Kurye hizmetleri"],
+    "home.visa.eyebrow": ["Visa & Einwanderung", "Visa & Immigration", "Vize & Göç"],
+    "home.visa.title": ["Visum-Beratung für Europa", "Visa consulting for Europe", "Avrupa için vize danışmanlığı"],
+    "home.visa.lead": [
+      "Professionelle Beratung für Visa- und Aufenthaltsanträge — vom ersten Gespräch bis zur vollständigen Antragsmappe.",
+      "Professional consulting for visa and residence permit applications — from the first conversation to the complete application file.",
+      "Vize ve oturum izni başvuruları için profesyonel danışmanlık — ilk görüşmeden eksiksiz başvuru dosyasına kadar.",
+    ],
     "home.s4.text": [
       "Kurzfristige Kurierfahrten nach Absprache, auch für eilige Einzelsendungen.",
       "Short-notice courier trips by arrangement, including urgent single items.",
