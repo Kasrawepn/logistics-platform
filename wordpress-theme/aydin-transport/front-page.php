@@ -16,6 +16,7 @@ get_header();
     <div class="hero__media" data-parallax="0.12">
       <img src="<?php echo esc_url( aydin_asset( 'img/aydin-van-dark.jpg' ) ); ?>" alt="Transporter von Aydın Transport &amp; Logistik mit Firmenaufschrift" fetchpriority="high">
     </div>
+    <div class="hero__overlay"></div>
     <div class="hero__inner container">
       <div class="hero__content">
         <span class="hero__eyebrow hero__anim" data-i18n="home.hero.eyebrow">Transport &amp; Logistik · Radolfzell</span>
