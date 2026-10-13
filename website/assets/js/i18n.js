@@ -138,9 +138,9 @@
     "footer.legal.terms": ["AGB", "Terms", "Şartlar"],
     "footer.legal.imprint": ["Impressum", "Imprint", "Künye"],
     "address": [
-      "Herrenlandstraße 31–37, Radolfzell, Deutschland",
-      "Herrenlandstraße 31–37, Radolfzell, Germany",
-      "Herrenlandstraße 31–37, Radolfzell, Almanya",
+      "Herrenlandstraße 31–37, 78315 Radolfzell, Deutschland",
+      "Herrenlandstraße 31–37, 78315 Radolfzell, Germany",
+      "Herrenlandstraße 31–37, 78315 Radolfzell, Almanya",
     ],
 
     /* ---------------------------------------------------------------- home */

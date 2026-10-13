@@ -66,7 +66,7 @@ get_header();
               <div class="info-item__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
               <div>
                 <h4 data-i18n="ct.info.addressTitle">Adresse</h4>
-                <p data-i18n="address">Herrenlandstraße 31–37, Radolfzell, Deutschland</p>
+                <p data-i18n="address">Herrenlandstraße 31–37, 78315 Radolfzell, Deutschland</p>
                 <p style="font-size:.875rem;color:var(--fg-muted)" data-i18n="ct.info.addressNote">Termine nach Absprache</p>
               </div>
             </div>
@@ -102,7 +102,7 @@ get_header();
         <article class="office" data-reveal>
           <h3 data-i18n="ct.area.o1">Radolfzell</h3>
           <div class="office__role" data-i18n="ct.area.o1role">Standort</div>
-          <p data-i18n="address">Herrenlandstraße 31–37, Radolfzell, Deutschland</p>
+          <p data-i18n="address">Herrenlandstraße 31–37, 78315 Radolfzell, Deutschland</p>
         </article>
         <article class="office" data-reveal>
           <h3 data-i18n="ct.area.o2">Deutschlandweit</h3>
