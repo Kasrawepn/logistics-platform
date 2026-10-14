@@ -9,7 +9,7 @@
  * inner pages once so a fresh install shows the whole site after activation.
  */
 
-define( 'AYDIN_THEME_VERSION', '1.0.0' );
+define( 'AYDIN_THEME_VERSION', '1.0.1' );
 
 /**
  * The inner pages: WordPress slug => German title used when the page is created,
@@ -146,6 +146,12 @@ add_action( 'after_setup_theme', 'aydin_setup' );
  * slug — create the missing ones when the theme is activated.
  */
 function aydin_create_pages() {
+	// Avoid running on every page load once all pages exist.
+	if ( get_option( 'aydin_pages_version' ) === AYDIN_THEME_VERSION ) {
+		return;
+	}
+
+	$created = false;
 	foreach ( aydin_page_map() as $slug => $page ) {
 		if ( get_page_by_path( $slug ) ) {
 			continue;
@@ -160,7 +166,14 @@ function aydin_create_pages() {
 				'post_content' => '',
 			)
 		);
+		$created = true;
 	}
+
+	if ( $created ) {
+		flush_rewrite_rules();
+	}
+
+	update_option( 'aydin_pages_version', AYDIN_THEME_VERSION );
 }
 add_action( 'after_switch_theme', 'aydin_create_pages' );
 add_action( 'init', 'aydin_create_pages' );
