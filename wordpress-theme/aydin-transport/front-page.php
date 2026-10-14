@@ -169,41 +169,48 @@ get_header();
       </div>
 
       <div class="visa-cards" data-reveal-group="80">
-        <article class="card" data-reveal>
+        <a class="card visa-card-link" data-reveal href="<?php echo esc_url( aydin_page_url( 'visa-register', '?type=tourist' ) ); ?>">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10a2 2 0 0 1 2 2v9H5v-9a2 2 0 0 1 2-2Z"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M9 13h6"/></svg></div>
           <h3 data-i18n="visa.s1.title">Touristenvisum</h3>
           <p data-i18n="visa.s1.text">Für touristische Reisen in europäische Länder — mit allen erforderlichen Unterlagen.</p>
-        </article>
-        <article class="card" data-reveal>
+          <span class="visa-card-link__cta" data-i18n="nav.visaReg">Visum beantragen</span>
+        </a>
+        <a class="card visa-card-link" data-reveal href="<?php echo esc_url( aydin_page_url( 'visa-register', '?type=business' ) ); ?>">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/></svg></div>
           <h3 data-i18n="visa.s2.title">Geschäftsvisum</h3>
           <p data-i18n="visa.s2.text">Für geschäftliche Termine, Messen und Meetings in Europa.</p>
-        </article>
-        <article class="card" data-reveal>
+          <span class="visa-card-link__cta" data-i18n="nav.visaReg">Visum beantragen</span>
+        </a>
+        <a class="card visa-card-link" data-reveal href="<?php echo esc_url( aydin_page_url( 'visa-register', '?type=family-visit' ) ); ?>">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c0-3.1 2.5-5.2 5.5-5.2s5.5 2.1 5.5 5.2"/><path d="M16.2 5.6a3 3 0 0 1 0 5.6"/><path d="M17.6 14.8c1.9.5 3.1 2.2 3.1 4.7"/></svg></div>
           <h3 data-i18n="visa.s3.title">Familienbesuchsvisum</h3>
           <p data-i18n="visa.s3.text">Um Familie und Freunde in europäischen Ländern zu besuchen.</p>
-        </article>
-        <article class="card" data-reveal>
+          <span class="visa-card-link__cta" data-i18n="nav.visaReg">Visum beantragen</span>
+        </a>
+        <a class="card visa-card-link" data-reveal href="<?php echo esc_url( aydin_page_url( 'visa-register', '?type=student' ) ); ?>">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.4 12 5.4l9 4-9 4-9-4Z"/><path d="M7 11.6v4.6c0 1.1 2.2 2 5 2s5-.9 5-2v-4.6"/></svg></div>
           <h3 data-i18n="visa.s4.title">Studentenvisum</h3>
           <p data-i18n="visa.s4.text">Für Studium, Sprachkurse und Austauschprogramme in Europa.</p>
-        </article>
-        <article class="card" data-reveal>
+          <span class="visa-card-link__cta" data-i18n="nav.visaReg">Visum beantragen</span>
+        </a>
+        <a class="card visa-card-link" data-reveal href="<?php echo esc_url( aydin_page_url( 'visa-register', '?type=work' ) ); ?>">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 5.5 19 10l-7.5 7.5L7 13l7.5-7.5Z"/><path d="M14.5 5.5 17 3l3.5 3.5L18 9"/><path d="M7 13l-3 3v3h3l3-3"/></svg></div>
           <h3 data-i18n="visa.s5.title">Arbeitsvisum</h3>
           <p data-i18n="visa.s5.text">Für Beschäftigung und berufliche Tätigkeiten in europäischen Ländern.</p>
-        </article>
-        <article class="card" data-reveal>
+          <span class="visa-card-link__cta" data-i18n="nav.visaReg">Visum beantragen</span>
+        </a>
+        <a class="card visa-card-link" data-reveal href="<?php echo esc_url( aydin_page_url( 'visa-register', '?type=family-reunion' ) ); ?>">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div>
           <h3 data-i18n="visa.s6.title">Familiennachzugsvisum</h3>
           <p data-i18n="visa.s6.text">Nachzug von Ehepartner und Kindern nach Europa.</p>
-        </article>
-        <article class="card" data-reveal>
+          <span class="visa-card-link__cta" data-i18n="nav.visaReg">Visum beantragen</span>
+        </a>
+        <a class="card visa-card-link" data-reveal href="<?php echo esc_url( aydin_page_url( 'visa-register', '?type=residence' ) ); ?>">
           <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="3" width="15" height="18" rx="2"/><circle cx="12" cy="10.6" r="3.1"/><path d="M8.6 18h6.8"/></svg></div>
           <h3 data-i18n="visa.s7.title">Aufenthaltsanträge</h3>
           <p data-i18n="visa.s7.text">Anträge auf Aufenthaltserlaubnis und Verlängerung in europäischen Ländern.</p>
-        </article>
+          <span class="visa-card-link__cta" data-i18n="nav.visaReg">Visum beantragen</span>
+        </a>
       </div>
 
       <div class="split__actions" data-reveal="fade" style="margin-top: 2.5rem;">
