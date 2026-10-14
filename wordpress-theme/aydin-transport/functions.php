@@ -42,10 +42,15 @@ function aydin_page_map() {
 			'title_key' => 'meta.contact.title',
 			'desc_key'  => 'meta.contact.desc',
 		),
-		'visa'      => array(
+		'visa'           => array(
 			'label'     => 'Visa',
 			'title_key' => 'meta.visa.title',
 			'desc_key'  => 'meta.visa.desc',
+		),
+		'visa-register'  => array(
+			'label'     => 'Visum-Registrierung',
+			'title_key' => 'meta.visaReg.title',
+			'desc_key'  => 'meta.visaReg.desc',
 		),
 	);
 }
@@ -103,6 +108,7 @@ function aydin_enqueue_assets() {
 	wp_enqueue_script( 'aydin-i18n', aydin_asset( 'js/i18n.js' ), array(), $version, true );
 	wp_enqueue_script( 'aydin-layout', aydin_asset( 'js/layout.js' ), array( 'aydin-i18n' ), $version, true );
 	wp_enqueue_script( 'aydin-main', aydin_asset( 'js/main.js' ), array( 'aydin-layout' ), $version, true );
+	wp_enqueue_script( 'aydin-visa-reg', aydin_asset( 'js/visa-register.js' ), array( 'aydin-main' ), $version, true );
 
 	// Header and footer are built in JavaScript from a table of page names; hand
 	// it the WordPress URLs instead of the static .html files.
@@ -114,7 +120,8 @@ function aydin_enqueue_assets() {
 		'solutions.html' => 'solutions',
 		'fleet.html'     => 'fleet',
 		'contact.html'   => 'contact',
-		'visa.html'      => 'visa',
+		'visa.html'           => 'visa',
+		'visa-register.html'  => 'visa-register',
 	) as $file => $slug ) {
 		$urls[ $file ] = aydin_page_url( $slug );
 

@@ -778,6 +778,211 @@
   }
 }
 
+.visa-card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.visa-card-link:hover {
+  border-color: var(--gold-line);
+  transform: translateY(-3px);
+}
+
+.visa-card-link__cta {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+
+.visa-card-link:hover .visa-card-link__cta {
+  color: var(--gold);
+}
+
+/* --------------------------------------------------- Visa registration */
+.vr-steps {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.vr-steps__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.vr-steps__num {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--fg-muted);
+  transition: all 0.3s var(--ease-out);
+}
+
+.vr-steps__item.is-active .vr-steps__num {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--navy-900);
+}
+
+.vr-steps__item.is-done .vr-steps__num {
+  border-color: var(--gold-line);
+  background: var(--gold-line);
+  color: var(--navy-900);
+}
+
+.vr-steps__label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.vr-steps__item.is-active .vr-steps__label {
+  color: var(--navy-900);
+}
+
+.vr-steps__line {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  min-width: 20px;
+}
+
+.vr-panel {
+  display: none;
+}
+
+.vr-panel.is-active {
+  display: block;
+}
+
+.vr-type-grid .vr-type-card {
+  cursor: pointer;
+  transition: border-color 0.25s var(--ease-out), transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+  outline: none;
+}
+
+.vr-type-card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.35);
+}
+
+.vr-type-card:hover {
+  border-color: var(--gold-line);
+  transform: translateY(-3px);
+}
+
+.vr-type-card.is-selected {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold), 0 8px 24px rgba(197, 160, 89, 0.18);
+}
+
+.vr-selected-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  margin-bottom: 2rem;
+}
+
+.vr-selected-bar__label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.vr-selected-bar__value {
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.vr-selected-bar__change {
+  margin-left: auto;
+  background: none;
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--gold-600);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.vr-selected-bar__change:hover {
+  color: var(--gold);
+}
+
+.vr-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.vr-review {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--paper);
+}
+
+.vr-review__row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9375rem;
+}
+
+.vr-review__row:last-child {
+  border-bottom: 0;
+}
+
+.vr-review__label {
+  flex: 0 0 10rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding-top: 2px;
+}
+
+.vr-review__value {
+  color: var(--navy-900);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .vr-steps__label { display: none; }
+  .vr-steps__line { min-width: 12px; }
+  .vr-selected-bar__change { margin-left: 0; width: 100%; text-align: left; }
+  .vr-review__label { flex: 0 0 7rem; }
+}
+
 /* ---------------------------------------------------------- Responsive */
 @media (max-width: 1080px) {
   .split__text,

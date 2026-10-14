@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visum-Registrierung — Aydın Transport & Logistik</title>
+<meta name="description" content="Registrieren Sie sich für unsere Visa-Beratung: Wählen Sie Ihren Visumtyp, geben Sie Ihre Kontaktdaten ein und wir melden uns bei Ihnen.">
+<meta name="theme-color" content="#0A1A2F">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<noscript><style>[data-reveal]{opacity:1;transform:none}</style></noscript>
+</head>
+<body data-page="visa" data-title-key="meta.visaReg.title" data-desc-key="meta.visaReg.desc">
+
+<a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
+<div data-component="header"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="page-hero__media" data-parallax="0.1">
+      <img src="assets/img/aydin-office.jpg" alt="Besprechungsraum von Aydın Transport & Logistik" fetchpriority="high">
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="container page-hero__inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" data-i18n="common.home">Startseite</a><span>/</span>
+        <a href="visa.html" data-i18n="nav.visa">Visa</a><span>/</span>
+        <span aria-current="page" data-i18n="vr.hero.title">Visum-Registrierung</span>
+      </nav>
+      <h1 data-i18n="vr.hero.title">Visum-Registrierung</h1>
+      <p data-i18n="vr.hero.lead">
+        Wählen Sie Ihren Visumtyp, geben Sie Ihre Daten ein — wir melden uns bei Ihnen.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+
+      <!-- Step indicator -->
+      <div class="vr-steps" data-vr-steps>
+        <div class="vr-steps__item is-active" data-step-indicator="1">
+          <span class="vr-steps__num">1</span>
+          <span class="vr-steps__label" data-i18n="vr.step1.eyebrow">Schritt 1</span>
+        </div>
+        <div class="vr-steps__line"></div>
+        <div class="vr-steps__item" data-step-indicator="2">
+          <span class="vr-steps__num">2</span>
+          <span class="vr-steps__label" data-i18n="vr.step2.eyebrow">Schritt 2</span>
+        </div>
+        <div class="vr-steps__line"></div>
+        <div class="vr-steps__item" data-step-indicator="3">
+          <span class="vr-steps__num">3</span>
+          <span class="vr-steps__label" data-i18n="vr.step3.eyebrow">Schritt 3</span>
+        </div>
+      </div>
+
+      <form class="form vr-form" data-form novalidate>
+
+        <!-- ============================== STEP 1: Visa type selection -->
+        <div class="vr-panel is-active" data-vr-panel="1">
+          <div class="section-head" style="margin-bottom:2rem">
+            <div>
+              <span class="eyebrow" data-i18n="vr.step1.eyebrow">Schritt 1</span>
+              <h2 class="section-head__title" data-i18n="vr.step1.title">Visumtyp wählen</h2>
+            </div>
+            <p data-i18n="vr.step1.lead">Welche Art von Visum benötigen Sie? Klicken Sie auf die passende Karte.</p>
+          </div>
+
+          <div class="visa-cards vr-type-grid" data-vr-types>
+            <article class="card vr-type-card" data-visa-type="tourist" tabindex="0" role="button">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8h10a2 2 0 0 1 2 2v9H5v-9a2 2 0 0 1 7-2Z"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M9 13h6"/></svg></div>
+              <h3 data-i18n="visa.s1.title">Touristenvisum</h3>
+              <p data-i18n="visa.s1.text">Für touristische Reisen in europäische Länder — mit allen erforderlichen Unterlagen.</p>
+            </article>
+            <article class="card vr-type-card" data-visa-type="business" tabindex="0" role="button">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/></svg></div>
+              <h3 data-i18n="visa.s2.title">Geschäftsvisum</h3>
+              <p data-i18n="visa.s2.text">Für geschäftliche Termine, Messen und Meetings in Europa.</p>
+            </article>
+            <article class="card vr-type-card" data-visa-type="family-visit" tabindex="0" role="button">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c0-3.1 2.5-5.2 5.5-5.2s5.5 2.1 5.5 5.2"/><path d="M16.2 5.6a3 3 0 0 1 0 5.6"/><path d="M17.6 14.8c1.9.5 3.1 2.2 3.1 4.7"/></svg></div>
+              <h3 data-i18n="visa.s3.title">Familienbesuchsvisum</h3>
+              <p data-i18n="visa.s3.text">Um Familie und Freunde in europäischen Ländern zu besuchen.</p>
+            </article>
+            <article class="card vr-type-card" data-visa-type="student" tabindex="0" role="button">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.4 12 5.4l9 4-9 4-9-4Z"/><path d="M7 11.6v4.6c0 1.1 2.2 2 5 2s5-.9 5-2v-4.6"/></svg></div>
+              <h3 data-i18n="visa.s4.title">Studentenvisum</h3>
+              <p data-i18n="visa.s4.text">Für Studium, Sprachkurse und Austauschprogramme in Europa.</p>
+            </article>
+            <article class="card vr-type-card" data-visa-type="work" tabindex="0" role="button">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 5.5 19 10l-7.5 7.5L7 13l7.5-7.5Z"/><path d="M14.5 5.5 17 3l3.5 3.5L18 9"/><path d="M7 13l-3 3v3h3l3-3"/></svg></div>
+              <h3 data-i18n="visa.s5.title">Arbeitsvisum</h3>
+              <p data-i18n="visa.s5.text">Für Beschäftigung und berufliche Tätigkeiten in europäischen Ländern.</p>
+            </article>
+            <article class="card vr-type-card" data-visa-type="family-reunion" tabindex="0" role="button">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+              <h3 data-i18n="visa.s6.title">Familiennachzugsvisum</h3>
+              <p data-i18n="visa.s6.text">Nachzug von Ehepartner und Kindern nach Europa.</p>
+            </article>
+            <article class="card vr-type-card" data-visa-type="residence" tabindex="0" role="button">
+              <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="3" width="15" height="18" rx="2"/><circle cx="12" cy="10.6" r="3.1"/><path d="M8.6 18h6.8"/></svg></div>
+              <h3 data-i18n="visa.s7.title">Aufenthaltsanträge</h3>
+              <p data-i18n="visa.s7.text">Anträge auf Aufenthaltserlaubnis und Verlängerung in europäischen Ländern.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- ============================== STEP 2: Contact details -->
+        <div class="vr-panel" data-vr-panel="2" hidden>
+          <div class="section-head" style="margin-bottom:2rem">
+            <div>
+              <span class="eyebrow" data-i18n="vr.step2.eyebrow">Schritt 2</span>
+              <h2 class="section-head__title" data-i18n="vr.step2.title">Ihre Kontaktdaten</h2>
+            </div>
+            <p data-i18n="vr.step2.lead">Damit wir Sie erreichen können — wir melden uns mit den nächsten Schritten.</p>
+          </div>
+
+          <div class="vr-selected-bar">
+            <span class="vr-selected-bar__label" data-i18n="vr.selected">Gewählter Visumtyp</span>
+            <span class="vr-selected-bar__value" data-vr-selected-type>—</span>
+            <button class="vr-selected-bar__change" type="button" data-vr-back-to-1 data-i18n="vr.changeType">Visumtyp ändern</button>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="vr-name"><span data-i18n="vr.f.name">Name</span> <span class="req">*</span></label>
+              <input id="vr-name" name="name" type="text" autocomplete="name" required data-i18n-attr="placeholder:vr.f.namePh" placeholder="Vor- und Nachname">
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="vr-email"><span data-i18n="vr.f.email">E-Mail</span> <span class="req">*</span></label>
+              <input id="vr-email" name="email" type="email" autocomplete="email" required data-i18n-attr="placeholder:vr.f.emailPh" placeholder="name@beispiel.de">
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label for="vr-phone" data-i18n="vr.f.phone">Telefon</label>
+              <input id="vr-phone" name="phone" type="tel" autocomplete="tel" data-i18n-attr="placeholder:vr.f.phonePh" placeholder="+49 …">
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="vr-nationality" data-i18n="vr.f.nationality">Staatsangehörigkeit</label>
+              <input id="vr-nationality" name="origin" type="text" data-i18n-attr="placeholder:vr.f.nationalityPh" placeholder="z. B. Deutschland, Türkei">
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="vr-destination" data-i18n="vr.f.destination">Zielland</label>
+            <input id="vr-destination" name="destination" type="text" data-i18n-attr="placeholder:vr.f.destinationPh" placeholder="z. B. Deutschland">
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="vr-message" data-i18n="vr.f.message">Anmerkungen</label>
+            <textarea id="vr-message" name="message" rows="4" data-i18n-attr="placeholder:vr.f.messagePh" placeholder="Weitere Informationen zu Ihrem Antrag"></textarea>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+
+          <div class="vr-nav">
+            <button class="btn btn--navy" type="button" data-vr-prev data-i18n="vr.btn.back">Zurück</button>
+            <button class="btn btn--gold" type="button" data-vr-next data-i18n="vr.btn.next">Weiter</button>
+          </div>
+        </div>
+
+        <!-- ============================== STEP 3: Review & submit -->
+        <div class="vr-panel" data-vr-panel="3" hidden>
+          <div class="section-head" style="margin-bottom:2rem">
+            <div>
+              <span class="eyebrow" data-i18n="vr.step3.eyebrow">Schritt 3</span>
+              <h2 class="section-head__title" data-i18n="vr.step3.title">Übersicht & absenden</h2>
+            </div>
+            <p data-i18n="vr.step3.lead">Bitte prüfen Sie Ihre Angaben und senden Sie die Registrierung ab.</p>
+          </div>
+
+          <div class="vr-review" data-vr-review></div>
+
+          <label class="checkbox">
+            <input type="checkbox" name="consent" required>
+            <span><span data-i18n="vr.consent">Ich bin damit einverstanden, dass Aydın Transport & Logistik mich zu dieser Visa-Anfrage kontaktiert.</span> <span class="req">*</span></span>
+          </label>
+
+          <div class="form-success" role="status" tabindex="-1">
+            <strong data-i18n="vr.successTitle">Danke — Ihre Registrierung ist eingegangen.</strong>
+            <span data-i18n="vr.successText">Wir melden uns mit den nächsten Schritten. Für dringende Fälle erreichen Sie uns telefonisch unter +49 160 801 66 59.</span>
+          </div>
+
+          <div class="form-error" role="alert" tabindex="-1">
+            <strong data-i18n="vr.errorTitle">Die Registrierung konnte nicht gesendet werden.</strong>
+            <span data-i18n="vr.errorText">Bitte versuchen Sie es später erneut — oder rufen Sie uns direkt an: +49 160 801 66 59.</span>
+          </div>
+
+          <div class="vr-nav">
+            <button class="btn btn--navy" type="button" data-vr-prev data-i18n="vr.btn.back">Zurück</button>
+            <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center">
+              <button class="btn btn--gold btn--lg" type="submit" data-i18n="vr.btn.submit">Registrierung senden</button>
+              <span class="form__note" data-i18n="vr.note">Unverbindlich. Ihre Daten werden nicht weitergegeben.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden field for visa type (maps to server "service" field) -->
+        <input type="hidden" name="service" data-vr-service>
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<div data-component="footer"></div>
+<script src="assets/js/i18n.js" defer></script>
+<script src="assets/js/layout.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/visa-register.js" defer></script>
+</body>
+</html>
