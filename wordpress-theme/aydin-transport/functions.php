@@ -163,3 +163,4 @@ function aydin_create_pages() {
 	}
 }
 add_action( 'after_switch_theme', 'aydin_create_pages' );
+add_action( 'init', 'aydin_create_pages' );
