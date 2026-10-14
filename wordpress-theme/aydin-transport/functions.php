@@ -9,7 +9,7 @@
  * inner pages once so a fresh install shows the whole site after activation.
  */
 
-define( 'AYDIN_THEME_VERSION', '1.0.1' );
+define( 'AYDIN_THEME_VERSION', '1.0.2' );
 
 /**
  * The inner pages: WordPress slug => German title used when the page is created,
@@ -177,3 +177,45 @@ function aydin_create_pages() {
 }
 add_action( 'after_switch_theme', 'aydin_create_pages' );
 add_action( 'init', 'aydin_create_pages' );
+
+/**
+ * Inline the visa-registration CSS so the page is styled even if pages.css
+ * fails to load on the hosting (observed on konsoleH installs where the
+ * enqueued pages.css returned a cached or empty version).
+ */
+function aydin_inline_vr_styles() {
+	if ( ! is_page( 'visa-register' ) ) {
+		return;
+	}
+	?>
+<style>
+.vr-steps{display:flex;align-items:center;gap:.75rem;margin-bottom:3rem}
+.vr-steps__item{display:flex;align-items:center;gap:.6rem}
+.vr-steps__num{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);font-size:.9375rem;font-weight:700;color:var(--fg-muted);transition:all .3s var(--ease-out)}
+.vr-steps__item.is-active .vr-steps__num{border-color:var(--gold);background:var(--gold);color:var(--navy-900)}
+.vr-steps__item.is-done .vr-steps__num{border-color:var(--gold-line);background:var(--gold-line);color:var(--navy-900)}
+.vr-steps__label{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted)}
+.vr-steps__item.is-active .vr-steps__label{color:var(--navy-900)}
+.vr-steps__line{flex:1;height:1px;background:var(--line);min-width:20px}
+.vr-panel{display:none}
+.vr-panel.is-active{display:block}
+.vr-type-grid .vr-type-card{cursor:pointer;transition:border-color .25s var(--ease-out),transform .25s var(--ease-out),box-shadow .25s var(--ease-out);outline:none}
+.vr-type-card:focus-visible{box-shadow:0 0 0 3px rgba(197,160,89,.35)}
+.vr-type-card:hover{border-color:var(--gold-line);transform:translateY(-3px)}
+.vr-type-card.is-selected{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),0 8px 24px rgba(197,160,89,.18)}
+.vr-selected-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;padding:1rem 1.25rem;border:1px solid var(--gold-line);border-radius:var(--radius);background:var(--paper);margin-bottom:2rem}
+.vr-selected-bar__label{font-size:.6875rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted)}
+.vr-selected-bar__value{font-weight:700;color:var(--navy-900)}
+.vr-selected-bar__change{margin-left:auto;background:none;border:none;font-size:.8125rem;font-weight:600;color:var(--gold-600);cursor:pointer;text-decoration:underline;padding:0}
+.vr-selected-bar__change:hover{color:var(--gold)}
+.vr-nav{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-top:2rem}
+.vr-review{border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;background:var(--paper)}
+.vr-review__row{display:flex;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.9375rem}
+.vr-review__row:last-child{border-bottom:0}
+.vr-review__label{flex:0 0 10rem;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-muted);padding-top:2px}
+.vr-review__value{color:var(--navy-900);font-weight:500}
+@media(max-width:640px){.vr-steps__label{display:none}.vr-steps__line{min-width:12px}.vr-selected-bar__change{margin-left:0;width:100%;text-align:left}.vr-review__label{flex:0 0 7rem}}
+</style>
+	<?php
+}
+add_action( 'wp_head', 'aydin_inline_vr_styles', 20 );
