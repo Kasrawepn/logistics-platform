@@ -185,7 +185,12 @@ itself can only be proven with the real App Password.
   it is set, the form reports its error state instead of delivering.
 - The `api` service has to be deployed next to the static site — a host that can only serve
   files has no `/api/contact`, and the form then shows its error state.
-- Footer legal links (Impressum, Datenschutz, AGB) are `#` placeholders.
+- `impressum.html`, `datenschutz.html` and `agb.html` exist and are linked from the shared
+  footer (`layout.js`) and from each other. Their body text is German only — the page shows a
+  translated `legal.binding` notice saying the German version is legally binding, which is why
+  those paragraphs carry no `data-i18n` keys. The USt-IdNr. line in the Impressum is still a
+  `.legal-todo` placeholder until the owner supplies the number (or confirms there is none);
+  the AGB are a carefully written draft and should get a legal review before hand-over.
 - The site is trilingual with no server-side routing: crawlers only ever index the German
   copy at the canonical URLs.
 

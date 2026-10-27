@@ -170,9 +170,9 @@
         <div class="footer-bar">
           <span>© <span data-year>2026</span> Aydın Transport &amp; Logistik. ${t("footer.rights")}</span>
           <nav class="footer-bar__links" aria-label="Legal">
-            <a href="#">${t("footer.legal.imprint")}</a>
-            <a href="#">${t("footer.legal.privacy")}</a>
-            <a href="#">${t("footer.legal.terms")}</a>
+            <a href="${url("impressum.html")}">${t("footer.legal.imprint")}</a>
+            <a href="${url("datenschutz.html")}">${t("footer.legal.privacy")}</a>
+            <a href="${url("agb.html")}">${t("footer.legal.terms")}</a>
           </nav>
         </div>
       </div>

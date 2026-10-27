@@ -137,6 +137,66 @@
     "footer.legal.privacy": ["Datenschutz", "Privacy", "Gizlilik"],
     "footer.legal.terms": ["AGB", "Terms", "Şartlar"],
     "footer.legal.imprint": ["Impressum", "Imprint", "Künye"],
+
+    /* ------------------------------------------------------------- legal */
+    "meta.imprint.title": [
+      "Impressum — Aydın Transport & Logistik",
+      "Imprint — Aydın Transport & Logistics",
+      "Künye — Aydın Transport & Lojistik",
+    ],
+    "meta.imprint.desc": [
+      "Impressum und Anbieterkennzeichnung von Aydın Transport & Logistik gemäß § 5 DDG.",
+      "Imprint and provider identification of Aydın Transport & Logistics pursuant to § 5 DDG.",
+      "Aydın Transport & Lojistik künyesi ve § 5 DDG uyarınca sağlayıcı bilgileri.",
+    ],
+    "meta.privacy.title": [
+      "Datenschutzerklärung — Aydın Transport & Logistik",
+      "Privacy Policy — Aydın Transport & Logistics",
+      "Gizlilik Politikası — Aydın Transport & Lojistik",
+    ],
+    "meta.privacy.desc": [
+      "Informationen zur Verarbeitung personenbezogener Daten nach DSGVO.",
+      "Information on the processing of personal data under the GDPR.",
+      "Kişisel verilerin GDPR kapsamında işlenmesine ilişkin bilgiler.",
+    ],
+    "meta.terms.title": [
+      "AGB — Aydın Transport & Logistik",
+      "Terms and Conditions — Aydın Transport & Logistics",
+      "Genel Şartlar — Aydın Transport & Lojistik",
+    ],
+    "meta.terms.desc": [
+      "Allgemeine Geschäftsbedingungen für Transport-, Kurier- und Visa-Dienstleistungen.",
+      "Terms and conditions for transport, courier and visa services.",
+      "Taşıma, kurye ve vize hizmetleri için genel şartlar.",
+    ],
+    "legal.nav.title": ["Rechtliches", "Legal", "Hukuki Bilgiler"],
+    "legal.binding": [
+      "Rechtlich verbindlich ist ausschließlich die deutsche Fassung dieser Seite.",
+      "Only the German version of this page is legally binding.",
+      "Bu sayfanın yalnızca Almanca sürümü hukuken bağlayıcıdır.",
+    ],
+    "legal.imprint.title": ["Impressum", "Imprint", "Künye"],
+    "legal.imprint.lead": [
+      "Anbieterkennzeichnung und Pflichtangaben gemäß § 5 DDG.",
+      "Provider identification and mandatory information pursuant to § 5 DDG.",
+      "§ 5 DDG uyarınca sağlayıcı bilgileri ve zorunlu açıklamalar.",
+    ],
+    "legal.privacy.title": ["Datenschutz", "Privacy Policy", "Gizlilik"],
+    "legal.privacy.lead": [
+      "Wie wir Ihre personenbezogenen Daten verarbeiten — nach DSGVO.",
+      "How we process your personal data under the GDPR.",
+      "Kişisel verilerinizi GDPR kapsamında nasıl işliyoruz.",
+    ],
+    "legal.terms.title": [
+      "Allgemeine Geschäftsbedingungen",
+      "Terms and Conditions",
+      "Genel Şartlar",
+    ],
+    "legal.terms.lead": [
+      "Bedingungen für Transportaufträge und Visa-Beratung.",
+      "Conditions for transport orders and visa consulting.",
+      "Taşıma siparişleri ve vize danışmanlığı koşulları.",
+    ],
     "address": [
       "Herrenlandstraße 31–37, 78315 Radolfzell, Deutschland",
       "Herrenlandstraße 31–37, 78315 Radolfzell, Germany",

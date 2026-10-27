@@ -9,7 +9,7 @@
  * inner pages once so a fresh install shows the whole site after activation.
  */
 
-define( 'AYDIN_THEME_VERSION', '1.0.2' );
+define( 'AYDIN_THEME_VERSION', '1.0.3' );
 
 /**
  * The inner pages: WordPress slug => German title used when the page is created,
@@ -51,6 +51,21 @@ function aydin_page_map() {
 			'label'     => 'Visum-Registrierung',
 			'title_key' => 'meta.visaReg.title',
 			'desc_key'  => 'meta.visaReg.desc',
+		),
+		'impressum'      => array(
+			'label'     => 'Impressum',
+			'title_key' => 'meta.imprint.title',
+			'desc_key'  => 'meta.imprint.desc',
+		),
+		'datenschutz'    => array(
+			'label'     => 'Datenschutz',
+			'title_key' => 'meta.privacy.title',
+			'desc_key'  => 'meta.privacy.desc',
+		),
+		'agb'            => array(
+			'label'     => 'AGB',
+			'title_key' => 'meta.terms.title',
+			'desc_key'  => 'meta.terms.desc',
 		),
 	);
 }
@@ -122,6 +137,9 @@ function aydin_enqueue_assets() {
 		'contact.html'   => 'contact',
 		'visa.html'           => 'visa',
 		'visa-register.html'  => 'visa-register',
+		'impressum.html'      => 'impressum',
+		'datenschutz.html'    => 'datenschutz',
+		'agb.html'            => 'agb',
 	) as $file => $slug ) {
 		$urls[ $file ] = aydin_page_url( $slug );
 

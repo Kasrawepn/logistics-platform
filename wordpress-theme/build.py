@@ -32,11 +32,14 @@ PAGES = [
     ("contact.html", "page-contact.php", "contact", "Kontakt"),
     ("visa.html", "page-visa.php", "visa", "Visa"),
     ("visa-register.html", "page-visa-register.php", "visa-register", "Visum-Registrierung"),
+    ("impressum.html", "page-impressum.php", "impressum", "Impressum"),
+    ("datenschutz.html", "page-datenschutz.php", "datenschutz", "Datenschutz"),
+    ("agb.html", "page-agb.php", "agb", "AGB"),
 ]
 
 ASSET_RE = re.compile(r'(src|href)="assets/([^"]+)"')
 PAGE_REF_RE = re.compile(
-    r'href="(index|services|about|solutions|fleet|contact|visa|visa-register)\.html(#[A-Za-z0-9_-]+|\?[A-Za-z0-9_=-]+)?"'
+    r'href="(index|services|about|solutions|fleet|contact|visa|visa-register|impressum|datenschutz|agb)\.html(#[A-Za-z0-9_-]+|\?[A-Za-z0-9_=-]+)?"'
 )
 FORM_RE = re.compile(r"\n[ \t]*<form\b.*?</form>\n", re.S)
 CONTACT_HEADING_RE = re.compile(r'(<h2[^>]*data-i18n=")ct\.form\.title("[^>]*>).*?(</h2>)', re.S)
