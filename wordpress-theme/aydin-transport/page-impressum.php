@@ -44,8 +44,8 @@ get_header();
           <address>
             <strong>Aydın Transport &amp; Logistik</strong><br>
             Inhaber: Muhammet Aydın<br>
-            Herrenlandstraße 31–37<br>
-            78315 Radolfzell<br>
+            Höhrenbergstr. 22<br>
+            78476 Allensbach<br>
             Deutschland
           </address>
 
@@ -62,7 +62,7 @@ get_header();
           </p>
 
           <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
-          <p>Muhammet Aydın, Herrenlandstraße 31–37, 78315 Radolfzell.</p>
+          <p>Muhammet Aydın, Höhrenbergstr. 22, 78476 Allensbach.</p>
 
           <h3>Verbraucherstreitbeilegung</h3>
           <p>

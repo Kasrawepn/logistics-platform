@@ -18,12 +18,14 @@
 Real details, taken from the owner — do not invent more:
 
 - Brand: **Aydın Transport & Logistik** (van livery: "Zuverlässig. Schnell. Pünktlich.",
-  gold arc through the "A"), family-run, based in Konstanz.
+  gold arc through the "A"), family-run, based in Allensbach.
 - Phone `+49 160 801 66 59`, email `Aydinmuhammet601@gmail.com`,
-  Herrenlandstraße 31–37, Konstanz. No postcode has been supplied — do not invent one.
+  Höhrenbergstr. 22, 78476 Allensbach.
 - Services are the owner's list: deutschlandweite Transporte, Direktfahrten,
   Express-Lieferungen, Kurierdienste, on the strength of a 3.5-tonne van, for private and
-  business customers. Everything the old "Horizon Logistics" site claimed beyond that
+  business customers. The former visa/immigration consulting was **removed at the owner's
+  request** (pages, service section, cards, translations, legal clauses, theme templates) —
+  do not bring it back. Everything the old "Horizon Logistics" site claimed beyond that
   (185 vehicles, ISO/AEO/GDP certificates, warehouses, Rotterdam/Duisburg/Antwerp/Verona
   hubs, customer logos, testimonials, statistics) was **placeholder fiction and has been
   removed** — do not reintroduce claims like these without the owner confirming them.
@@ -132,7 +134,8 @@ uploads `aydin-transport.zip` themselves.
   heading/lead swapped to the `ct.quote.*` keys, because the hosting cannot run the Node
   mail service.
 - `functions.php` enqueues the same CSS/JS in the same order, creates the five inner pages
-  on activation (slugs `services`, `about`, `solutions`, `fleet`, `contact`) and hands
+  on activation (slugs `services`, `about`, `solutions`, `fleet`, `contact`), moves the
+  retired `visa`/`visa-register` pages to the trash once, and hands
   `layout.js` its page URLs through `window.AydinSiteUrls`. The header/footer stay injected
   by JS from one table, so `layout.js` runs every internal href through `url()` and falls
   back to the `.html` names when that object is missing (the static preview). Page URLs are

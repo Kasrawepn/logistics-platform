@@ -44,8 +44,8 @@ get_header();
           <address>
             <strong>Aydın Transport &amp; Logistik</strong><br>
             Inhaber: Muhammet Aydın<br>
-            Herrenlandstraße 31–37<br>
-            78315 Radolfzell, Deutschland<br>
+            Höhrenbergstr. 22<br>
+            78476 Allensbach, Deutschland<br>
             Telefon: <a href="tel:+491608016659">+49 160 801 66 59</a><br>
             E-Mail: <a href="mailto:Aydinmuhammet601@gmail.com">Aydinmuhammet601@gmail.com</a>
           </address>
@@ -81,15 +81,15 @@ get_header();
 
           <h2>4. Anfrage-, Angebots- und Registrierungsformulare</h2>
           <p>
-            Wenn Sie ein Formular auf dieser Website absenden (zum Beispiel eine Angebotsanfrage oder
-            die Visa-Registrierung), übermitteln Sie die dort eingegebenen Angaben an uns. Die
+            Wenn Sie ein Formular auf dieser Website absenden (zum Beispiel eine Angebotsanfrage
+            oder das Kontaktformular), übermitteln Sie die dort eingegebenen Angaben an uns. Die
             Zustellung erfolgt per E-Mail über die Google Ireland Limited, Gordon House, Barrow Street,
             Dublin 4, Irland, als E-Mail-Dienstleister; Google handelt dabei als Auftragsverarbeiter.
           </p>
           <p>
             Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO für die Bearbeitung Ihrer Anfrage sowie
-            Art. 6 Abs. 1 lit. a DSGVO für Angaben, die Sie im Rahmen der Visa-Registrierung freiwillig
-            machen. Eine erteilte Einwilligung können Sie jederzeit widerrufen.
+            Art. 6 Abs. 1 lit. a DSGVO für Angaben, die Sie uns freiwillig übermitteln. Eine erteilte
+            Einwilligung können Sie jederzeit widerrufen.
           </p>
 
           <h2>5. Cookies und lokale Speicherung</h2>
@@ -103,8 +103,8 @@ get_header();
           <h2>6. Empfänger und Auftragsverarbeitung</h2>
           <p>
             Eine Weitergabe Ihrer Daten erfolgt nur, soweit dies zur Vertragserfüllung erforderlich ist
-            (zum Beispiel an ausführende Frachtführer oder, bei Visa-Anfragen, an von Ihnen benannte
-            Stellen), gesetzlich vorgeschrieben ist oder Sie eingewilligt haben. Mit Dienstleistern, die
+            (zum Beispiel an ausführende Frachtführer), gesetzlich vorgeschrieben ist oder Sie
+            eingewilligt haben. Mit Dienstleistern, die
             in unserem Auftrag Daten verarbeiten, bestehen Verträge zur Auftragsverarbeitung nach
             Art. 28 DSGVO.
           </p>
