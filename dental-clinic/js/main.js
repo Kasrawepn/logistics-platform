@@ -1,5 +1,6 @@
 import { initRouter, navigate, parseRoute } from './router.js';
 import { createOrbitScene } from './scene.js';
+import { createDentistScene } from './dentist-scene.js';
 import { initBookingView, resetBookingFlow } from './booking-view.js';
 import { initBookingsView, refreshBookings } from './bookings-view.js';
 import { TIME_SLOTS, formatTime } from './store.js';
@@ -45,20 +46,55 @@ document.querySelectorAll('[data-scroll]').forEach((link) => {
 /* ---------- clinic status card ---------- */
 const clockNode = document.getElementById('clinic-clock');
 const slotNode = document.getElementById('next-slot');
+const statusNode = document.getElementById('clinic-status');
+const statusChip = document.getElementById('clinic-status-chip');
 const timeFormat = new Intl.DateTimeFormat('fa-IR', { hour: '2-digit', minute: '2-digit' });
+const weekdayFormat = new Intl.DateTimeFormat('fa-IR', { weekday: 'long' });
+
+// Opening hours of the practice (0 = Sunday … 6 = Saturday), in minutes.
+const OPENING_HOURS = {
+  1: [[510, 750], [810, 1050]], // Monday 08:30–12:30, 13:30–17:30
+  2: [[510, 840]], // Tuesday 08:30–14:00
+  3: [[510, 750], [810, 1050]], // Wednesday
+  4: [[510, 750], [810, 1050]], // Thursday
+  5: [[510, 780]], // Friday 08:30–13:00
+};
+const SLOT_MINUTES = TIME_SLOTS.map((slot) => {
+  const [hours, minutes] = slot.split(':').map(Number);
+  return { slot, minutes: hours * 60 + minutes };
+});
+
+function nextAvailableSlot(dayOffset) {
+  const date = new Date();
+  date.setDate(date.getDate() + dayOffset);
+  const ranges = OPENING_HOURS[date.getDay()] || [];
+  const nowMinutes = dayOffset === 0 ? new Date().getHours() * 60 + new Date().getMinutes() : -Infinity;
+
+  const match = SLOT_MINUTES.find(
+    (entry) =>
+      entry.minutes > nowMinutes + 45 &&
+      ranges.some(([start, end]) => entry.minutes >= start && entry.minutes + 45 <= end),
+  );
+
+  if (!match) return null;
+  const label = dayOffset === 0 ? 'امروز' : dayOffset === 1 ? 'فردا' : weekdayFormat.format(date);
+  return `${label} · ${formatTime(match.slot)}`;
+}
 
 function updateClinicStatus() {
   const now = new Date();
   if (clockNode) clockNode.textContent = `ساعت ${timeFormat.format(now)}`;
 
-  if (!slotNode) return;
+  const ranges = OPENING_HOURS[now.getDay()] || [];
   const minutes = now.getHours() * 60 + now.getMinutes();
-  const nextSlot = TIME_SLOTS.find((slot) => {
-    const [hours, mins] = slot.split(':').map(Number);
-    return hours * 60 + mins > minutes + 45;
-  });
+  const isOpen = ranges.some(([start, end]) => minutes >= start && minutes < end);
 
-  slotNode.textContent = nextSlot ? `امروز · ${formatTime(nextSlot)}` : 'فردا · ۰۹:۰۰';
+  if (statusNode) statusNode.textContent = isOpen ? 'کلینیک باز است' : 'کلینیک بسته است';
+  statusChip?.classList.toggle('is-closed', !isOpen);
+
+  if (!slotNode) return;
+  const next = [0, 1, 2, 3, 4, 5, 6].map(nextAvailableSlot).find(Boolean);
+  slotNode.textContent = next || 'با تلفن هماهنگ کنید';
 }
 
 updateClinicStatus();
@@ -84,12 +120,14 @@ if ('IntersectionObserver' in window && revealNodes.length) {
 
 /* ---------- 3D hero ---------- */
 const orbitScene = createOrbitScene(document.getElementById('orbit-canvas'));
+createDentistScene(document.getElementById('dentist-canvas'));
 
 /* ---------- views ---------- */
 initBookingView();
 initBookingsView();
 
 initRouter((route) => {
+  document.body.dataset.route = route;
   orbitScene.setActive(route === 'home');
   closeNav();
   if (route === 'booking') resetBookingFlow();

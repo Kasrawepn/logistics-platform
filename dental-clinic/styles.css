@@ -495,6 +495,19 @@ ul {
   color: var(--mint);
 }
 
+.status-chip.is-closed {
+  color: var(--muted);
+}
+
+.status-chip.is-closed .pulse-dot {
+  background: var(--muted);
+  box-shadow: 0 0 0 4px rgba(147, 164, 191, 0.12);
+}
+
+.status-chip.is-closed .pulse-dot::after {
+  border-color: rgba(147, 164, 191, 0.35);
+}
+
 .hero-card-clock {
   font-size: 0.8rem;
   color: var(--muted);
@@ -632,6 +645,106 @@ ul {
 .section-sub {
   color: var(--muted);
   max-width: 40rem;
+}
+
+/* ---------- dentist 3D portrait ---------- */
+.section-dentist {
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.dentist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.dentist-copy h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+}
+
+.dentist-facts {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1.1rem 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.dentist-facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.dentist-facts li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 10px rgba(94, 234, 212, 0.85);
+}
+
+.dentist-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.dentist-stage {
+  position: relative;
+  height: clamp(400px, 46vw, 540px);
+  border-radius: 30px;
+  border: 1px solid rgba(94, 234, 212, 0.22);
+  background:
+    radial-gradient(90% 80% at 50% 18%, rgba(56, 189, 248, 0.16), transparent 65%),
+    radial-gradient(70% 60% at 50% 100%, rgba(167, 139, 250, 0.14), transparent 70%),
+    rgba(6, 10, 18, 0.85);
+  box-shadow: 0 40px 90px -60px rgba(56, 189, 248, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.dentist-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+
+.stage-badge {
+  position: absolute;
+  top: 1rem;
+  inset-inline-start: 1rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #04121a;
+  background: linear-gradient(135deg, var(--mint), var(--cyan));
+  box-shadow: 0 10px 24px -14px rgba(94, 234, 212, 0.9);
+}
+
+.stage-hint {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0.85rem;
+  margin: 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+@media (min-width: 960px) {
+  .dentist-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: clamp(2rem, 4vw, 3.2rem);
+  }
 }
 
 /* ---------- services ---------- */
@@ -1474,6 +1587,55 @@ ul {
   color: var(--muted);
   font-size: 0.9rem;
   margin: 0 0 1rem;
+}
+
+/* ---------- floating booking button ---------- */
+.floating-book {
+  position: fixed;
+  inset-inline: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #04121a;
+  background: linear-gradient(135deg, var(--mint), var(--cyan));
+  box-shadow: 0 20px 45px -18px rgba(94, 234, 212, 0.9);
+}
+
+.floating-book-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #04121a;
+  opacity: 0.5;
+}
+
+.floating-book-price {
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.8em;
+  background: rgba(4, 18, 26, 0.16);
+}
+
+@media (max-width: 959px) {
+  .floating-book {
+    display: flex;
+  }
+
+  body[data-route="booking"] .floating-book,
+  body[data-route="bookings"] .floating-book {
+    display: none;
+  }
+
+  .site-footer {
+    padding-bottom: 5.5rem;
+  }
 }
 
 /* ---------- footer ---------- */
