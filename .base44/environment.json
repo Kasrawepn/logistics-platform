@@ -1,0 +1,12 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "PAYPAL_CLIENT_ID",
+      "description": "PayPal REST app Client ID from developer.paypal.com → Apps & Credentials (use the Sandbox ID while testing). Served to the browser via /config.js; without it the booking flow falls back to a clearly marked test payment.",
+      "requiredAtBoot": false
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>دنت اوربیت | کلینیک دندانپزشکی و رزرو آنلاین جرمگیری</title>
+  <meta name="description" content="کلینیک دندانپزشکی دنت اوربیت — رزرو آنلاین جرمگیری دندان با پرداخت امن پی‌پال، در کمتر از دو دقیقه." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/config.js"></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#/" aria-label="دنت اوربیت">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="6.4" fill="currentColor" />
+            <ellipse cx="20" cy="20" rx="16" ry="6.6" stroke="currentColor" stroke-width="1.5" transform="rotate(-24 20 20)" opacity=".7" />
+            <ellipse cx="20" cy="20" rx="16" ry="6.6" stroke="currentColor" stroke-width="1.5" transform="rotate(40 20 20)" opacity=".4" />
+            <circle cx="32.5" cy="11.5" r="2" fill="currentColor" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>دنت اوربیت</strong>
+          <small>کلینیک دندانپزشکی</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="منوی اصلی">
+        <a href="#/" data-nav="home">خانه</a>
+        <a href="#/" data-scroll="#services">خدمات</a>
+        <a href="#/" data-scroll="#process">روند رزرو</a>
+        <a href="#/booking" data-nav="booking">رزرو جرمگیری</a>
+        <a href="#/bookings" data-nav="bookings">رزروهای من</a>
+      </nav>
+
+      <a href="#/booking" class="btn btn-primary btn-sm header-cta">رزرو آنلاین</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="باز و بسته کردن منو" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HOME ================= -->
+    <section class="view" data-view="home">
+      <section class="hero" id="hero">
+        <canvas id="orbit-canvas" aria-hidden="true"></canvas>
+        <div class="hero-veil" aria-hidden="true"></div>
+
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="pulse-dot"></span> کلینیک دندانپزشکی دیجیتال · مونیخ</p>
+            <h1>لبخندت را در <em>مدارِ درخشش</em> بگذار</h1>
+            <p class="lead">
+              جرمگیری حرفه‌ای، آرام و بدون درد — با رزرو آنلاین و پرداخت امن پی‌پال.
+              زمانت را انتخاب کن، همان‌جا پرداخت کن و فقط بیا.
+            </p>
+            <div class="hero-actions">
+              <a href="#/booking" class="btn btn-primary btn-lg">
+                رزرو جرمگیری
+                <span class="price-chip">۷۹ €</span>
+              </a>
+              <a href="#/bookings" class="btn btn-ghost btn-lg">رزروهای من</a>
+            </div>
+            <ul class="hero-facts">
+              <li>پرداخت امن با پی‌پال</li>
+              <li>لغو رایگان تا ۲۴ ساعت قبل</li>
+              <li>بدون تماس تلفنی</li>
+            </ul>
+          </div>
+
+          <aside class="hero-card glass" aria-label="اطلاعات کلینیک">
+            <div class="hero-card-head">
+              <span class="status-chip"><span class="pulse-dot"></span> کلینیک باز است</span>
+              <span class="hero-card-clock" id="clinic-clock">—</span>
+            </div>
+            <div class="hero-card-body">
+              <p class="hero-card-label">نوبت بعدی آزاد</p>
+              <p class="hero-card-slot" id="next-slot">امروز · ۱۶:۰۰</p>
+              <div class="hero-card-rows">
+                <div><span>ساعت کاری</span><strong>۹:۰۰ – ۱۸:۰۰</strong></div>
+                <div><span>مدت جرمگیری</span><strong>۴۵ دقیقه</strong></div>
+                <div><span>رضایت بیماران</span><strong>۹٫۴ از ۱۰</strong></div>
+              </div>
+            </div>
+            <a href="#/booking" class="hero-card-link">همین نوبت را رزرو کن ←</a>
+          </aside>
+        </div>
+
+        <a href="#/" class="scroll-hint" data-scroll="#services" aria-label="رفتن به خدمات">
+          <span></span>
+        </a>
+      </section>
+
+      <section class="marquee-band" aria-hidden="true">
+        <div class="marquee-track">
+          <span>جرمگیری با اولتراسونیک</span><i>✦</i>
+          <span>بی‌حسی موضعی بدون درد</span><i>✦</i>
+          <span>پرداخت امن پی‌پال</span><i>✦</i>
+          <span>تجهیزات استریل تک‌بارمصرف</span><i>✦</i>
+          <span>مشاوره رایگان پس از درمان</span><i>✦</i>
+          <span>جرمگیری با اولتراسونیک</span><i>✦</i>
+          <span>بی‌حسی موضعی بدون درد</span><i>✦</i>
+          <span>پرداخت امن پی‌پال</span><i>✦</i>
+          <span>تجهیزات استریل تک‌بارمصرف</span><i>✦</i>
+          <span>مشاوره رایگان پس از درمان</span><i>✦</i>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">خدمات کلینیک</p>
+            <h2>همه‌چیز برای لبخندی که می‌درخشد</h2>
+            <p class="section-sub">از جرمگیری دوره‌ای تا درمان‌های تخصصی؛ همه با تجهیزات دیجیتال و برنامه‌ی درمانی شفاف.</p>
+          </header>
+
+          <div class="service-grid">
+            <article class="service-card service-featured reveal">
+              <div class="service-glow" aria-hidden="true"></div>
+              <span class="service-tag">قابل رزرو آنلاین</span>
+              <h3>جرمگیری و بروساژ</h3>
+              <p>حذف جرم و پلاک با اولتراسونیک، پالیش مینای دندان و بررسی سلامت لثه در یک جلسه‌ی ۴۵ دقیقه‌ای.</p>
+              <ul class="service-list">
+                <li>اولتراسونیک + پالیش</li>
+                <li>بررسی لثه و مینا</li>
+                <li>پرداخت با پی‌پال</li>
+              </ul>
+              <div class="service-foot">
+                <span class="service-price">۷۹ €</span>
+                <a href="#/booking" class="btn btn-primary btn-sm">رزرو نوبت</a>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-icon" aria-hidden="true">✦</span>
+              <h3>سفید کردن دندان</h3>
+              <p>روشن‌سازی چند پله‌ای رنگ دندان با ژل تخصصی و محافظت کامل از مینا.</p>
+              <div class="service-foot">
+                <span class="service-price muted">از ۱۴۹ €</span>
+                <span class="service-note">با مشاوره</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-icon" aria-hidden="true">◈</span>
+              <h3>ایمپلنت دیجیتال</h3>
+              <p>اسکن سه‌بعدی، طراحی دیجیتال و کاشت ایمپلنت با دقت میلی‌متری.</p>
+              <div class="service-foot">
+                <span class="service-price muted">از ۶۹۰ €</span>
+                <span class="service-note">با مشاوره</span>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <span class="service-icon" aria-hidden="true">◎</span>
+              <h3>ارتودنسی شفاف</h3>
+              <p>پلنرهای نامرئی با اسکن دیجیتال و پیگیری آنلاین مسیر درمان.</p>
+              <div class="service-foot">
+                <span class="service-price muted">از ۱٬۹۰۰ €</span>
+                <span class="service-note">با مشاوره</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-process" id="process">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">روند رزرو</p>
+            <h2>سه قدم تا یک جلسه‌ی آرام</h2>
+          </header>
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step-num">۰۱</span>
+              <h3>زمانت را انتخاب کن</h3>
+              <p>روز و ساعت مناسب را از تقویم آنلاین انتخاب کن؛ نوبت فوراً برایت نگه داشته می‌شود.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step-num">۰۲</span>
+              <h3>با پی‌پال پرداخت کن</h3>
+              <p>پرداخت امن از طریق پی‌پال، بدون وارد کردن اطلاعات کارت در سایت.</p>
+            </li>
+            <li class="step reveal">
+              <span class="step-num">۰۳</span>
+              <h3>فقط بیا</h3>
+              <p>کد رزرو را همراه داشته باش؛ بقیه‌اش با ما. لغو رایگان تا ۲۴ ساعت قبل.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="stats-band">
+        <div class="wrap stats-grid">
+          <div class="stat reveal"><strong>۱۲</strong><span>سال تجربه بالینی</span></div>
+          <div class="stat reveal"><strong>۳٬۲۰۰+</strong><span>بیمار راضی</span></div>
+          <div class="stat reveal"><strong>۹٫۴</strong><span>امتیاز رضایت از ۱۰</span></div>
+          <div class="stat reveal"><strong>۴۵</strong><span>دقیقه برای هر جلسه</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap cta-band reveal">
+          <div>
+            <p class="eyebrow">نوبتت را از دست نده</p>
+            <h2>امروز جرمگیری، فردا لبخند تازه</h2>
+            <p class="section-sub">ظرفیت هر روز محدود است؛ رزرو آنلاین کمتر از دو دقیقه وقت می‌گیرد.</p>
+          </div>
+          <a href="#/booking" class="btn btn-primary btn-lg">رزرو جرمگیری · ۷۹ €</a>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= BOOKING ================= -->
+    <section class="view" data-view="booking" hidden>
+      <div class="wrap page-head">
+        <a href="#/" class="back-link">→ بازگشت به خانه</a>
+        <h1>رزرو جرمگیری دندان</h1>
+        <p class="section-sub">اطلاعاتت را وارد کن، زمان را انتخاب کن و با پی‌پال پرداخت کن.</p>
+      </div>
+
+      <div class="wrap booking-layout">
+        <form class="booking-form glass" id="booking-form" novalidate>
+          <ol class="stepper" aria-label="مراحل رزرو">
+            <li class="stepper-item is-active" data-step-label="1"><span>۱</span> اطلاعات</li>
+            <li class="stepper-item" data-step-label="2"><span>۲</span> پرداخت</li>
+            <li class="stepper-item" data-step-label="3"><span>۳</span> تأیید</li>
+          </ol>
+
+          <div class="form-step" data-step="1">
+            <div class="field-row">
+              <label class="field">
+                <span>نام و نام خانوادگی</span>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="مثلاً سارا محمدی" required />
+                <small class="field-error" data-error-for="name"></small>
+              </label>
+              <label class="field">
+                <span>شماره موبایل</span>
+                <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+49 ۱۵۱ ۲۳۴۵۶۷۸" required />
+                <small class="field-error" data-error-for="phone"></small>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>ایمیل <em>(اختیاری — برای ارسال رسید)</em></span>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" />
+              <small class="field-error" data-error-for="email"></small>
+            </label>
+
+            <div class="field-row">
+              <label class="field">
+                <span>تاریخ</span>
+                <input type="date" id="date" name="date" required />
+                <small class="field-error" data-error-for="date"></small>
+              </label>
+              <label class="field">
+                <span>ساعت</span>
+                <select id="time" name="time" required></select>
+                <small class="field-error" data-error-for="time"></small>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>توضیحات <em>(اختیاری)</em></span>
+              <textarea id="notes" name="notes" rows="3" placeholder="حساسیت، سابقه‌ی درمانی یا هر نکته‌ای که بهتر است بدانیم."></textarea>
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">ادامه و پرداخت</button>
+            <p class="form-foot">با ادامه، قوانین لغو رزرو (تا ۲۴ ساعت قبل، رایگان) را می‌پذیری.</p>
+          </div>
+
+          <div class="form-step" data-step="2" hidden>
+            <div class="summary" id="booking-summary"></div>
+
+            <div class="paypal-box">
+              <div class="paypal-head">
+                <span class="paypal-logo" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7.6 20.5H4.9l2.4-15h5.1c2.9 0 4.6 1.5 4.2 4-.4 2.7-2.4 4.1-5.2 4.1H9.1l-.6 3.6-.9 3.3Z" fill="#7dd3fc" opacity=".85"/><path d="M11.9 21.5H9.2l2.4-15h5.1c2.9 0 4.6 1.5 4.2 4-.4 2.7-2.4 4.1-5.2 4.1h-2.3l-.6 3.6-.9 3.3Z" fill="#5eead4" opacity=".6"/></svg>
+                </span>
+                <div>
+                  <strong>پرداخت با پی‌پال</strong>
+                  <p id="pay-amount" class="pay-amount">۷۹ €</p>
+                </div>
+              </div>
+              <div id="paypal-buttons" class="paypal-buttons"></div>
+              <button type="button" class="btn btn-primary btn-block btn-lg" id="demo-pay" hidden>پرداخت آزمایشی</button>
+              <p class="pay-note" id="pay-note"></p>
+            </div>
+
+            <button type="button" class="btn btn-ghost btn-block" id="back-to-form">ویرایش اطلاعات</button>
+          </div>
+
+          <div class="form-step form-success" data-step="3" hidden>
+            <div class="success-mark" aria-hidden="true">✓</div>
+            <h2>رزرو ثبت شد</h2>
+            <p class="success-sub">کد رزروت را نگه دار؛ یک پیام تأیید هم برایت فرستادیم.</p>
+            <div class="ticket" id="success-ticket"></div>
+            <div class="success-actions">
+              <a href="#/bookings" class="btn btn-primary">مشاهده رزروهای من</a>
+              <a href="#/" class="btn btn-ghost">بازگشت به خانه</a>
+            </div>
+          </div>
+        </form>
+
+        <aside class="booking-aside">
+          <div class="aside-card glass">
+            <p class="eyebrow">جزئیات خدمت</p>
+            <h3>جرمگیری و بروساژ</h3>
+            <p class="aside-text">حذف جرم و پلاک با دستگاه اولتراسونیک، پالیش مینا و بررسی سلامت لثه.</p>
+            <ul class="service-list">
+              <li>۴۵ دقیقه در اتاق درمان</li>
+              <li>بی‌حسی موضعی در صورت نیاز</li>
+              <li>دستورالعمل مراقبت پس از درمان</li>
+            </ul>
+            <div class="aside-price">
+              <span>هزینه‌ی جلسه</span>
+              <strong>۷۹ €</strong>
+            </div>
+          </div>
+          <div class="aside-card aside-note">
+            <p><strong>پرداخت امن.</strong> اطلاعات کارت تو هرگز در این سایت ذخیره نمی‌شود؛ پرداخت کاملاً در محیط پی‌پال انجام می‌شود.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= BOOKINGS ================= -->
+    <section class="view" data-view="bookings" hidden>
+      <div class="wrap page-head">
+        <a href="#/" class="back-link">→ بازگشت به خانه</a>
+        <h1>رزروهای من</h1>
+        <p class="section-sub">همه‌ی نوبت‌های در حال انجام و انجام‌شده‌ی تو، در یک نگاه.</p>
+      </div>
+
+      <div class="wrap">
+        <div class="tabs" role="tablist" aria-label="فیلتر رزروها">
+          <button type="button" class="tab is-active" data-filter="all" role="tab" aria-selected="true">
+            همه <span class="tab-count" data-count="all">۰</span>
+          </button>
+          <button type="button" class="tab" data-filter="upcoming" role="tab" aria-selected="false">
+            در حال انجام <span class="tab-count" data-count="upcoming">۰</span>
+          </button>
+          <button type="button" class="tab" data-filter="completed" role="tab" aria-selected="false">
+            انجام شده <span class="tab-count" data-count="completed">۰</span>
+          </button>
+        </div>
+
+        <div id="bookings-list" class="booking-list" aria-live="polite"></div>
+
+        <div id="bookings-empty" class="empty-state" hidden>
+          <div class="empty-mark" aria-hidden="true">◌</div>
+          <h3>هنوز رزروی ثبت نکرده‌ای</h3>
+          <p>اولین نوبت جرمگیری‌ات را رزرو کن؛ کمتر از دو دقیقه وقت می‌گیرد.</p>
+          <a href="#/booking" class="btn btn-primary">رزرو جرمگیری · ۷۹ €</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#/" aria-label="دنت اوربیت">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="6.4" fill="currentColor" />
+              <ellipse cx="20" cy="20" rx="16" ry="6.6" stroke="currentColor" stroke-width="1.5" transform="rotate(-24 20 20)" opacity=".7" />
+              <ellipse cx="20" cy="20" rx="16" ry="6.6" stroke="currentColor" stroke-width="1.5" transform="rotate(40 20 20)" opacity=".4" />
+              <circle cx="32.5" cy="11.5" r="2" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-text"><strong>دنت اوربیت</strong><small>کلینیک دندانپزشکی</small></span>
+        </a>
+        <p>خیابان لئوپولد، پلاک ۱۲ · مونیخ<br />شنبه تا پنجشنبه، ۹:۰۰ تا ۱۸:۰۰</p>
+      </div>
+      <nav class="footer-nav" aria-label="لینک‌های فوتر">
+        <a href="#/booking">رزرو جرمگیری</a>
+        <a href="#/bookings">رزروهای من</a>
+        <a href="#/" data-scroll="#services">خدمات</a>
+        <a href="#/" data-scroll="#process">روند رزرو</a>
+      </nav>
+      <p class="footer-copy">© ۲۰۲۶ دنت اوربیت · پرداخت‌ها از طریق پی‌پال</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
