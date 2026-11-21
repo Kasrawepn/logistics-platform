@@ -77,6 +77,10 @@ ul {
   list-style: none;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 ::selection {
   background: rgba(94, 234, 212, 0.3);
 }

@@ -31,8 +31,10 @@ export function formatNumber(value) {
 }
 
 export function formatTime(time) {
-  const [h, m] = String(time).split(':');
-  return `${numberFa.format(Number(h)).padStart(2, '۰')}:${String(m).padStart(2, '۰')}`;
+  const [hours, minutes] = String(time).split(':').map(Number);
+  const hh = numberFa.format(hours || 0).padStart(2, '۰');
+  const mm = numberFa.format(minutes || 0).padStart(2, '۰');
+  return `${hh}:${mm}`;
 }
 
 export function formatDate(isoDate) {
