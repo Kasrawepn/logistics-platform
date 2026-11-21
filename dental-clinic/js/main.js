@@ -1,6 +1,9 @@
 import { initRouter, navigate, parseRoute } from './router.js';
 import { createOrbitScene } from './scene.js';
 import { createDentistScene } from './dentist-scene.js';
+import { createGalleryScene } from './gallery-scene.js';
+import { renderHomeSections, renderGalleryFallback } from './home-sections.js';
+import { GALLERY } from './content.js';
 import { initBookingView, resetBookingFlow } from './booking-view.js';
 import { initBookingsView, refreshBookings } from './bookings-view.js';
 import { TIME_SLOTS, formatTime } from './store.js';
@@ -100,6 +103,9 @@ function updateClinicStatus() {
 updateClinicStatus();
 window.setInterval(updateClinicStatus, 60_000);
 
+/* ---------- content extracted from the practice site ---------- */
+renderHomeSections();
+
 /* ---------- reveal on scroll ---------- */
 const revealNodes = [...document.querySelectorAll('.reveal')];
 if ('IntersectionObserver' in window && revealNodes.length) {
@@ -121,6 +127,8 @@ if ('IntersectionObserver' in window && revealNodes.length) {
 /* ---------- 3D hero ---------- */
 const orbitScene = createOrbitScene(document.getElementById('orbit-canvas'));
 createDentistScene(document.getElementById('dentist-canvas'));
+const galleryScene = createGalleryScene(document.getElementById('gallery-canvas'), GALLERY);
+if (!galleryScene.available) renderGalleryFallback(document.querySelector('.gallery-stage'));
 
 /* ---------- views ---------- */
 initBookingView();
@@ -129,6 +137,7 @@ initBookingsView();
 initRouter((route) => {
   document.body.dataset.route = route;
   orbitScene.setActive(route === 'home');
+  galleryScene.setActive(route === 'home');
   closeNav();
   if (route === 'booking') resetBookingFlow();
   if (route === 'bookings') refreshBookings();

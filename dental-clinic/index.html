@@ -38,7 +38,9 @@
       <nav class="nav" id="main-nav" aria-label="منوی اصلی">
         <a href="#/" data-nav="home">خانه</a>
         <a href="#/" data-scroll="#dentist">دکتر</a>
+        <a href="#/" data-scroll="#gallery">گالری سه‌بعدی</a>
         <a href="#/" data-scroll="#services">خدمات</a>
+        <a href="#/" data-scroll="#practice">کلینیک</a>
         <a href="#/" data-scroll="#process">روند رزرو</a>
         <a href="#/booking" data-nav="booking">رزرو جرمگیری</a>
         <a href="#/bookings" data-nav="bookings">رزروهای من</a>
@@ -147,6 +149,24 @@
         </div>
       </section>
 
+      <section class="section section-gallery" id="gallery">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">گالری سه‌بعدی</p>
+            <h2>کلینیک را در فضا بچرخان</h2>
+            <p class="section-sub">
+              تصاویر واقعی کلینیک دکتر حسینی روی یک حلقه‌ی سه‌بعدی؛ با کشیدن بچرخان و روی هر عکس بزن تا جلو بیاید.
+            </p>
+          </header>
+
+          <div class="gallery-stage reveal" role="img" aria-label="گالری سه‌بعدی تصاویر کلینیک">
+            <canvas id="gallery-canvas"></canvas>
+            <span class="stage-badge">گالری ۳D</span>
+            <p class="stage-hint">بکش تا بچرخد · روی عکس بزن</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="services">
         <div class="wrap">
           <header class="section-head reveal">
@@ -172,35 +192,52 @@
               </div>
             </article>
 
-            <article class="service-card reveal">
-              <span class="service-icon" aria-hidden="true">◈</span>
-              <h3>ایمپلنتولوژی</h3>
-              <p>جایگزینی دندان‌های از دست‌رفته با ایمپلنت؛ حفظ دندان‌های مجاور و بازگرداندن عملکرد و زیبایی.</p>
-              <div class="service-foot">
-                <span class="service-price muted">با مشاوره</span>
-                <span class="service-note">طرح درمان اختصاصی</span>
-              </div>
-            </article>
+          </div>
 
-            <article class="service-card reveal">
-              <span class="service-icon" aria-hidden="true">✦</span>
-              <h3>پروتکل پیشگیری</h3>
-              <p>برنامه‌ی پیشگیری فردی: آموزش بهداشت، نمایان‌کردن پلاک و پاک‌سازی کامل جرم‌ها، حتی زیر خط لثه.</p>
-              <div class="service-foot">
-                <span class="service-price muted">با مشاوره</span>
-                <span class="service-note">کودکان و بزرگسالان</span>
-              </div>
-            </article>
+          <div class="service-grid service-grid-more" id="service-grid-more"></div>
+        </div>
+      </section>
 
-            <article class="service-card reveal">
-              <span class="service-icon" aria-hidden="true">◎</span>
-              <h3>ارتودنسی</h3>
-              <p>اصلاح ناهنجاری‌های دندانی با پلنر و براکت، همراه با پیگیری مسیر درمان.</p>
-              <div class="service-foot">
-                <span class="service-price muted">با مشاوره</span>
-                <span class="service-note">کودکان و بزرگسالان</span>
+      <section class="section section-team" id="team">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="eyebrow">تیم کلینیک</p>
+            <h2>آدم‌هایی که کنارت هستند</h2>
+            <p class="section-sub">دکتر حسینی و تیم ثابت کلینیک در کنستانتس؛ از پذیرش تا پایان درمان.</p>
+          </header>
+          <div class="team-grid" id="team-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section-practice" id="practice">
+        <div class="wrap practice-grid">
+          <div class="practice-copy reveal">
+            <p class="eyebrow">کلینیک ما</p>
+            <h2>در قلب کنستانتس</h2>
+            <p class="section-sub">
+              پراتیک دکتر برهان‌الدین حسینی از ژانویه ۲۰۲۳ در همین نشانی ادامه می‌یابد؛ با تمرکز بر ایمپلنت،
+              پروتز، پیشگیری و درمان آرام برای همه‌ی سنین.
+            </p>
+            <ul class="practice-facts">
+              <li><span>نشانی</span><strong>Fürstengutweg 8 · 78462 Konstanz</strong></li>
+              <li><span>تلفن</span><strong dir="ltr"><a href="tel:+49753125250">07531 25 25 0</a></strong></li>
+              <li><span>فکس</span><strong dir="ltr">07531 284 62 28</strong></li>
+              <li><span>ایمیل</span><strong dir="ltr"><a href="mailto:info@zahnarztpraxisdrstrahl.de">info@zahnarztpraxisdrstrahl.de</a></strong></li>
+            </ul>
+            <a href="#/booking" class="btn btn-primary btn-lg">رزرو جرمگیری · ۷۹ €</a>
+          </div>
+
+          <div class="practice-side">
+            <div class="practice-photo reveal">
+              <div class="tilt-inner" data-tilt>
+                <img src="/assets/site/practice.jpg" alt="اتاق درمان کلینیک دکتر حسینی در کنستانتس" loading="lazy" />
               </div>
-            </article>
+            </div>
+            <div class="practice-card glass reveal">
+              <p class="eyebrow">ساعات کاری</p>
+              <ul class="hours-list" id="practice-hours"></ul>
+              <p class="hours-note">ساعات بیشتر، مثل مطب کودکان، با هماهنگی تلفنی.</p>
+            </div>
           </div>
         </div>
       </section>

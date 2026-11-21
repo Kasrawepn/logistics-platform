@@ -1848,3 +1848,247 @@ ul {
     transform: none;
   }
 }
+
+/* ---------- 3D photo gallery ---------- */
+.section-gallery {
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.gallery-stage {
+  position: relative;
+  height: clamp(380px, 46vw, 560px);
+  border-radius: 30px;
+  border: 1px solid rgba(94, 234, 212, 0.22);
+  background:
+    radial-gradient(90% 80% at 50% 18%, rgba(56, 189, 248, 0.16), transparent 65%),
+    radial-gradient(70% 60% at 50% 100%, rgba(167, 139, 250, 0.14), transparent 70%),
+    rgba(6, 10, 18, 0.85);
+  box-shadow: 0 40px 90px -60px rgba(56, 189, 248, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.gallery-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+}
+
+.gallery-stage canvas.is-grabbing {
+  cursor: grabbing;
+}
+
+.gallery-flat {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+  padding: 1rem;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.gallery-flat figure {
+  margin: 0;
+}
+
+.gallery-flat img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.gallery-flat figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- full treatment spectrum ---------- */
+.service-grid-more {
+  margin-top: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.service-grid-more .service-card {
+  padding: 1.35rem;
+}
+
+.tilt-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.25s var(--ease);
+  will-change: transform;
+}
+
+.service-media {
+  margin-bottom: 0.75rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(6, 10, 18, 0.6);
+}
+
+.service-media img {
+  width: 100%;
+  height: 132px;
+  object-fit: cover;
+  opacity: 0.92;
+}
+
+.service-de {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(94, 234, 212, 0.75);
+}
+
+.service-grid-more .service-foot {
+  margin-top: auto;
+  padding-top: 0.6rem;
+}
+
+/* ---------- team ---------- */
+.team-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.team-card {
+  padding: 0.9rem;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(16, 24, 38, 0.72), rgba(8, 13, 22, 0.6));
+}
+
+.team-photo {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.team-body {
+  padding: 0.9rem 0.35rem 0.4rem;
+}
+
+.team-body h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
+}
+
+.team-role {
+  margin: 0 0 0.5rem;
+  font-size: 0.74rem;
+  color: var(--mint);
+}
+
+.team-body p:last-child {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- practice / clinic info ---------- */
+.practice-grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: 1fr;
+}
+
+.practice-facts {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1.2rem 0 1.5rem;
+  font-size: 0.88rem;
+}
+
+.practice-facts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px dashed var(--line);
+}
+
+.practice-facts span {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.practice-facts strong {
+  font-weight: 600;
+  text-align: end;
+}
+
+.practice-side {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.practice-photo {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-glow);
+}
+
+.practice-photo .tilt-inner {
+  display: block;
+}
+
+.practice-photo img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.practice-card {
+  padding: 1.3rem 1.4rem;
+  border-radius: 24px;
+}
+
+.hours-list {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+}
+
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.hours-list span {
+  color: var(--muted);
+}
+
+.hours-note {
+  margin: 0.9rem 0 0;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
+@media (min-width: 900px) {
+  .practice-grid {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(2rem, 4vw, 3.2rem);
+    align-items: start;
+  }
+}
